@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Usuarios>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>USUARIOS<small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<div class="container-fluid col-md-12">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    USUARIOS
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label labels">Primer Nombre</label>
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nombre2)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Apellido1)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Apellido2)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tb_Rol_Usuarios.Nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tb_Tipo_Documento.Nombre)
+                                </th>
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nombre2)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Apellido1)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Apellido2)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tb_Rol_Usuarios.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tb_Sucursales.Nombre)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tb_Tipo_Documento.Nombre)
+                                </td>
+
+                                <td class="text-right"><button class="btn btn-transparent btn-xs"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Editar", "Edit", new { id = item.Identificacion })</button> <div class="btn btn-transparent btn-transparent-danger btn-xs"><span class="fa fa-trash-o"></span>  <span class="hidden-xs hidden-sm hidden-md">@Html.ActionLink("Borrar", "Delete", new { id = item.Identificacion })</span></div></td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+         </div>
+    </div>

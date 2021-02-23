@@ -1,0 +1,50 @@
+﻿@model Proyecto.Models.Tb_AbonosCuotas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_AbonosCuotas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAbono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAbono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorAbono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorAbono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Cuotas.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Cuotas.Codigo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

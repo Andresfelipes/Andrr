@@ -1,0 +1,1481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADMISModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Acciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Accion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Detalle_permiso">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Modulo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rol" Type="int" Nullable="false" />
+    <Property Name="Permiiso" Type="int" Nullable="false" />
+    <Property Name="Accion" Type="int" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="Modulo" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Modulo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'ADMIS_AI.dbo.prueba' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="prueba">
+          <Property Name="id" Type="int" />
+          <Property Name="descripcion" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Tb_Abonos">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Credito" Type="int" Nullable="false" />
+    <Property Name="Valor" Type="float" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_AbonosCuotas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cuotas" Type="int" Nullable="false" />
+    <Property Name="FechaAbono" Type="date" Nullable="false" />
+    <Property Name="ValorAbono" Type="float" Nullable="false" />
+    <Property Name="Recargo" Type="float" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Tb_bajas">
+    <Key>
+      <PropertyRef Name="Codigo_baja" />
+    </Key>
+    <Property Name="Codigo_baja" Type="int" Nullable="false" />
+    <Property Name="Sucursal_baja" Type="varchar" MaxLength="6" />
+    <Property Name="fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tb_Clientes">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="bigint" Nullable="false" />
+    <Property Name="Nombre1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nombre2" Type="varchar" MaxLength="30" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="20" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Celular" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="TipoCliente" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Ciudad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cupo_activo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Solicitud" Type="varchar" MaxLength="20" />
+    <Property Name="Tipo_Documento_Codigo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Configuraciones">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="AumentoFinanciacion" Type="float" />
+    <Property Name="Tiempo" Type="int" />
+    <Property Name="IVA" Type="float" />
+    <Property Name="Recargo" Type="float" />
+    <Property Name="MontoMinorista" Type="float" />
+    <Property Name="MontoMayorista" Type="float" />
+    <Property Name="CupoCliente" Type="int" />
+    <Property Name="Sucursal_pricipal" Type="varchar" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="Tb_Creditos">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Numero_Pagare" Type="int" Nullable="false" />
+    <Property Name="Cuota_inicial" Type="float" />
+    <Property Name="Total_Adeudado" Type="float" Nullable="false" />
+    <Property Name="Venta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Cuotas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Financiacion" Type="int" Nullable="false" />
+    <Property Name="NumeroCuotas" Type="int" Nullable="false" />
+    <Property Name="FechaInicio" Type="date" Nullable="false" />
+    <Property Name="FechaLimite" Type="date" Nullable="false" />
+    <Property Name="ValorCuotas" Type="float" Nullable="false" />
+    <Property Name="CuotasAPagar" Type="int" Nullable="false" />
+    <Property Name="FechaAPagar" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Bajas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baja" Type="int" Nullable="false" />
+    <Property Name="Motivo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Producto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Entrada">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="float" Nullable="false" />
+    <Property Name="Entrada" Type="int" Nullable="false" />
+    <Property Name="ProductoSucursal" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Producto_Sucursal">
+    <Key>
+      <PropertyRef Name="codigo_detalle" />
+    </Key>
+    <Property Name="codigo_detalle" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Stock_Minimo" Type="int" Nullable="false" />
+    <Property Name="Stock_Maximo" Type="int" Nullable="false" />
+    <Property Name="Valor_Venta" Type="float" Nullable="false" />
+    <Property Name="Valor_Mayor" Type="float" Nullable="false" />
+    <Property Name="Valor_Especial" Type="float" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Producto" Type="varchar" MaxLength="10" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_DetalleTranslados">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="ProductoSucursal" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Aumento" Type="float" Nullable="false" />
+    <Property Name="Translado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_DetalleVenta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Descuento" Type="float" />
+    <Property Name="Venta" Type="int" Nullable="false" />
+    <Property Name="ProductoSucursal" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Precio" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Dian">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Resolucion" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Fecha_inicio_vigencia" Type="date" Nullable="false" />
+    <Property Name="Fecha_fin_vigencia" Type="date" Nullable="false" />
+    <Property Name="Num_inicio_rango" Type="int" Nullable="false" />
+    <Property Name="Num_fin_rango" Type="int" Nullable="false" />
+    <Property Name="Num_actual" Type="int" Nullable="false" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Entradas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Proveedor" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Estados">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Financiacion">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="Numero_Pagare" Type="int" Nullable="false" />
+    <Property Name="Tiempo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Aumento" Type="float" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="Cuota_Inicial" Type="int" />
+    <Property Name="Total_Adeudado" Type="float" Nullable="false" />
+    <Property Name="Venta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Permiso">
+    <Key>
+      <PropertyRef Name="Permiso_id" />
+    </Key>
+    <Property Name="Permiso_id" Type="int" Nullable="false" />
+    <Property Name="Modulo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Permiso_Denegado_Roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Post">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Resolucion" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Num_actual" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Productos">
+    <Key>
+      <PropertyRef Name="Codigo_producto" />
+    </Key>
+    <Property Name="Codigo_producto" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Referencia" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="Estado" Type="varchar" MaxLength="15" />
+    <Property Name="Tipo_Producto" Type="varchar" MaxLength="10" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="Precio" Type="int" />
+  </EntityType>
+  <EntityType Name="Tb_Proveedores">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="int" Nullable="false" />
+    <Property Name="Celular" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Tipo_Documento" Type="int" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Nit" Type="int" Nullable="false" />
+    <Property Name="Nombre1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nombre2" Type="varchar" MaxLength="30" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="20" />
+    <Property Name="Empresa" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Recuperar_contraseña">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Respuesta" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Usuario" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Rol_Usuarios">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Sucursales">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Apodo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Prefijo" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="NIT" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Tipo_Documento">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Tipo_Producto">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Usuarios">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="bigint" Nullable="false" />
+    <Property Name="Tipo_Documento" Type="int" Nullable="false" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="6" />
+    <Property Name="Nombre1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Nombre2" Type="varchar" MaxLength="30" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="20" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="45" />
+    <Property Name="Rol" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_ventas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="iva" Type="float" Nullable="false" />
+    <Property Name="Cliente" Type="bigint" Nullable="false" />
+    <Property Name="Sucursal" Type="varchar" MaxLength="6" />
+    <Property Name="Sub_Total" Type="float" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Translados">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Sucursal_origen" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Sucursal_Destino" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Tb_Abonos__Cuota__4222D4EF">
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="1" />
+    <End Role="Tb_AbonosCuotas" Type="Self.Tb_AbonosCuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Cuotas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_AbonosCuotas">
+        <PropertyRef Name="Cuotas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Abonos__Cuota__4316F928">
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="1" />
+    <End Role="Tb_AbonosCuotas" Type="Self.Tb_AbonosCuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Cuotas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_AbonosCuotas">
+        <PropertyRef Name="Cuotas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Cuotas__Finan__46E78A0C">
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="1" />
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Financiacion">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Cuotas">
+        <PropertyRef Name="Financiacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Cuotas__Finan__47DBAE45">
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="1" />
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Financiacion">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Cuotas">
+        <PropertyRef Name="Financiacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_Cli_v">
+    <End Role="Tb_Clientes" Type="Self.Tb_Clientes" Multiplicity="1" />
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Clientes">
+        <PropertyRef Name="Identificacion" />
+      </Principal>
+      <Dependent Role="Tb_ventas">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cre_e">
+    <End Role="Tb_Estados" Type="Self.Tb_Estados" Multiplicity="1" />
+    <End Role="Tb_Creditos" Type="Self.Tb_Creditos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Estados">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Creditos">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cre_v">
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="1" />
+    <End Role="Tb_Creditos" Type="Self.Tb_Creditos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ventas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Creditos">
+        <PropertyRef Name="Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_CreditoAbono">
+    <End Role="Tb_Creditos" Type="Self.Tb_Creditos" Multiplicity="1" />
+    <End Role="Tb_Abonos" Type="Self.Tb_Abonos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Creditos">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Abonos">
+        <PropertyRef Name="Credito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cuo_f">
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="1" />
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Financiacion">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Cuotas">
+        <PropertyRef Name="Financiacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_D_entrada">
+    <End Role="Tb_Entradas" Type="Self.Tb_Entradas" Multiplicity="1" />
+    <End Role="Tb_Detalle_Entrada" Type="Self.Tb_Detalle_Entrada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Entradas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Entrada">
+        <PropertyRef Name="Entrada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Detalle_permiso_Acciones">
+    <End Role="Acciones" Type="Self.Acciones" Multiplicity="0..1" />
+    <End Role="Detalle_permiso" Type="Self.Detalle_permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Acciones">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Detalle_permiso">
+        <PropertyRef Name="Accion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Detalle_permiso_Modulos">
+    <End Role="Modulos" Type="Self.Modulos" Multiplicity="1" />
+    <End Role="Detalle_permiso" Type="Self.Detalle_permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulos">
+        <PropertyRef Name="Modulo" />
+      </Principal>
+      <Dependent Role="Detalle_permiso">
+        <PropertyRef Name="Modulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Detalle_permiso_Tb_Permiso_Denegado_Roles">
+    <End Role="Tb_Permiso_Denegado_Roles" Type="Self.Tb_Permiso_Denegado_Roles" Multiplicity="1" />
+    <End Role="Detalle_permiso" Type="Self.Detalle_permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Permiso_Denegado_Roles">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Detalle_permiso">
+        <PropertyRef Name="Permiiso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Detalle_permiso_Tb_Rol_Usuarios">
+    <End Role="Tb_Rol_Usuarios" Type="Self.Tb_Rol_Usuarios" Multiplicity="1" />
+    <End Role="Detalle_permiso" Type="Self.Detalle_permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Rol_Usuarios">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Detalle_permiso">
+        <PropertyRef Name="Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DetV_Ven">
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="1" />
+    <End Role="Tb_DetalleVenta" Type="Self.Tb_DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ventas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_DetalleVenta">
+        <PropertyRef Name="Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Dian">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Dian" Type="Self.Tb_Dian" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Dian">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_doc">
+    <End Role="Tb_Tipo_Documento" Type="Self.Tb_Tipo_Documento" Multiplicity="1" />
+    <End Role="Tb_Clientes" Type="Self.Tb_Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Documento">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Clientes">
+        <PropertyRef Name="Tipo_Documento_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_doc_p">
+    <End Role="Tb_Tipo_Documento" Type="Self.Tb_Tipo_Documento" Multiplicity="1" />
+    <End Role="Tb_Proveedores" Type="Self.Tb_Proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Documento">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Proveedores">
+        <PropertyRef Name="Tipo_Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_doc_u">
+    <End Role="Tb_Tipo_Documento" Type="Self.Tb_Tipo_Documento" Multiplicity="1" />
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Documento">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Usuarios">
+        <PropertyRef Name="Tipo_Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Fin_e">
+    <End Role="Tb_Estados" Type="Self.Tb_Estados" Multiplicity="1" />
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Estados">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Financiacion">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Fin_v">
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="1" />
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ventas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Financiacion">
+        <PropertyRef Name="Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Post">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Post" Type="Self.Tb_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Post">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Pro_e">
+    <End Role="Tb_Proveedores" Type="Self.Tb_Proveedores" Multiplicity="1" />
+    <End Role="Tb_Entradas" Type="Self.Tb_Entradas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Proveedores">
+        <PropertyRef Name="Identificacion" />
+      </Principal>
+      <Dependent Role="Tb_Entradas">
+        <PropertyRef Name="Proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_producto_detalle">
+    <End Role="Tb_Productos" Type="Self.Tb_Productos" Multiplicity="0..1" />
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Productos">
+        <PropertyRef Name="Codigo_producto" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rec">
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="1" />
+    <End Role="Tb_Recuperar_contraseña" Type="Self.Tb_Recuperar_contraseña" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuarios">
+        <PropertyRef Name="Identificacion" />
+      </Principal>
+      <Dependent Role="Tb_Recuperar_contraseña">
+        <PropertyRef Name="Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rol_u">
+    <End Role="Tb_Rol_Usuarios" Type="Self.Tb_Rol_Usuarios" Multiplicity="1" />
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Rol_Usuarios">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Usuarios">
+        <PropertyRef Name="Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_suc_e">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Entradas" Type="Self.Tb_Entradas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Entradas">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_suc_u">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="0..1" />
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Usuarios">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Suc_v">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="0..1" />
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_ventas">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_sucursal_detalle">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tb_DetalleTranslados_Translados">
+    <End Role="Translados" Type="Self.Translados" Multiplicity="1" />
+    <End Role="Tb_DetalleTranslados" Type="Self.Tb_DetalleTranslados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Translados">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_DetalleTranslados">
+        <PropertyRef Name="Translado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tipo_producto">
+    <End Role="Tb_Tipo_Producto" Type="Self.Tb_Tipo_Producto" Multiplicity="0..1" />
+    <End Role="Tb_Productos" Type="Self.Tb_Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Producto">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Productos">
+        <PropertyRef Name="Tipo_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Translados_Tb_Sucursales">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Translados" Type="Self.Translados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Translados">
+        <PropertyRef Name="Sucursal_Destino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Activos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ActProveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="Cel" Type="varchar" Mode="In" />
+    <Parameter Name="Tel" Type="varchar" Mode="In" />
+    <Parameter Name="TipoDoc" Type="int" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Nit" Type="int" Mode="In" />
+    <Parameter Name="Nom1" Type="varchar" Mode="In" />
+    <Parameter Name="Nom2" Type="varchar" Mode="In" />
+    <Parameter Name="Apell1" Type="varchar" Mode="In" />
+    <Parameter Name="Apell2" Type="varchar" Mode="In" />
+    <Parameter Name="Empresa" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ActSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Apodo" Type="varchar" Mode="In" />
+    <Parameter Name="Prefijo" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="NIT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Actualiza_producto_Sucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sucur" Type="varchar" Mode="In" />
+    <Parameter Name="strock_min" Type="int" Mode="In" />
+    <Parameter Name="stock_max" Type="int" Mode="In" />
+    <Parameter Name="valor_venta" Type="float" Mode="In" />
+    <Parameter Name="valor_mayor" Type="float" Mode="In" />
+    <Parameter Name="valor_especial" Type="float" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ActualizarAbono" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ActualizarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Identificacion" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre1" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido1" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido2" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Celular" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Ciudad" Type="varchar" Mode="In" />
+    <Parameter Name="Cupo_activo" Type="char" Mode="In" />
+    <Parameter Name="Solicitud" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo_Documento_Codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ActualizarEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ActualizarProducto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CodigoProducto" Type="varchar" Mode="In" />
+    <Parameter Name="Ref" Type="varchar" Mode="In" />
+    <Parameter Name="Desc" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="TipoProd" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ActualizarTipoProd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ActualizarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+    <Parameter Name="TipoDoc" Type="int" Mode="In" />
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+    <Parameter Name="Nom1" Type="varchar" Mode="In" />
+    <Parameter Name="Nom2" Type="varchar" Mode="In" />
+    <Parameter Name="Apell1" Type="varchar" Mode="In" />
+    <Parameter Name="Apell2" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Rol" Type="int" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Anular_Abono" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Anular_Credito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Aumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="cambiar_estado_cliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="cambiar_estado_credito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="cambiar_estado_Financiacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="cambiar_estado_producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="cambiar_estado_proveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="cambiar_estado_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="cambiar_estado_Ventas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Campos_prov" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Cantidad_Detalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="sucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Cantidad_Detalle_baja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="sucursal" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Cargar_Cuota" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="financiacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Cargar_Dian" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Cargar_Iva" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Cargar_Venta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Venta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CargarCUpo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Clientes_estado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="ComprobanteAbonoCredito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ComprobanteAbonoCuota" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ComprobanteAbonoCuota1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ComprobanteAbonoCuotas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ComprobanteTraslado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ComprobanteTraslados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consul_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Abonos_Cuotas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Baja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Consultar_Credito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Identificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Cuotas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="consultar_Det_TrasladoPDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Detalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="venta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Detalle_Entrada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="entrada" Type="int" Mode="In" />
+  </Function>
+  <Function Name="consultar_detalle_pdf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="consultar_detalle_permiso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="permiso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="consultar_detalle_permiso1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="permiso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Detalle_Traslado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="traslado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="consultar_Detalle_TrasladoPDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Dian" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Entrada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Consultar_permiso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Consultar_Productos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Consultar_Translado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Consultar_Venta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ConsultarClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Identificacion" Type="int" Mode="In" />
+    <Parameter Name="Nombre1" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ConsultarFinanciacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Identificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarProveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ConsultarUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ConsultarVentas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Identificacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ContarConfiguracion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="contardetalle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="contardetalleTraslados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="conusltar_detalle_baja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Cuota" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Editar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="editar_rol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarTipoDoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="elminar_permisos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Estado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="estado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="estaRegistrado_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="facturaCrédito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="FacturaFinanciacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="FacturaFinanciacionPDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Fecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Inactivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertarClientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Identificacion" Type="bigint" Mode="In" />
+    <Parameter Name="Nombre1" Type="varchar" Mode="In" />
+    <Parameter Name="nombre2" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido1" Type="varchar" Mode="In" />
+    <Parameter Name="Apellido2" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Celular" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Ciudad" Type="varchar" Mode="In" />
+    <Parameter Name="Cupo_activo" Type="char" Mode="In" />
+    <Parameter Name="Solicitud" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo_Documento_Codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Llamar_Sucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="llenap_entrada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sucur" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="llenarp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="mora" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="pdf" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="PDFtraslados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Precio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+    <Parameter Name="Sucursal" Type="int" Mode="In" />
+    <Parameter Name="Valor" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="precio_Entrada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="varchar" Mode="In" />
+    <Parameter Name="suc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Recargos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Reg_Credito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="estado" Type="int" Mode="In" />
+    <Parameter Name="num_pagare" Type="int" Mode="In" />
+    <Parameter Name="cuota_inicial" Type="int" Mode="In" />
+    <Parameter Name="total_adeudado" Type="float" Mode="In" />
+    <Parameter Name="venta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Reg_Financiacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+    <Parameter Name="estado" Type="int" Mode="In" />
+    <Parameter Name="num_pagare" Type="int" Mode="In" />
+    <Parameter Name="tiempo" Type="varchar" Mode="In" />
+    <Parameter Name="aumento" Type="float" Mode="In" />
+    <Parameter Name="total" Type="float" Mode="In" />
+    <Parameter Name="Cuota_inicial" Type="float" Mode="In" />
+    <Parameter Name="Total_Adeudado" Type="float" Mode="In" />
+    <Parameter Name="venta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegDetalleProdSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo_detalle" Type="varchar" Mode="In" />
+    <Parameter Name="StockMin" Type="int" Mode="In" />
+    <Parameter Name="StockMax" Type="int" Mode="In" />
+    <Parameter Name="ValorVenta" Type="float" Mode="In" />
+    <Parameter Name="ValorMayor" Type="float" Mode="In" />
+    <Parameter Name="ValorEspecial" Type="float" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="Producto" Type="varchar" Mode="In" />
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegDetalleTraslado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="ProductoSucursal" Type="varchar" Mode="In" />
+    <Parameter Name="Precio" Type="float" Mode="In" />
+    <Parameter Name="Translado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegDetalleVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="Descuento" Type="float" Mode="In" />
+    <Parameter Name="Venta" Type="int" Mode="In" />
+    <Parameter Name="precio" Type="float" Mode="In" />
+    <Parameter Name="Producto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistraDetaleTraslado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+    <Parameter Name="precio" Type="float" Mode="In" />
+    <Parameter Name="traslado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Registrar_baja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="sucursal" Type="varchar" Mode="In" />
+    <Parameter Name="fecha" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Registrar_Detalle_baja" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="baja" Type="int" Mode="In" />
+    <Parameter Name="motivo" Type="varchar" Mode="In" />
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Registrar_detalle_producto_sucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stock_min" Type="int" Mode="In" />
+    <Parameter Name="stock_max" Type="int" Mode="In" />
+    <Parameter Name="valor_venta" Type="float" Mode="In" />
+    <Parameter Name="valor_mayor" Type="float" Mode="In" />
+    <Parameter Name="valor_especial" Type="float" Mode="In" />
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+    <Parameter Name="producto" Type="varchar" Mode="In" />
+    <Parameter Name="sucursal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="Registrar_Producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Referencia" Type="varchar" Mode="In" />
+    <Parameter Name="descripcion" Type="varchar" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo_producto" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="int" Mode="In" />
+    <Parameter Name="precio" Type="float" Mode="In" />
+  </Function>
+  <Function Name="registrar_sucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="varchar" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+    <Parameter Name="apodo" Type="varchar" Mode="In" />
+    <Parameter Name="prefijo" Type="varchar" Mode="In" />
+    <Parameter Name="telefono" Type="varchar" Mode="In" />
+    <Parameter Name="direccion" Type="varchar" Mode="In" />
+    <Parameter Name="nit" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="registrarAbono" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="credito" Type="int" Mode="In" />
+    <Parameter Name="valor" Type="float" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarAbonoCuota" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cuotas" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="valorAbono" Type="float" Mode="In" />
+    <Parameter Name="recargo" Type="float" Mode="In" />
+  </Function>
+  <Function Name="RegistrarDetalleEntrada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cantidad" Type="int" Mode="In" />
+    <Parameter Name="precio" Type="float" Mode="In" />
+    <Parameter Name="entrada" Type="int" Mode="In" />
+    <Parameter Name="productoSucursal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarDian" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="int" Mode="In" />
+    <Parameter Name="Resolucion" Type="varchar" Mode="In" />
+    <Parameter Name="FechaInicio" Type="date" Mode="In" />
+    <Parameter Name="FechaFin" Type="date" Mode="In" />
+    <Parameter Name="NumInicio" Type="int" Mode="In" />
+    <Parameter Name="NumFin" Type="int" Mode="In" />
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarEntrada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="int" Mode="In" />
+    <Parameter Name="Fecha" Type="date" Mode="In" />
+    <Parameter Name="Total" Type="float" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+    <Parameter Name="Proveedor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegistrarEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarPermiso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rol" Type="int" Mode="In" />
+    <Parameter Name="modulo" Type="int" Mode="In" />
+    <Parameter Name="accion" Type="int" Mode="In" />
+    <Parameter Name="permiso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="registrarPermisoDEnegado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegistrarPost" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="NumActual" Type="int" Mode="In" />
+    <Parameter Name="Resolucion" Type="varchar" Mode="In" />
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarRol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarTipoProd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="registrarTraslado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="date" Mode="In" />
+    <Parameter Name="sucursal_origen" Type="varchar" Mode="In" />
+    <Parameter Name="sucursal_destino" Type="varchar" Mode="In" />
+    <Parameter Name="total" Type="float" Mode="In" />
+  </Function>
+  <Function Name="RegistrarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="TipoDoc" Type="int" Mode="In" />
+    <Parameter Name="Sucursal" Type="int" Mode="In" />
+    <Parameter Name="Nom1" Type="varchar" Mode="In" />
+    <Parameter Name="Nom2" Type="varchar" Mode="In" />
+    <Parameter Name="Apell1" Type="varchar" Mode="In" />
+    <Parameter Name="Apell2" Type="varchar" Mode="In" />
+    <Parameter Name="Contr" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Rol" Type="int" Mode="In" />
+    <Parameter Name="estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegistrarVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="int" Mode="In" />
+    <Parameter Name="Fecha" Type="datetime" Mode="In" />
+    <Parameter Name="Total" Type="float" Mode="In" />
+    <Parameter Name="iva" Type="float" Mode="In" />
+    <Parameter Name="Cliente" Type="int" Mode="In" />
+    <Parameter Name="Sucursal" Type="varchar" Mode="In" />
+    <Parameter Name="Sub" Type="float" Mode="In" />
+  </Function>
+  <Function Name="RegProveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="Cel" Type="varchar" Mode="In" />
+    <Parameter Name="Tel" Type="varchar" Mode="In" />
+    <Parameter Name="TipoDoc" Type="int" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="Nit" Type="int" Mode="In" />
+    <Parameter Name="Nom1" Type="varchar" Mode="In" />
+    <Parameter Name="Nom2" Type="varchar" Mode="In" />
+    <Parameter Name="Apell1" Type="varchar" Mode="In" />
+    <Parameter Name="Apell2" Type="varchar" Mode="In" />
+    <Parameter Name="Empresa" Type="varchar" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Apodo" Type="varchar" Mode="In" />
+    <Parameter Name="Prefijo" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="NIT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="RegTipoDoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codigo" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="reporteProductosGlobal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="reporteProductosSucursal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="ReporteVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReporteVenta1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReporteVenta2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RepVentaDetal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SacarAcciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sacarid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sacarModulos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sacarRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="tienepermiso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Controller" Type="varchar" Mode="In" />
+    <Parameter Name="Accion" Type="varchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="tipo_doc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Usuario_estado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="Validar_Cliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="bigint" Mode="In" />
+  </Function>
+  <EntityContainer Name="ADMISModelStoreContainer">
+    <EntitySet Name="Acciones" EntityType="Self.Acciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detalle_permiso" EntityType="Self.Detalle_permiso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modulos" EntityType="Self.Modulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Abonos" EntityType="Self.Tb_Abonos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_AbonosCuotas" EntityType="Self.Tb_AbonosCuotas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_bajas" EntityType="Self.Tb_bajas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Clientes" EntityType="Self.Tb_Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Configuraciones" EntityType="Self.Tb_Configuraciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Creditos" EntityType="Self.Tb_Creditos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Cuotas" EntityType="Self.Tb_Cuotas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Detalle_Bajas" EntityType="Self.Tb_Detalle_Bajas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Detalle_Entrada" EntityType="Self.Tb_Detalle_Entrada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Detalle_Producto_Sucursal" EntityType="Self.Tb_Detalle_Producto_Sucursal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_DetalleTranslados" EntityType="Self.Tb_DetalleTranslados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_DetalleVenta" EntityType="Self.Tb_DetalleVenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Dian" EntityType="Self.Tb_Dian" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Entradas" EntityType="Self.Tb_Entradas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Estados" EntityType="Self.Tb_Estados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Financiacion" EntityType="Self.Tb_Financiacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Permiso" EntityType="Self.Tb_Permiso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Permiso_Denegado_Roles" EntityType="Self.Tb_Permiso_Denegado_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Post" EntityType="Self.Tb_Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Productos" EntityType="Self.Tb_Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Proveedores" EntityType="Self.Tb_Proveedores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Recuperar_contraseña" EntityType="Self.Tb_Recuperar_contraseña" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Rol_Usuarios" EntityType="Self.Tb_Rol_Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Sucursales" EntityType="Self.Tb_Sucursales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Tipo_Documento" EntityType="Self.Tb_Tipo_Documento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Tipo_Producto" EntityType="Self.Tb_Tipo_Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_Usuarios" EntityType="Self.Tb_Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tb_ventas" EntityType="Self.Tb_ventas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Translados" EntityType="Self.Translados" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tb_Abonos__Cuota__4222D4EF" Association="Self.FK__Tb_Abonos__Cuota__4222D4EF">
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+      <End Role="Tb_AbonosCuotas" EntitySet="Tb_AbonosCuotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Abonos__Cuota__4316F928" Association="Self.FK__Tb_Abonos__Cuota__4316F928">
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+      <End Role="Tb_AbonosCuotas" EntitySet="Tb_AbonosCuotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Cuotas__Finan__46E78A0C" Association="Self.FK__Tb_Cuotas__Finan__46E78A0C">
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Cuotas__Finan__47DBAE45" Association="Self.FK__Tb_Cuotas__Finan__47DBAE45">
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_Cli_v" Association="Self.Fk_Cli_v">
+      <End Role="Tb_Clientes" EntitySet="Tb_Clientes" />
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cre_e" Association="Self.fk_Cre_e">
+      <End Role="Tb_Estados" EntitySet="Tb_Estados" />
+      <End Role="Tb_Creditos" EntitySet="Tb_Creditos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cre_v" Association="Self.fk_Cre_v">
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+      <End Role="Tb_Creditos" EntitySet="Tb_Creditos" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_CreditoAbono" Association="Self.Fk_CreditoAbono">
+      <End Role="Tb_Creditos" EntitySet="Tb_Creditos" />
+      <End Role="Tb_Abonos" EntitySet="Tb_Abonos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cuo_f" Association="Self.fk_Cuo_f">
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_D_entrada" Association="Self.Fk_D_entrada">
+      <End Role="Tb_Entradas" EntitySet="Tb_Entradas" />
+      <End Role="Tb_Detalle_Entrada" EntitySet="Tb_Detalle_Entrada" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Detalle_permiso_Acciones" Association="Self.FK_Detalle_permiso_Acciones">
+      <End Role="Acciones" EntitySet="Acciones" />
+      <End Role="Detalle_permiso" EntitySet="Detalle_permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Detalle_permiso_Modulos" Association="Self.FK_Detalle_permiso_Modulos">
+      <End Role="Modulos" EntitySet="Modulos" />
+      <End Role="Detalle_permiso" EntitySet="Detalle_permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Detalle_permiso_Tb_Permiso_Denegado_Roles" Association="Self.FK_Detalle_permiso_Tb_Permiso_Denegado_Roles">
+      <End Role="Tb_Permiso_Denegado_Roles" EntitySet="Tb_Permiso_Denegado_Roles" />
+      <End Role="Detalle_permiso" EntitySet="Detalle_permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Detalle_permiso_Tb_Rol_Usuarios" Association="Self.FK_Detalle_permiso_Tb_Rol_Usuarios">
+      <End Role="Tb_Rol_Usuarios" EntitySet="Tb_Rol_Usuarios" />
+      <End Role="Detalle_permiso" EntitySet="Detalle_permiso" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DetV_Ven" Association="Self.fk_DetV_Ven">
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+      <End Role="Tb_DetalleVenta" EntitySet="Tb_DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Dian" Association="Self.fk_Dian">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Dian" EntitySet="Tb_Dian" />
+    </AssociationSet>
+    <AssociationSet Name="fk_doc" Association="Self.fk_doc">
+      <End Role="Tb_Tipo_Documento" EntitySet="Tb_Tipo_Documento" />
+      <End Role="Tb_Clientes" EntitySet="Tb_Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_doc_p" Association="Self.fk_doc_p">
+      <End Role="Tb_Tipo_Documento" EntitySet="Tb_Tipo_Documento" />
+      <End Role="Tb_Proveedores" EntitySet="Tb_Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="fk_doc_u" Association="Self.fk_doc_u">
+      <End Role="Tb_Tipo_Documento" EntitySet="Tb_Tipo_Documento" />
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Fin_e" Association="Self.fk_Fin_e">
+      <End Role="Tb_Estados" EntitySet="Tb_Estados" />
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Fin_v" Association="Self.fk_Fin_v">
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Post" Association="Self.fk_Post">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Post" EntitySet="Tb_Post" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Pro_e" Association="Self.fk_Pro_e">
+      <End Role="Tb_Proveedores" EntitySet="Tb_Proveedores" />
+      <End Role="Tb_Entradas" EntitySet="Tb_Entradas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_producto_detalle" Association="Self.Fk_producto_detalle">
+      <End Role="Tb_Productos" EntitySet="Tb_Productos" />
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rec" Association="Self.fk_Rec">
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+      <End Role="Tb_Recuperar_contraseña" EntitySet="Tb_Recuperar_contraseña" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rol_u" Association="Self.fk_rol_u">
+      <End Role="Tb_Rol_Usuarios" EntitySet="Tb_Rol_Usuarios" />
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_suc_e" Association="Self.fk_suc_e">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Entradas" EntitySet="Tb_Entradas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_suc_u" Association="Self.fk_suc_u">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Suc_v" Association="Self.fk_Suc_v">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_sucursal_detalle" Association="Self.Fk_sucursal_detalle">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tb_DetalleTranslados_Translados" Association="Self.FK_Tb_DetalleTranslados_Translados">
+      <End Role="Translados" EntitySet="Translados" />
+      <End Role="Tb_DetalleTranslados" EntitySet="Tb_DetalleTranslados" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tipo_producto" Association="Self.fk_tipo_producto">
+      <End Role="Tb_Tipo_Producto" EntitySet="Tb_Tipo_Producto" />
+      <End Role="Tb_Productos" EntitySet="Tb_Productos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Translados_Tb_Sucursales" Association="Self.FK_Translados_Tb_Sucursales">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Translados" EntitySet="Translados" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

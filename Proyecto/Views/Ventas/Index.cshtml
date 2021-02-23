@@ -1,0 +1,250 @@
+﻿@model Proyecto.Models.viewModelVenta
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>VENTAS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                   Consultar venta
+                </header>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary" onclick="vent(1)">
+                        <input type="radio" name="Activo" id="Activo"> Activos
+                    </label>
+                    <label class="btn btn-primary" onclick="vent(2)">
+                        <input type="radio" name="Anulada" id="Anulada" autocomplete="off"> Anuladas
+                    </label>
+                </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                        <th>
+                            <label>Código</label>
+                        </th>
+                        <th>
+                            <label>Fecha</label>
+                        </th>
+                        <th>
+                            <label>Cliente</label>
+                        </th>
+                        <th>
+                            <label>Sucursal</label>
+                        </th>
+                        <th>
+                            <label>Iva</label>
+                        </th>
+                        <th>
+                            <label>Sub Total</label>
+                        </th>
+                        <th>
+                            <label>Total</label>
+                        </th>
+                        <th class="text-center">Acciones
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Codigo
+                                    </td>
+                                    <td>
+                                        @item.Fecha
+                                    </td>
+                                    <td>
+                                        @item.Cliente
+                                    </td>
+                                    <td>
+                                        @item.Sucursal
+                                    </td>
+                                    <td>
+                                        @item.Iva
+                                    </td>
+                                    <td>
+                                        @item.Sub_Total
+                                    </td>
+                                    <td>
+                                        @item.Total
+                                    </td>
+                                    <td class="text-center">
+                                        @if (ViewBag.buton == "1")
+                                        {
+                                        <button Type="button" id="@item.Codigo" onclick="validar(@item.Codigo)" class="btn btn-info"><span class="fa fa-trash-o"></span><span class="hidden-xs hidden-sm hidden-md"></span></button>
+                                        <button type="button" id="com" onclick="comp(@item.Codigo)" class="btn btn-primary">Comprobante</button>
+                                        }
+                                        <button type="button" id="det" onclick="detalle(@item.Codigo)" class="btn btn-primary">Detalles</button>
+
+                                    </td>
+                                </tr>
+                            }
+                            
+
+                    </table>
+                    <br />
+                    <table class="table-ventas" >
+                        <thead>
+                        <th>
+                            <label>Cantidad</label>
+                        </th>
+                        <th>
+                            <label>Descuento</label>
+                        </th>
+                        <th>
+                            <label>Producto</label>
+                        </th>
+                        <th>
+                            <label>Precio</label>
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody id="Detalle">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    @*window.onload = function () {
+        document.getElementById("16").style.display = 'none';
+    console.log(@ViewBag.res)
+        var count = @ViewBag.res;
+        console.log(count)
+        var control = 0;
+        var aumen = 1;
+        for(var i = 0; i < count; i++ ){
+            if(control < count){
+                if(document.getElementById(aumen) != null){
+                    document.getElementById(aumen).style.display = 'none';
+                    aumen++;
+                    control ++;
+                }else{
+                    aumen++;
+                } 
+            }else{
+                i = count;
+            }           
+        }
+    }*@
+
+    function detalle(elemento) {
+        var dato = {'elemento': elemento};
+        var tr = 0;
+        for(var i = 0; i < 2; i++){
+            var tab = document.getElementById(tr);
+            console.log(tab)
+            if(tab != null){
+                tab.remove();
+                tr++;
+                i--;
+            }else{
+                i = 2;
+            }
+        }
+            
+        $.ajax({
+            'url': '/Ventas/Consultar',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(dato)
+        }).done(function (respuesta) {
+            var html = '';
+            for(var i = 0; i < respuesta.length; i++){
+                var num = respuesta[i].Descuento.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+                num = num.split('').reverse().join('').replace(/^[\.]/, '');
+                var num1 = respuesta[i].Precio.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+                num1 = num1.split('').reverse().join('').replace(/^[\.]/, '');
+                html += '<tr id="' + i + '">';
+                html += '<td style="width: 250px;padding-left: 20px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Cantidad + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td style="width: 250px;padding-left: 0px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label>' + num + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td style="width: 250px;padding-left: 0px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label">' + respuesta[i].ProductoSucursal + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td style="width: 250px;padding-left: 0px;">';
+                html += '<div class="col-md-4" style="padding-left: 0px;">';
+                html += '<label>' + num1 + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '</tr>';
+            }
+            $('#Detalle').append(html);
+            
+        })
+    }
+
+    function vent(id) {
+        location.href = '/Ventas/Index/' + id + '';
+    }
+
+    function comp(id){
+                var datos = { 'cod': id };
+                $.ajax({
+                    'url': '/Ventas/pdf',
+                    'dataType': 'json',
+                    'type': 'post',
+                    'contentType': "application/json; charset=utf-8",
+                    'data': JSON.stringify(datos)
+                }).done(function (respuesta) {
+                    swal({title: "¡COMPROBANTE GENERADO!", type: "success", showConfirmButton: true},function () { location.href = '/Tb_ventas/Index' });
+                })
+    }
+
+    function validar(Id) {
+        swal({
+            title: "¡Cambiar estado!",
+            text: "¿Esta seguro de anular la venta?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sí, estoy seguro",
+            closeOnConfirm: false
+        },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Ventas/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                console.log(Respuesta);
+                swal({ title: "¡Anulada!", text: "Venta anulada", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+            })
+        })
+    }
+
+</script>

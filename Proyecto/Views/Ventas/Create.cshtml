@@ -1,0 +1,594 @@
+﻿@model Proyecto.Models.viewModelVenta
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>VENTAS</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar venta</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cod">Código *</label>
+                            @Html.EditorFor(model => model.Tb_ventas.Codigo, new { htmlAttributes = new { @class = "form-control validate-character", @Value = ViewBag.Codigo, id = "Codigo", disabled = "disabled" } })
+                            @Html.ValidationMessageFor(model => model.Tb_ventas.Codigo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels" Text="fech">Fecha *</label>
+                        @Html.EditorFor(model => model.Tb_ventas.Fecha, new { htmlAttributes = new { @class = "form-control", @Value = ViewBag.fecha, id = "fecha", disabled = "disabled" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Fecha, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels" Text="suc">Sucursal *</label>
+                        @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control", disabled = "disabled" })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Sucursal, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels" Text="cliente">Cliente *</label>
+                        <select class="selectpicker form-control selectcliente" data-live-search="true" id="Cliente" name="Cliente" tabindex="-98">
+                            <option value="0">Seleccione un cliente...</option>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <option value="@item.Identificacion" data-subtext="@item.Identificacion">@item.Nombre1</option>
+                            }
+                        </select>
+
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Cliente, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels" Text="iva">Iva *</label>
+                        @Html.EditorFor(model => model.Tb_ventas.iva, new { htmlAttributes = new { @class = "form-control validate-character", @Value = ViewBag.iva, id = "iva", disabled = "disabled", @onchange = "format(this)" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.iva, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels" Text="tot">Total *</label>
+                        @Html.EditorFor(model => model.Tb_ventas.Total, new { htmlAttributes = new { @class = "form-control validate-character", disabled = "disabled", @onchange = "format(this)" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Total, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels" Text="st">Sub Total *</label>
+                        @Html.EditorFor(model => model.Tb_ventas.Sub_Total, new { htmlAttributes = new { @class = "form-control validate-character", disabled = "disabled", @onchange = "format(this)" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Sub_Total, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="widget-body" style="width: 962px; padding-left: 3px; margin-right: 900px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 250px; padding-left: 15px;">Producto</th>
+                                    <th style="padding-right: 56px;padding-left: 20px;">Cantidad</th>
+                                    <th style="padding-right: 56px;padding-left: 20px;">Descuento</th>
+                                    <th style="padding-right: 56px;padding-left: 20px;" id="drow">
+                                        <select class="selectpicker form-control selectprecio" onchange="cambiar_producto()" id="tipoventa" >
+                                            <option value="Normal">Precio de Venta</option>
+                                            <option value="Mayor">Precio al por mayor</option>
+                                            <option value="No">Precio Especial</option>
+                                        </select>
+                                    </th>
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <input class="form-control text-box single-line cuadro" data-val="true" data-val-number="The field producto must be a number." data-val-required="El campo producto es obligatorio." id="Prod" name="Producto" onblur="Produc()" type="text" value="">
+                                                @Html.ValidationMessageFor(model => model.Tb_Detalle.ProductoSucursal, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="width: 250px;">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Tb_Detalle.Cantidad, new { htmlAttributes = new { @class = "form-control validate-character cuadro", @onblur = "cantidad()"} })
+                                                @Html.ValidationMessageFor(model => model.Tb_Detalle.Cantidad, "", new { @class = "text-danger", id="Cant" })
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td style="width: 250px;">
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Tb_Detalle.Descuento, new { htmlAttributes = new { @class = "form-control validate-character cuadro", @onkeyup = "format(this)" } })
+                                            @Html.ValidationMessageFor(model => model.Tb_Detalle.Descuento, "", new { @class = "text-danger" })
+                                        </div>
+                                    </td>
+                                    <td style="width: 250px;">
+                                        <div class="col-md-10">
+                                            <input class="form-control text-box single-line cuadro" data-val="true" data-val-number="The field iva must be a number." data-val-required="El campo iva es obligatorio." onchange="format(this)"  id="Precio" name="Precio" type="number" value="" disabled>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-right"><input onclick="pasarDetalle(); calcular(); montar()" value="Agregar" type="button" class="btn btn-primary" style="background-color:limegreen; color:white; border-color:limegreen;"></td>
+                                </tr>
+                            </tbody>
+                            <tbody id="Detalle"></tbody>
+                        </table>
+                    </div>
+
+                    @*<div class="form-group ">
+                        <div class="col-md-offset-5 col-md-6 col-lg-6">
+                            <input onclick="Registrar_Detalle()" type="button" value="REGISTRAR" class="btn btn-primary" />
+                            <input onclick="Registrar_Detalle_Financiacion()" type="button" value="FINANCIAR" class="btn btn-primary" />
+                            <input onclick="Registrar_Detalle_Credito()" type="button" value="CREDITO" class="btn btn-primary" />
+                        </div>
+                    </div>*@
+
+                    <div class="form-inline">
+                        <div class="col-md-offset-4 form-group col-md-12">
+                            <input onclick="Registrar_Detalle()" type="button" value="Registrar" class="btn btn-primary" />
+                            <input onclick="Registrar_Detalle_Financiacion()" type="button" value="Financiar" class="btn btn-primary" />
+                            <input onclick="Registrar_Detalle_Credito()" type="button" value="Crédito" class="btn btn-primary" />
+                            <input type="reset" value="Limpiar" class="btn btn-default" />
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+<script type="text/javascript">
+    function Produc() {
+        var prod = $('#Prod').val();
+        if (prod != "") {
+            var suc = $('#Sucursal').val();
+            var datos = { 'id': prod, 'suc': suc };
+            $.ajax({
+                'url': '/Ventas/Produc',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(datos)
+            }).done(function (respuesta) {
+                if (respuesta == "1") {
+                    cambiar_producto();
+                } else {
+                    alertify.error("El producto no esta registrado");
+                    $('#Prod').focus();
+                }
+            })
+        }
+    }
+
+    function cambiar_producto() {
+        var estadoActual = document.getElementById("Precio");
+        if ($('#tipoventa').val() != "No") {
+            estadoActual.disabled = true;
+            if ($('#Prod').val() != "") {
+                var id = $('#Prod').val();
+                var tipo = $('#tipoventa').val();
+                var codigo = id.replace("'", "-")
+                $('#Prod').val(codigo);
+                var suc = $('#Sucursal').val();
+                var datos = { 'id': codigo, 'suc': suc, 'tipo': tipo };
+                $.ajax({
+                    'url': '/Ventas/Precio',
+                    'dataType': 'json',
+                    'type': 'post',
+                    'contentType': "application/json; charset=utf-8",
+                    'data': JSON.stringify(datos)
+                }).done(function (respuesta) {
+                    var num = respuesta[0].toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+                    num = num.split('').reverse().join('').replace(/^[\.]/, '');
+                    $('#Precio').val(num);
+                    $('#Tb_Detalle_Cantidad').focus();
+                })
+            }
+        } else {
+            estadoActual.disabled = false;
+            $('#Precio').val("");
+        }
+    }
+
+    var array = { detalle: [], venta: '', sub_total: '', fecha: '', sucursal: '', cliente: '', iva: '', total: '', id: '' };
+    function pasarDetalle() {
+        if ($('#Prod').val() != "") {
+            if ($('#Tb_Detalle_Cantidad').val() != "") {
+                if ($('#Tb_Detalle_Cantidad').val() >= 1) {
+                    if ($('#Precio').val() != "") {
+                        var actu = 0;
+                        var producto_cod = $('#Prod').val();
+                        for (var i = 0; i < array.detalle.length; i++) {
+                            if (array.detalle[i].ProductoSucursal == producto_cod) {
+                                actu = 1;
+                            }
+                        }
+                        if (actu == 0) {
+                            var cantidad = $('#Tb_Detalle_Cantidad').val().replace();
+                            var producto = $('#Prod').val().replace();
+                            var Descuento = $('#Tb_Detalle_Descuento').val();
+                            if (Descuento == 0) {
+                                Descuento = 0;
+                            }
+                            var precio = $('#Precio').val();
+                            var html = '';
+                            html += '<tr id="Hola">';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += producto;
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + cantidad + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + Descuento + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label id="Pre">' + precio + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;>';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '</tr>';
+                            if (Descuento != "0")
+                            {
+                                Descuento = Descuento.toString().replace(".", "");
+                            }
+                            array.detalle.push({ 'Producto': producto, 'ProductoSucursal': producto_cod, 'Cantidad': cantidad, 'precio': precio.replace(".", ""), 'Descuento': Descuento });
+                            console.log(array.detalle[0].Descuento);
+                            $('#Detalle').append(html);
+                            $('#Prod').val('');
+                            $('#Tb_Detalle_Cantidad').val('');
+                            $('#Tb_Detalle_Descuento').val('');
+                            $('#Precio').val('');
+                            calcular();
+                        } else {
+                            actualizar();
+                        }
+                    } else {
+                        alertify.error("Debe seleccionar un precio");
+                        $('#tipoventa').focus();
+                    }
+                } else {
+                    alertify.error("Cantidad debe ser mayor a 0");
+                    $('#Tb_Detalle_Cantidad').focus();
+                }
+            } else {
+                alertify.error("Debe ingresar la cantidad");
+                $('#Tb_Detalle_Cantidad').focus();
+            }
+        } else {
+            alertify.error("Debe ingresar un producto");
+            $('#Prod').focus();
+        }
+    }
+
+    function format(input) {
+        var num = input.value.replace(/\./g, '');
+        if (!isNaN(num)) {
+            num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num = num.split('').reverse().join('').replace(/^[\.]/, '');
+            input.value = num;
+        }
+
+        else {
+            alert('Solo se permiten numeros');
+            input.value = input.value.replace(/[^\d\.]*/g, '');
+        }
+    }
+
+    function cantidad() {
+        var cant = parseFloat($("#Tb_Detalle_Cantidad").val());
+            var id = $('#Prod').val();
+            var suc = $('#Sucursal').val();
+            var lo = cant;
+            for (var i = 0; i < array.detalle.length; i++) {
+                if (array.detalle[i].ProductoSucursal == id) {
+                    lo = parseFloat(parseFloat(lo) + parseFloat(array.detalle[i].Cantidad));
+                }
+            }
+            var datos = { 'id': id, 'suc': suc, 'cantidad': lo };
+            $.ajax({
+                'url': '/Ventas/Cantidad',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(datos)
+            }).done(function (respuesta) {
+                var can = parseFloat(respuesta[0]);
+                if (can < 0) {
+                    alertify.error('Cantidad insuficiente');
+                    setTimeout(function () { $("#Tb_Detalle_Cantidad").focus(); }, 1);
+                }
+            })
+        }
+
+    
+
+    function calcularTotalDetalle() {
+        var total1 = 0;
+        array.total.each(function (index) {
+            var valor = $(this).val();
+            total1 += parseFloat(valor);
+        })
+        $('#Tb_ventas_Total').val(total1);
+    }
+   
+    function quitarElemento(elemento) {
+        var e = $(elemento).parent().parent();
+        $(e).remove();
+        var valores = "";
+        $(elemento).parents("tr").find("td").each(function () {
+            valores += $(this).html() + "\n";
+            return false;
+        });
+        $("#Prod").val(valores);
+        valor = $("#Prod").val();
+        $("#Prod").val('');
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].ProductoSucursal == valor) {
+                var arrays = { detalle: [], venta: '', sub_total: '', fecha: '', sucursal: '', cliente: '', iva: '', total: '', id: '' };
+                arrays.detalle = array.detalle;
+                array = { detalle: [], venta: '', sub_total: '', fecha: '', sucursal: '', cliente: '', iva: '', total: '', id: '' };
+                for (var i = 0; i < arrays.detalle.length; i++) {
+                    if (arrays.detalle[i].ProductoSucursal != valor) {
+                        array.detalle[i] = arrays.detalle[i];
+                    }
+                }
+            }
+        }
+        calcular();
+        
+    }
+
+    function actualizar() {
+        var producto_cod = $('#Prod').val();
+        var cantidad = $('#Tb_Detalle_Cantidad').val();
+        var Descuento = $('#Tb_Detalle_Descuento').val();
+        var precio = $('#Precio').val();
+        var posi = 0;
+        $("#Hola").remove();
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].ProductoSucursal == producto_cod) {
+                posi = i;
+            }
+        }
+        array.detalle[posi].Cantidad = (parseFloat(array.detalle[posi].Cantidad) + parseFloat(cantidad));
+        array.detalle[posi].Descuento = (parseFloat(array.detalle[posi].Descuento) + parseFloat(Descuento.replace(".", "")));
+        var num = array.detalle[posi].Descuento.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+        num = num.split('').reverse().join('').replace(/^[\.]/, '');
+        var num1 = array.detalle[posi].precio.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+        num1 = num1.split('').reverse().join('').replace(/^[\.]/, '');
+        for (var i = 0; i < array.detalle.length; i++) {
+            var html = '';
+            html += '<tr id="Hola">';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += array.detalle[i].Producto;
+            html += '</td>';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<label>' + array.detalle[i].Cantidad + '</label>';
+            html += '</div>';
+            html += '</td>';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<label>' + num + '</label>';
+            html += '</div>';
+            html += '</td>';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<label id="Pre">' + num1 + '</label>';
+            html += '</div>';
+            html += '</td>';
+            html += '<td style="width: 250px;>';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+            html += '</div>';
+            html += '</td>';
+            html += '</tr>';
+            $('#Detalle').append(html);
+        }
+        $('#Prod').val('');
+        $('#Tb_Detalle_Cantidad').val('');
+        $('#Tb_Detalle_Descuento').val('');
+        $('#Precio').val('');
+    }
+
+    function calcular() {
+        var Total = 0;
+        for (var i = 0; i < array.detalle.length; i++) {
+            Total += parseFloat((parseFloat(array.detalle[i].Cantidad) * parseFloat(array.detalle[i].precio)) - parseFloat(array.detalle[i].Descuento));
+        }
+        $('#Tb_ventas_Total').val(parseFloat(Total));
+        $.ajax({
+            'url': '/Ventas/Iva',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify()
+        }).done(function (respuesta) {
+            $('#iva').val(parseFloat((respuesta[0]) * parseFloat(Total)) / 100);
+            sub_total = parseFloat(parseFloat(Total) - ((parseFloat(Total) * parseFloat(respuesta[0])) / 100));
+            $('#Tb_ventas_Sub_Total').val(parseFloat(sub_total));
+            var num = $('#Tb_ventas_Total').val();
+            num = num.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num = num.split('').reverse().join('').replace(/^[\.]/, '');
+            $('#Tb_ventas_Total').val(num.replace("..","."));
+            var num1 = $('#Tb_ventas_Sub_Total').val();
+            num1 = num1.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num1 = num1.split('').reverse().join('').replace(/^[\.]/, '');
+            $('#Tb_ventas_Sub_Total').val(num1);
+            var num2 = $('#iva').val();
+            num2 = num2.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num2 = num2.split('').reverse().join('').replace(/^[\.]/, '');
+            $('#iva').val(num2);
+        })
+    }
+
+    function Registrar_Detalle() {
+        console.log($("#Cliente").val());
+        if (($("#Cliente").val() != 0) || (array.detalle.length != 0)) {
+            if ($("#Cliente").val() != 0) {
+                if (array.detalle.length != 0) {
+                    array.venta = $("#Codigo").val();
+                    array.fecha = $("#fecha").val();
+                    array.cliente = $("#Cliente").val();
+                    array.sucursal = $("#Sucursal").val();
+                    array.iva = $("#iva").val();
+                    array.total = $("#Tb_ventas_Total").val();
+                    array.sub_total = $("#Tb_ventas_Sub_Total").val();
+                    array.id = 1;
+                    $.ajax({
+                        'url': '/Ventas/Create',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(array)
+                    }).done(function (respuesta) {
+                        swal({ title: "¡REGISTRO EXITOSO!", text: "Venta registrada correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Ventas/Index' });
+                    })
+                } else {
+                    alertify.error("Debe agregar minimo un detalle");
+                }
+            } else {
+                alertify.error("Seleccione un cliente");
+            }
+        } else {
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+        }
+    }
+
+    function Registrar_Detalle_Financiacion() {
+        if (($("#Cliente").val() != 0) || (array.detalle.length != 0)) {
+            if ($("#Cliente").val() != 0) {
+                if (array.detalle.length != 0) {
+                    array.venta = $("#Codigo").val();
+                    array.fecha = $("#fecha").val();
+                    array.cliente = $("#Cliente").val();
+                    array.sucursal = $("#Sucursal").val();
+                    array.iva = $("#iva").val();
+                    array.total = $("#Tb_ventas_Total").val();
+                    array.sub_total = $("#Tb_ventas_Sub_Total").val();
+                    array.id = 2;
+                    $.ajax({
+                        'url': '/Ventas/Cliente',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(array)
+                    }).done(function (respuesta) {
+                        if (respuesta == 9) {
+                            $.ajax({
+                                'url': '/Ventas/Create',
+                                'dataType': 'json',
+                                'type': 'post',
+                                'contentType': "application/json; charset=utf-8",
+                                'data': JSON.stringify(array)
+                            }).done(function (respuesta) {
+                                location.href = '/Tb_Financiacion/Create/' + array.venta + '';
+                            })
+                        } else {
+                            if (respuesta == 1) {
+                                alertify.error("El cliente no tiene cupo disponible")
+                            } else {
+                                alertify.error("El Cliente debe ser minorista")
+                            }
+                        }
+                    })
+                } else {
+                    alertify.error("Debe agregar minimo un detalle");
+                }
+            } else {
+                alertify.error("Seleccione un cliente");
+            }
+        } else {
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+        }
+    }
+
+    function Registrar_Detalle_Credito() {
+        if (($("#Cliente").val() != 0) || (array.detalle.length != 0)) {
+            if ($("#Cliente").val() != 0) {
+                if (array.detalle.length != 0) {
+                    array.venta = $("#Codigo").val();
+                    array.fecha = $("#fecha").val();
+                    array.cliente = $("#Cliente").val();
+                    array.sucursal = $("#Sucursal").val();
+                    array.iva = $("#iva").val();
+                    array.total = $("#Tb_ventas_Total").val();
+                    array.sub_total = $("#Tb_ventas_Sub_Total").val();
+                    array.id = 2;
+                    $.ajax({
+                        'url': '/Ventas/Cliente',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(array)
+                    }).done(function (respuesta) {
+                        if (respuesta == 8) {
+                            $.ajax({
+                                'url': '/Ventas/Create',
+                                'dataType': 'json',
+                                'type': 'post',
+                                'contentType': "application/json; charset=utf-8",
+                                'data': JSON.stringify(array)
+                            }).done(function (respuesta) {
+                                location.href = '/Tb_Creditos/Create';
+                            })
+                        } else {
+                            if (respuesta == 2) {
+                                alertify.error("El cliente no tiene cupo disponible")
+                            } else {
+                                alertify.error("El cliente debe ser mayorista")
+                            }
+                        }
+                    })
+                } else {
+                    alertify.error("Debe agregar minimo un detalle");
+                }
+            } else {
+                alertify.error("Seleccione un cliente");
+            }
+        } else {
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+        }
+
+    }
+
+
+</script>

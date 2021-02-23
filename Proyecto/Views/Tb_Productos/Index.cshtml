@@ -1,0 +1,167 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Productos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>PRODUCTOS</h1>
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<br />
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar  producto
+                </header>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary" onclick="acti('Activo')">
+                        <input type="radio" name="Activo" id="Activo"> Activos
+                    </label>
+                    <label class="btn btn-primary" onclick="acti('Inactivo')">
+                        <input type="radio" name="Inactivo" id="Inactivo" autocomplete="off"> Inactivos
+                    </label>
+                </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Código</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Descripción</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Estado</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Cantidad</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Precio entrada</label>
+                                </th>
+
+                                <th class="text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Codigo_producto
+                                    </td>
+                                    <td>
+                                        @item.Descripcion
+                                    </td>
+                                    <td>
+                                        @item.Estado
+                                    </td>
+                                    <td>
+                                        @item.cantidad
+                                    </td>
+                                    <td>
+                                        @item.Precio
+                                    </td>
+
+
+
+                                    <td class="text-right "><button class="btn btn-primary" style="border-color:white;"><span></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink(" Editar", "Edit", new { id = item.Codigo_producto })</button>
+                                        <button Type="button" onclick="return validar('@item.Codigo_producto', '@item.Estado')" class="btn btn-info";>
+                                            <span class="fa fa-trash-o"></span>
+                                            <span class="hidden-xs hidden-sm hidden-md"></span>
+                                            </button></td>
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function validar(Id, estado) {
+        if (estado == 'Activo') {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Esta seguro de inhabilitar el producto?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí,estoy seguro",
+                closeOnConfirm: false
+
+
+            },
+        function () {
+            var dato = { 'Id': Id }
+            $.ajax({
+                'url': '/Tb_Productos/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(dato)
+            }).done(function (Respuesta) {
+                console.log(Respuesta);
+                swal({ title: "¡Desactivado!", text: "Producto Inhabilitado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000))
+            })
+
+
+        });
+        } else {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Esta seguro de activar el producto?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí,estoy seguro",
+                closeOnConfirm: false
+
+
+            },
+        function () {
+            var dato = { 'Id': Id }
+            $.ajax({
+                'url': '/Tb_Productos/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(dato)
+            }).done(function (Respuesta) {
+                console.log(Respuesta);
+                swal({ title: "¡Activado!", text: "Producto activado", type: "success", showConfirmButton: false }, setTimeout("location.reload()", 1000))
+            })
+
+
+        });
+        }
+    }
+
+    function acti(element) {
+        location.href = '/Tb_Productos/Index/' + element + '';
+    }
+
+
+</script>

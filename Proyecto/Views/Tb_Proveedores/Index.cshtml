@@ -1,0 +1,169 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Proveedores>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>PROVEEDORES</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<br />
+
+<div class="container-fluid col-md-12">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar proveedores
+                </header>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary" onclick="acti()">
+                        <input type="radio" name="Activo" id="Activo"> Activos
+                    </label>
+                    <label class="btn btn-primary" onclick="inac()">
+                        <input type="radio" name="Inactivo" id="Inactivo" autocomplete="off"> Inactivos
+                    </label>
+                </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Identificación </label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Nombres </label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Apellidos </label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Celular </label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Estado </label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">NIT </label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Empresa </label>
+                                </th>
+                                <th class="text-center">Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.Dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Identificacion
+                                    </td>
+                                    <td>
+                                        @item.Nombre1 @item.Nombre2
+                                    </td>
+
+                                    <td>
+                                        @item.Apellido1 @item.Apellido2
+                                    </td>
+                                    <td>
+                                        @item.Celular
+                                    </td>
+                                    <td>
+                                        @item.Estado
+                                    </td>
+                                    <td>
+                                        @item.Nit
+                                    </td>
+                                    <td>
+                                        @item.Empresa
+                                    </td>
+
+
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-primary">@Html.ActionLink("Editar", "Edit", new { id = item.Identificacion })</button>
+                                        <button Type="button" onclick="return validar('@item.Identificacion','@item.Estado')" class="btn btn-info">
+                                            <span class="fa fa-trash-o"></span>
+                                            <span class="hidden-xs hidden-sm hidden-md"></span>
+
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function validar(Id, Estado) {
+        if (Estado == "Activo") {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Esta seguro de inhabilitar el proveedor?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, estoy seguro",
+                closeOnConfirm: false
+            },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Proveedores/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                swal({ title: "¡Desactivado!", text: "Proveedor inhabilitado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+            });
+        });
+        } else {
+            swal({
+                title: "¿Activar?",
+                text: "¿Esta seguro de activar el proveedor?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Si, estoy seguro",
+                closeOnConfirm: false
+            },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Proveedores/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                swal({ title: "¡Activado!", text: "Proveedor Activado", type: "success", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+            });
+        });
+        }
+    }
+
+    function acti() {
+        location.href = '/Tb_Proveedores/Index/';
+    }
+    function inac() {
+        location.href = '/Tb_Proveedores/Index/' + 1 + '';
+    }
+
+</script>

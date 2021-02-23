@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Tipo_Documento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>TIPO DOCUMENTOZ<small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    CLIENTES
+                </header>
+                <div class="widget-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Nombre)
+                                </th>
+
+                                <th class="text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+
+                                    <td class="text-right"><button class="btn btn-transparent btn-xs"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Edit", "Edit", new { id = item.Codigo })</button> <div class="btn btn-transparent btn-transparent-danger btn-xs"><span class="fa fa-trash-o"></span>  <span class="hidden-xs hidden-sm hidden-md">@Html.ActionLink("Delete", "Delete", new { id = item.Codigo })</span></div></td>
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+

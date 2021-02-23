@@ -1,0 +1,84 @@
+﻿@model Proyecto.Models.Tb_Rol_Usuarios
+@using Proyecto.Tags;
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>Roles</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<script>
+
+    var corrercto = "@ViewBag.edito";
+    if (corrercto == "edito") {
+
+
+        swal({ title: "¡REGISTRO EXITOSO!", text: "Rol Actualizado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Rol_Usuarios/Index' });
+
+    }
+
+
+</script>
+
+
+<script>
+
+    window.onload =  function ()
+    {
+
+        $('#Codigo').removeAttr("disabled");
+
+       
+    }
+
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Editar Rol</div>
+                <div class="widget-body">
+                    <div class="form">
+                        <hr />
+                       
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.Codigo, htmlAttributes: new { @class = "control-label col-md-2"})
+
+                            @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control",  } })
+                            @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

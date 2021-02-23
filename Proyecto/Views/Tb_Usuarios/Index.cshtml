@@ -1,0 +1,212 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Usuarios>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>USUARIOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<div class="container-fluid col-md-12">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar usuario
+                </header>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active" onclick="acti()">
+                        <input type="radio" name="Activo" id="Activo"> Activos
+                    </label>
+                    <label class="btn btn-primary" onclick="inac()">
+                        <input type="radio" name="Inactivo" id="Inactivo" autocomplete="off"> Inactivos
+                    </label>
+                </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Identificación</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Nombres</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Apellidos</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Rol</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Estado</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Correo</label>
+                                </th>
+
+                                <th>
+                                    <label id="lblid" class="control-label">Sucursal</label>
+                                </th>
+
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.Dato)
+                        {
+                            <tr>
+                                <td>
+                                   @item.Identificacion
+                                </td>
+                                <td>
+                                    @item.Nombre2
+                                </td>
+                                <td>
+                                    @item.Apellido2
+                                </td>
+                                <td>
+                                    @item.Nombre
+                                </td>
+                                <td>
+                                    @item.estado
+                                </td>
+                                <td>
+                                    @item.Email
+                                </td>
+                                <td>
+                                    @item.Apodo
+                                </td>
+
+                                <td class="text-center"><button class="btn btn-primary" style="border-color:white;"><span></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Editar", "Edit", new { id = item.Identificacion })</button>
+                                <button Type="button" onclick="validar('@item.Identificacion', '@item.estado');" class="btn btn-info" style="border-color:white; "><span class="fa fa-trash-o"></span> <span class="hidden-xs hidden-sm hidden-md"></span></button></td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+         </div>
+    </div>
+<script type="text/javascript">
+    function validar(Id, Estado) {
+        if (Estado == "Activo") {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Esta seguro de inhabilitar el usuario?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sí, estoy seguro",
+                closeOnConfirm: false
+            },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Usuarios/inactivo',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                if (Respuesta == "1") {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Usuarios/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Desactivado!", text: "Usuario inhabilitado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                } else {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Usuarios/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Activado!", text: "Usuario habilitado", type: "success", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                }
+            })
+
+        });
+        } else {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Esta seguro de activar el usuario?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#398EE3",
+                confirmButtonText: "Sí, estoy seguro",
+                closeOnConfirm: false
+
+
+            },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Usuarios/inactivo',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                if (Respuesta == "1") {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Usuarios/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Desactivado!", text: "Usuario inhabilitado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                } else {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Usuarios/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Activado!", text: "Usuario habilitado", type: "success", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                }
+            })
+
+        });
+        }
+    }
+    function acti() {
+        location.href = '/Tb_Usuarios/Index/';
+    }
+    function inac() {
+        location.href = '/Tb_Usuarios/Index/' + 1 + '';
+    }
+
+</script>

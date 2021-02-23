@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Configuraciones>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CONFIGURACIONES</h1>
+
+            </div>
+
+
+        </div>
+    </div>
+</header>
+
+<br />
+
+<form method="post">
+    @Html.AntiForgeryToken()
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-12 col-xs-12">
+                <div class="widget widget-default">
+                    <header class="widget-header">
+                        Consultar Configuracion
+                    </header>
+                    
+                    <div class="widget-body">
+                        <table class="table col-md-5 col-sm-7  display" id="myTable" cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                   
+                                    <th><label id="lblid" class="control-label">AumentoFinanciacion</label></th>
+
+                                    <th> <label id="lblid" class="control-label">Tiempo</label></th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Iva</label>
+                                    </th>
+
+                                    <th>
+                                        <label id="lblid" class="control-label">Recargo</label>
+                                    </th>
+
+                                    <th>
+                                        <label id="lblid" class="control-label">MontoMinorista</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">MontoMayorista</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">CupoCliente</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">SucursalPrincipal</label>
+                                    </th>
+
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.AumentoFinanciacion)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Tiempo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.IVA)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Recargo)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MontoMinorista)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.MontoMayorista)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CupoCliente)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Sucursal_pricipal)
+                                        </td>
+                                        <td class="text-right ">
+                                            <button type="button" class="btn btn-primary">@Html.ActionLink("Editar", "Edit", new { id = item.Codigo })</button>
+                                        </td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>

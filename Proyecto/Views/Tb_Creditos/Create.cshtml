@@ -1,0 +1,161 @@
+﻿@model Proyecto.Models.Tb_Creditos
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CRÉDITOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar crédito</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="codigo">Código *</label>
+                            
+                                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control validate-character", @Value = ViewBag.Codigo } })
+                                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+                           
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="fecha">Fecha *</label>
+                           
+                                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" , @Value = ViewBag.Fecha } })
+                                @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                          
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="estado">Estado *</label>
+                          
+                                @Html.DropDownList("Estado", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                           
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numpag">Número Pagaré *</label>
+                          
+                                @Html.EditorFor(model => model.Numero_Pagare, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                                @Html.ValidationMessageFor(model => model.Numero_Pagare, "", new { @class = "text-danger" })
+                            </div>
+                      
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cuota">Cuota Inicial </label>
+                           
+                                @Html.EditorFor(model => model.Cuota_inicial, new { htmlAttributes = new { @class = "form-control validate-character", @onkeyup = "tot()" } })
+                                @Html.ValidationMessageFor(model => model.Cuota_inicial, "", new { @class = "text-danger" })
+                          
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="totalAdeud">Total Adeudado *</label>
+                            
+                                @Html.EditorFor(model => model.Total_Adeudado, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                                @Html.ValidationMessageFor(model => model.Total_Adeudado, "", new { @class = "text-danger" })
+                        
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="codigo">Venta *</label>
+                           
+                                @Html.DropDownList("Venta", null, htmlAttributes: new { @class = "form-control" , @onchange = "venta()"})
+                                @Html.ValidationMessageFor(model => model.Venta, "", new { @class = "text-danger" })
+                           
+                        </div>
+                        <br />
+                       
+                        <div class="form-inline">
+                            <div class="col-md-offset-5 form-group col-md-12">
+                                <input type="submit" onclick="return regis()" value="Registrar" class="btn btn-primary" />
+                                <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                    }
+<script type="text/javascript">
+    window.onload = function venta() {
+        var id = $('#Venta').val();
+        var datos = { 'id': id };
+        $.ajax({
+            'url': '/Tb_Creditos/Venta',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(datos)
+        }).done(function (respuesta) {
+            var num = respuesta[0].Total.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num = num.split('').reverse().join('').replace(/^[\.]/, '');
+            $('#Total_Adeudado').val(num);
+        })
+    }
+
+    function tot() {
+        var id = $('#Venta').val();
+        var datos = { 'id': id };
+        $.ajax({
+            'url': '/Tb_Creditos/Venta',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(datos)
+        }).done(function (respuesta) {
+            var num = respuesta[0].Total.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+            num = num.split('').reverse().join('').replace(/^[\.]/, '');
+            $('#Total_Adeudado').val(num);
+            total();
+        })
+    }
+
+    function total() {
+        if ($("#Cuota_inicial").val() != "") {
+            var Cuota = parseFloat($("#Cuota_inicial").val().replace(".", ""));
+        } else {
+            var Cuota = 0;
+        }
+        var Total = parseFloat($("#Total_Adeudado").val().replace(".", ""));
+        console.log(Total, Cuota);
+        var deuda = parseFloat((parseFloat(Total)) - (parseFloat(Cuota)));
+        var num = deuda.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+        num = num.split('').reverse().join('').replace(/^[\.]/, '');
+        $("#Total_Adeudado").val(num);
+        if ($("#Total_Adeudado").val() == "NaN") {
+            $("#Total_Adeudado").val(0);
+        }
+        var num2 = Cuota.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+        num2 = num2.split('').reverse().join('').replace(/^[\.]/, '');
+        $("#Cuota_inicial").val(num2);
+    }
+    function regis() {
+        $("#Cuota_inicial").val($("#Cuota_inicial").val().replace(".", ""));
+        $("#Total_Adeudado").val($("#Total_Adeudado").val().replace(".", ""));
+        swal({ title: "¡REGISTRO EXITOSO!", text: "Credito registrado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Creditos/Index' });
+    }
+</script>          
+

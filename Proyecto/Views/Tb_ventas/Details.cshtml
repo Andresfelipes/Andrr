@@ -1,0 +1,59 @@
+﻿@model Proyecto.Models.Tb_ventas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_ventas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.iva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.iva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Clientes.Nombre1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Clientes.Nombre1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Sucursales.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

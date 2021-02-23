@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Sucursales>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>SUCURSALES</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-11 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                   Consultar sucursal
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th><label id="lblid" class="control-label">Código</label></th>
+                                <th><label id="lblid" class="control-label">Nombre </label></th>
+                                <th><label id="lblid" class="control-label">Prefijo</label></th>
+                                <th><label id="lblid" class="control-label">Teléfono</label></th>
+                                <th><label id="lblid" class="control-label">Dirección</label></th>                                
+                                <th class="text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+@foreach (var item in Model)
+{
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Codigo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Nombre) / @Html.DisplayFor(modelItem => item.Apodo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Prefijo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Direccion)</td>
+                                
+                                <td class="text-right ">
+                                    <button class="btn btn-primary" style="border-color:white;"><span class="fa">
+                                   </span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Editar", "Edit", new {id = item.Codigo })</button>
+                                    <button Type="button" class="btn btn-info"><span class="fa fa-trash-o"></span><span class="hidden-xs hidden-sm hidden-md"></span></button>
+                            </tr>
+                           
+}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        

@@ -1,0 +1,158 @@
+﻿@model Proyecto.Models.viewModelTraslados
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>TRASLADOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                  Consultar traslado
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                        <th>
+                            <label>Código</label>
+                        </th>
+                        <th>
+                            <label>Fecha</label>
+                        </th>
+                        
+                        <th>
+                            <label>Sucursal Origen</label>
+                        </th>
+                        <th>
+                            <label>Sucursal Destino</label>
+                        </th>
+                        <th>
+                            <label>Aumento</label>
+                        </th>
+                        <th>
+                            <label>Total</label>
+                        </th>
+                        <th>
+                            <label>Acciones</label>
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Codigo
+                                    </td>
+                                    <td>
+                                        @item.Fecha
+                                    </td>
+                                    
+                                    <td>
+                                        @item.Sucursal_origen
+                                    </td>
+                                    <td>
+                                        @item.Sucursal_Destino
+                                    </td>
+                                    <td>
+                                        @item.Total
+                                    </td>
+                                    <td>
+                                        <button type="button" onclick="detalle(@item.Codigo)" class="btn btn-primary">Detalles</button>
+                                        <button Type="button" class="btn btn-info"><span class="fa fa-trash-o"></span><span class="hidden-xs hidden-sm hidden-md"></span></button>
+                                    </td>
+
+                                         @*<button type="button" onclick="pdf()" class="btn btn-primary">pdf</button>*@
+                                   </tr>
+                            }
+                            
+
+                    </table>
+
+                    <br />
+                    <table class="table-ventas" >
+                        <thead>
+                        <th>
+                            <label>Cantidad</label>
+                        </th>
+                        <th style="padding-left: 20px;">
+                            <label>Producto</label>
+                        </th>
+                        <th style="padding-left: 20px;">
+                            <label>Precio</label>
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody id="Detalle">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function detalle(elemento) {
+        var dato = {'elemento': elemento};
+        $("#Hola").remove();
+        $.ajax({
+            'url': '/Traslados/Consultar',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(dato)
+        }).done(function (respuesta) {
+            console.log(respuesta.length);
+            var html = '';
+            for(var i = 0; i < respuesta.length; i++){
+                html += '<tr id="Hola">';
+                html += '<td style="width: 250px;padding-left: 20px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Cantidad + '</label>';
+                html += '</div>';
+                html += '<td style="width: 250px;padding-left: 20px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label">' + respuesta[i].ProductoSucursal + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td style="width: 250px;padding-left: 20px;">';
+                html += '<div class="col-md-4" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Precio + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '</tr>';
+            }
+            $('#Detalle').append(html);
+            
+        })
+    }
+
+    function pdf() {
+        $.ajax({
+            'url': '/Traslados/pdfs',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify()
+        }).done(function (respuesta) {
+            console.log(respuesta.length);
+            location.href = 'Traslados/Index/';
+        })
+    }
+</script>

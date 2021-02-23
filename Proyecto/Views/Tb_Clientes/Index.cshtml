@@ -1,0 +1,390 @@
+﻿@model Proyecto.Models.Tb_Clientes
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //(Html.BeginForm("Delete", "Tb_ClientesController", FormMethod.Post))
+}
+
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CLIENTES </h1>
+               
+            </div>
+
+               
+        </div>
+    </div>
+</header>
+
+<br />
+
+                    <form method="post" >
+                        @Html.AntiForgeryToken()
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="widget widget-default">
+                                        <header class="widget-header">
+                                            Consultar cliente
+                                        </header>
+                                        <div class="btn-group" data-toggle="buttons">
+                                            <label class="btn btn-primary" onclick="acti()">
+                                                <input type="radio" name="Activo" id="Activo"> Activos
+                                            </label>
+                                            <label class="btn btn-primary" onclick="inac()">
+                                                <input type="radio" name="Inactivo" id="Inactivo" autocomplete="off"> Inactivos
+                                            </label>
+                                        </div>
+                                        <div class="widget-body">
+                                            <table class="table col-md-5 col-sm-7  display"  id="myTable" cellpadding="0" cellspacing="0" border="0" >
+                                                <thead>
+                                                    <tr>
+                                                        <th><label id="lblid" class="control-label" >Identificación</label></th>
+                                                        <th><label id="lblid" class="control-label">Nombres</label></th>
+                                                        <th> <label id="lblid" class="control-label">Apellidos</label></th>
+                                                        <th>
+                                                            <label id="lblid" class="control-label">Tipo Cliente</label>
+                                                        </th>
+
+                                                        <th>
+                                                            <label id="lblid" class="control-label">Estado</label>
+                                                        </th>
+
+                                                        <th>
+                                                            <label id="lblid" class="control-label">Cupo </label>
+                                                        </th>
+                                                        
+                                                        <th class="text-center">Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var item in ViewBag.dato)
+                                                    {
+                                                        <tr>
+                                                            <td>
+                                                                @item.Identificacion
+                                                            </td>
+                                                            <td>
+                                                                @item.Nombre1 @item.Nombre2
+                                                            </td>
+                                                            <td>
+                                                                @item.Apellido1 @item.Apellido2
+                                                            </td>
+
+                                                            <td>
+                                                                @item.TipoCliente
+                                                            </td>
+                                                            <td>
+                                                                @item.Estado
+                                                            </td>
+
+                                                            <td>
+                                                                @item.Cupo_activo
+                                                            </td>
+
+                                                            <td class="text-center">
+                                                            
+                                                            <button type="button" class="btn btn-primary">@Html.ActionLink("Editar","Edit",new { id = item.Identificacion })</button>
+                                                            <button Type="button" onclick="return validar('@item.Identificacion','@item.Estado')" class="btn btn-info"><span class="fa fa-trash-o"></span><span class="hidden-xs hidden-sm hidden-md"></span></button></td>
+
+                                                        </tr>
+
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                                    
+                                </div>
+                    </form>
+
+
+
+@*<div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="modalCliente">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">EDITAR CLIENTE</h4>
+      </div>
+        
+        <div class="modal-body">
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">IDENTIFICACION</label>
+                @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control" } })
+
+            </div>
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels " Text="IDENTIFICACION">TIPO DE DOCUMENTO</label>
+                @Html.DropDownList("Tipo_Documento_Codigo", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Tipo_Documento_Codigo, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">PRIMER NOMBRE</label>
+                @Html.EditorFor(model => model.Nombre1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombre1, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">SEGUNDO NOMBRE </label>
+                @Html.EditorFor(model => model.Nombre2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nombre2, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">APELLIDO-1</label>
+                @Html.EditorFor(model => model.Apellido1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Apellido1, "", new { @class = "text-danger" })
+            </div>
+
+
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">APELLIDO-2</label>
+                @Html.EditorFor(model => model.Apellido2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Apellido2, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">TELEFONO</label>
+                @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">CELULAR</label>
+                @Html.EditorFor(model => model.Celular, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Celular, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">EMAIL</label>
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">ESTADO CLIENTE</label>
+                @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">TIPO DE CLIENTE</label>
+                @Html.EditorFor(model => model.TipoCliente, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TipoCliente, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">DIRECCION</label>
+                @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group col-md-6">
+                <label id="lblid" class="control-label labels" Text="IDENTIFICACION">CIUDAD</label>
+                @Html.EditorFor(model => model.Ciudad, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Ciudad, "", new { @class = "text-danger" })
+            </div>
+        
+        <div class="form-group col-md-6">
+            <label id="lblid" class="control-label labels" Text="IDENTIFICACION">FINANCIACIONES ACTIVAS</label>
+            @Html.EditorFor(model => model.Cupo_activo, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Cupo_activo, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group col-md-6">
+            <label id="lblid" class="control-label labels" Text="IDENTIFICACION">#SOLICITUD</label>
+            @Html.EditorFor(model => model.Solicitud, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Solicitud, "", new { @class = "text-danger" })
+        </div>
+      
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>*@
+
+<script>
+    $(document).ready(function () {
+        $(".boton").click(function () {
+
+            var valores = "";
+            $(this).parents("tr").find("td").each(function () {
+                valores += $(this).html() + "\n";
+            });
+
+            alert(valores);
+        });
+    });
+
+    function modal(id) {
+        console.log(id);
+    }
+
+    function acti() {
+        location.href = '/Tb_Clientes/Index/';
+    }
+    function inac() {
+        location.href = '/Tb_Clientes/Index/' + 1 + '';
+    }
+
+    function validar(Id, Estado) {
+        if (Estado == "Activo") {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Está seguro de inhabilitar el cliente?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Si, estoy seguro",
+                closeOnConfirm: false
+
+
+            },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Clientes/inactivo',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                if (Respuesta == "1") {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Clientes/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Desactivado!", text: "Cliente inhabilitado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                } else {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Clientes/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Activado!", text: "Cliente habilitado", type: "success", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                }
+            })
+
+        });
+        } else {
+            swal({
+                title: "¡Cambiar estado!",
+                text: "¿Esta seguro de activar el cliente?",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#398EE3",
+                confirmButtonText: "Si, estoy seguro",
+                closeOnConfirm: false
+
+
+            },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Clientes/inactivo',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                if (Respuesta == "1") {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Clientes/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Desactivado!", text: "Cliente inhabilitado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                } else {
+                    var dato = { 'Id': Id }
+                    $.ajax({
+                        'url': '/Tb_Clientes/Delete',
+                        'dataType': 'json',
+                        'type': 'post',
+                        'contentType': "application/json; charset=utf-8",
+                        'data': JSON.stringify(dato)
+                    }).done(function (Respuesta) {
+                        console.log(Respuesta);
+                        swal({ title: "¡Activado!", text: "Cliente habilitado", type: "success", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                    })
+                }
+            })
+
+        });
+        }
+    }
+
+  //  function validar(Id) {
+  //      var ok
+  //      console.log(Id);
+  //      swal({
+  //          title: "INACTIVAR CLIENTE?",
+  //          text: "ESTA SEGURO DE INACTIVAR ESTE CLIENTE",
+  //          type: "warning",
+  //          showCancelButton: true,
+  //          confirmButtonColor: "#DD6B55",
+  //          confirmButtonText: "SI,ESTOY SEGURO",
+  //          cancelButtonText: "NO,CANCELAR!",
+  //          closeOnConfirm: false,
+  //          closeOnCancel: false
+  //      },
+  //function (isConfirm) {
+  //        var ok = true;
+  //        var dato = { 'Id': Id }
+  //        if (isConfirm) {
+  //            $.ajax({
+  //                'url': 'Tb_Clientes/Delete',
+  //                'dataType': 'json',
+  //                'type': 'post',
+  //                'contentType': "application/json; charset=utf-8",
+  //                'data': JSON.stringify(dato)
+  //            }).done(function (Respuesta) {
+  //                if (Respuesta) {
+  //                    swal("INACTIVAR!", "AH INACTIVA EL CLIENTE", "success");
+  //                    ok = true;
+  //                }
+  //            })
+  //            ok = true;
+  //        } else {
+  //            swal("CANCELDOSS", " :)", "error");
+  //            ok = false;
+  //        }
+
+  //});
+  //    return ok;
+  //  }
+   
+    
+
+    
+</script>

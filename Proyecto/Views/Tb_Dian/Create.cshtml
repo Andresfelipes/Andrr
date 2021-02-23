@@ -1,0 +1,155 @@
+﻿@model Proyecto.Models.Tb_Dian
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>DIAN</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script src="~/Scripts/Validation.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid ">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+
+                <div class="widget-header">Registrar DIAN</div>
+                <div class="widget-body">
+                    <div class="form">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="COD">Código *</label>
+
+                            @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="resol">Resolución *</label>
+                            @Html.EditorFor(model => model.Resolucion, new { htmlAttributes = new { @class = "form-control " } })
+                            @Html.ValidationMessageFor(model => model.Resolucion, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="fInicio">Fecha Inicio *</label>
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field Fecha_inicio_vigencia must be a date." data-val-required="El campo Fecha_inicio_vigencia es obligatorio." id="Fecha_inicio_vigencia" name="Fecha_inicio_vigencia" type="date" value="">
+                            @Html.ValidationMessageFor(model => model.Fecha_inicio_vigencia, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="fFIN">Fecha Fin *</label>
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field Fecha_fin_vigencia must be a date." data-val-required="El campo Fecha_fin_vigencia es obligatorio." id="Fecha_fin_vigencia" name="Fecha_fin_vigencia" type="date" value="">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numInicio">Número De Inicio *</label>
+                            @Html.EditorFor(model => model.Num_inicio_rango, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Num_inicio_rango, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numFin">Número Finalización *</label>
+                            @Html.EditorFor(model => model.Num_fin_rango, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Num_fin_rango, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numAct">Número Actual *</label>
+                            @Html.EditorFor(model => model.Num_actual, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Num_actual, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="sucur">Sucursal</label>
+                            @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Sucursal, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="estado">Estado *</label>
+                            <select class="form-control" id="Estado" name="Estado">
+                                <option value="Activo">Activo</option>
+                                <option value="Vencido">Vencido</option>
+                                <option value="Anulado">Anulado</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-inline">
+                            <div class="col-md-offset-5 form-group col-md-12">
+                                <input  onclick="return valdian();" type="submit" value="Registrar" class="btn btn-primary" />
+                                <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+<script>
+
+
+    function valdian() {
+
+        valor = document.getElementById("Codigo").value;
+        //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+        nom1 = document.getElementById("Resolucion").value;
+        ape1 = document.getElementById("Fecha_inicio_vigencia").value;
+        ape2 = document.getElementById("Fecha_fin_vigencia").value;
+        tel = document.getElementById("Num_inicio_rango").value;
+        cel = document.getElementById("Num_fin_rango").value;
+        email = document.getElementById("Num_actual").value;
+        estado = document.getElementById("Sucursal").value;
+        nit = document.getElementById("Estado").value;
+      
+
+        //sucur = document.getElementById("Sucursal").selectedIndex;
+
+
+
+        //rol = document.getElementById("Rol").selectedIndex;
+
+
+        if (valor== "" ||   nom1== "" || ape1== "" ||ape2=="" || email== ""||tel=="" || cel=="" || email == "" || estado == ""  || nit =="" || empresa =="" || dire=="" ) {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+        } else {
+
+            var corrrect = "@ViewBag.correcto";
+            if (corrrect = "Se Registro Correctamente")
+                swal({ title: "¡REGISTRO EXITOSO!", text: "Dian registrada correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Dian/Index' });
+        }
+
+    }
+</script>
+

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Creditos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CREDITOS <small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    CLIENTES
+                </header>
+                <div class="widget-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Codigo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Fecha)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Numero_Pagare)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Cuota_inicial)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Total_Adeudado)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tb_Estados.Estado)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tb_ventas.Codigo)
+                                </th>
+
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Codigo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Fecha)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Numero_Pagare)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Cuota_inicial)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Total_Adeudado)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tb_Estados.Estado)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tb_ventas.Codigo)
+                                </td>
+
+                                <td class="text-right"><button class="btn btn-transparent btn-xs"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Editar", "Edit", new { id = item.Codigo }) </button> <div class="btn btn-transparent btn-transparent-danger btn-xs"><span class="fa fa-trash-o"></span>  <span class="hidden-xs hidden-sm hidden-md">@Html.ActionLink("Borrar", "Delete", new { id = item.Codigo })</span></div></td>                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+

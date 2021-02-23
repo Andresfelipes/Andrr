@@ -1,0 +1,114 @@
+﻿@model Proyecto.Models.Tb_Proveedores
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_Proveedores</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Tipo_Documento.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Tipo_Documento.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Identificacion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

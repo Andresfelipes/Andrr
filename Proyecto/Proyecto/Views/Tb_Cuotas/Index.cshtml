@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Cuotas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CUOTAS <small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<div class="container-fluid">
+
+<div class="row">
+
+    <div class="col-md-12 col-xs-12">
+        <div class="widget widget-default">
+            <header class="widget-header">
+                CLIENTES
+            </header>
+            <div class="widget-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Financiacion)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NumeroCuotas)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FechaInicio)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FechaLimite)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ValorCuotas)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CuotasAPagar)
+                            </th>
+                            <th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.FechaAPagar)
+                            </th>
+                            @Html.DisplayNameFor(model => model.Tb_Financiacion.Tiempo)
+                            </th>
+                            <th class="text-right">Acciones</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                 <td>
+                                    @Html.DisplayFor(modelItem => item.Financiacion)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NumeroCuotas)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FechaInicio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FechaLimite)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ValorCuotas)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CuotasAPagar)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FechaAPagar)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tb_Financiacion.Tiempo)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Editar", "Edit", new { id = item.Codigo }) |
+                                    @Html.ActionLink("Detalles", "Details", new { id = item.Codigo }) |
+                                    @Html.ActionLink("Borrar", "Delete", new { id = item.Codigo })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+        

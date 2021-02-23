@@ -1,0 +1,171 @@
+﻿@model Proyecto.Models.ViewModelsPermisos
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>DENEGAR PERMISOS<small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                   PERMISOS DENEGADOS
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label>Codigo</label>
+                                </th>
+
+                                
+                                <th>
+                                    <label>Acciones</label>
+                                </th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item
+                                    </td>
+
+                                    <td>
+                                        <button type="button" onclick="detalle(@item)" class="btn btn-primary">Detalles</button>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+
+                    <br />
+                    <div class="col-md-*">
+                        <table class="table-ventas ">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label>CODIGO</label>
+                                    </th>
+                                    <th>
+                                        <label>MODULO</label>
+                                    </th>
+                                    <th>
+                                        <label>ROL</label>
+                                    </th>
+                                    <th>
+                                        <label>ACCION</label>
+                                    </th>
+                                    <th>
+                                        <label>ACCIONES</label>
+                                    </th>
+                                </tr>
+
+                            </thead>
+                            <tbody id="Detalle"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function detalle(elemento) {
+        var dato = {'elemento': elemento};
+
+        $("#Hola").remove();
+        $.ajax({
+            'url': '/Permisos/CONSULTAR',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(dato)
+        }).done(function (respuesta) {
+
+                var html = '';
+                for(var i = 0; i < respuesta.length; i++){
+                
+                    html += '<tr id="Hola">';
+                    html += '<td style="width: 250px;padding-left: 0px;">';
+                    html += '<div class="col-md-10" style="padding-left: 0px;">';
+                    html += '<label">' + respuesta[i].id + '</label>';
+                    html += '</div>';
+                    html += '</td>';
+                    html += '<td style="width: 250px;padding-left: 20px;">';
+                    html += '<div class="col-md-10" style="padding-left: 0px;">';
+                    html += '<label>' + respuesta[i].Modulo + '</label>';
+                    html += '</div>';
+                    html += '<td style="width: 250px;padding-left: 0px;">';
+                    html += '<div class="col-md-10" style="padding-left: 0px;">';
+                    html += '<label">' + respuesta[i].Nombre + '</label>';
+                    html += '</div>';
+                    html += '</td>';
+                    html += '<td style="width: 250px;padding-left: 0px;">';
+                    html += '<div class="col-md-10" style="padding-left: 0px;">';
+                    html += '<label">' + respuesta[i].Accion + '</label>';
+                    html += '</div>';
+                    html += '</td>';
+                    html += '<td style="width: 250px;padding-left: 0px;">';
+                    html += '<div class="col-md-10" style="padding-left: 0px;">';
+                    html += '<button type="button" onclick="Elimiar(' + respuesta[i].id + ')"  class="btn btn-danger">Eliminar</button>'
+                    html += '</div>';
+                    html += '</td>';
+                    html += '</tr>';
+                }
+            
+            $('#Detalle').append(html);
+
+        })
+    
+    }
+    
+    function Elimiar(elemento1)
+    {
+        var elimiar = { 'elemento1': elemento1 };
+    
+        $("#Hola").remove();
+        $.ajax({
+            'url': '/Permisos/Delete',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(elimiar)
+        }).done(function (respuesta) {
+            console.log(respuesta);
+           
+
+            if(respuesta[0] == "1"){
+
+                location.href = '/Permisos/Index';
+            }else{
+                
+            }
+        })
+
+
+    }
+    
+
+</script>
+
+

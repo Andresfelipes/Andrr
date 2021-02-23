@@ -1,0 +1,100 @@
+﻿
+@model Proyecto.Models.Tb_Usuarios
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="notifications top-right"></div>
+<div class="wrapper">
+    <div class="page-wrapper">
+        <div id="login-hidden" style="display: none;">
+            <div class="log-in-wrapper">
+                <img style="display:block;margin:0 auto;"src="~/assent/img/logo-login.png" />
+                <h1 class="log-in-title">Iniciar sesión</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger", @style = "margin-left: -50px" })
+                    </div>
+                </div>
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group color">
+                        @Html.TextBoxFor(model => model.Email, new {@class= "form-control input-lg", @placeholder = "Ingrese su correo" })
+                        
+                    </div>
+                    <div class="form-group color">
+                        @Html.PasswordFor(model => model.Contraseña, new { @class = "form-control input-lg", @placeholder = "Ingrese su contraseña" })
+                    </div>
+
+                    <div class="form-group">
+                        @Html.CheckBoxFor(model => model.Recordarme, new { @checked="true"})
+                       
+                        <label for="remember_me" class="icheck-label">
+                           @Html.DisplayNameFor(model => model.Recordarme)
+                        </label>
+                    </div>
+                    
+                    <button class="btn btn-transparent btn-lg btn-transparent-primary btn-block" type="submit">Iniciar</button>
+                    
+                    <ul class="login-bottom-links">
+                        <li><a href="/Home/RecuperarContrasenia">¿Olvidó la contraseña?</a></li>
+                    </ul>
+
+                }
+                
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var mensaje = "@ViewBag.logmessaje";
+    var mensaje1 = "@ViewBag.emailError";
+    var messaje2 = "@ViewBag.inactivo";
+
+    if (mensaje != "") {
+        alertify.error(mensaje);
+
+    }
+
+
+    if (mensaje1 != "") {
+
+        alertify.error(mensaje1);
+    }
+
+    if (messaje2 != "") {
+
+        alertify.error(messaje2);
+    }
+
+</script>
+
+<script>
+
+
+ function valclog() {
+
+     valor = document.getElementById("Email").value;
+        //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+     nom1 = document.getElementById("Contraseña").value;
+  
+
+
+
+     if (valor== "" || nom1== ""   ) {
+
+            sweetAlert("¡ERROR!", "Todos los campos obligatorios!", "error");
+
+            return false;
+        }
+
+    }
+</script>

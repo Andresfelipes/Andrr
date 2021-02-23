@@ -1,0 +1,153 @@
+﻿@model Proyecto.Models.Tb_ventas
+
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>VENTAS<small>REGISTRAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels">Código</label>
+
+
+                            @Html.EditorFor(model => model.Codigo,  new { htmlAttributes = new { @class = "form-control" } } )
+                            @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels">Fecha</label>
+
+                        @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels">Sucursal</label>
+
+                        @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Sucursal, "", new { @class = "text-danger" })
+                    </div>
+
+
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels">Cliente</label>
+                        @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Cliente, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels">Iva</label>
+
+                        @Html.EditorFor(model => model.iva, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.iva, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label labels">Total</label>
+
+                        @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="widget-body" style="width: 962px; padding-left: 3px; margin-right: 900px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 250px; padding-left: 15px;">Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="col-md-10" style="padding-left: 0px;">
+                                            <select class="form-control" id="Producto" name="Producto">
+                                                <option value=""></option>
+                                            </select>
+                                            <span class="field-validation-valid" data-valmsg-for="Producto" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </td>
+                                    <td style="width: 250px;">
+                                        <div class="col-md-10" style="padding-left: 0px;">
+                                            <input class="form-control text-box single-line" data-val="true" data-val-number="The field Cantidad must be a number." data-val-required="El campo Cantidad es obligatorio." id="Cantidad" name="Cantidad" type="number" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="Cantidad" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </td>
+                                    <td style="width: 250px;">
+                                        <div class="col-md-10" style="padding-left: 0px;">
+                                            <input class="form-control text-box single-line" data-val="true" data-val-number="The field Descuento must be a number." id="Descuento" name="Descuento" type="number" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="Descuento" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </td>
+
+
+                                    <td class="text-right"><button class="btn btn-transparent btn-xs"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span><a href="/Tb_Clientes/Edit/1152">Editar</a></button> <div class="btn btn-transparent btn-transparent-danger btn-xs"><span class="fa fa-trash-o"></span>  <span class="hidden-xs hidden-sm hidden-md"><a href="/Tb_Clientes/Delete/1152">Borrar</a></span></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="col-md-offset-5 col-md-6 col-lg-6">
+                            <input type="submit" value="REGISTRAR" class="btn btn-primary" />
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+                    
+                    }
+
+
+                    <script>
+
+                        function hola() {
+
+
+
+                        }
+
+
+                    </script>
+
+
+                  

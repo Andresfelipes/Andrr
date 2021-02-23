@@ -1,0 +1,204 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Cuotas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CUOTAS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<div class="container-fluid">
+
+<div class="row">
+
+    <div class="col-md-12 col-xs-12">
+        <div class="widget widget-default">
+            <header class="widget-header">
+                Consultar cuotas
+            </header>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary" onclick="cuo(1)">
+                    <input type="radio" name="Vigente" id="Vigente"> Vigente
+                </label>
+                <label class="btn btn-primary" onclick="cuo(2)">
+                    <input type="radio" name="EnMora" id="EnMora" autocomplete="off"> En Mora
+                </label>
+            </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">ID</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Financiación</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Número De Cuotas</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Cuotas a Pagar</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Valor</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Fecha De Pago</label>
+                                </th>
+                                <th class="text-center">Acciones</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Codigo
+                                    </td>
+                                    <td>
+                                        @item.Financiacion
+                                    </td>
+                                    <td>
+                                        @item.NumeroCuotas
+                                    </td>
+                                    <td>
+                                        @item.CuotasAPagar
+                                    </td>
+                                    <td>
+                                        @item.ValorCuotas
+                                    </td>
+                                    <td>
+                                        @item.FechaAPagar
+                                    </td>
+                                    <td class="text-center">
+                                        <button type="button" class="btn btn-info" onclick="detalle(@item.Codigo)">Abonos</button>
+                                        <button id="abo" type="button" class="btn btn-info" onclick="abono(@item.Financiacion)">Abonar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                    <br />
+                    <table class="table-ventas">
+                        <thead>
+                        <th class="text-center">
+                            <label>Id</label>
+                        </th>
+                        <th class="text-center">
+                            <label>Fecha Abono</label>
+                        </th>
+                        <th class="text-center">
+                            <label>Valor del Abono</label>
+                        </th>
+                        <th class="text-center">
+                            <label>Recargo</label>
+                        </th>
+                        <th class="text-center">
+                            <label>Acciones</label>
+                        </th>
+                        </thead>
+                        <tbody id="Detalle"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+        
+<script>
+
+    function abono(id) {
+        console.log(id);
+        location.href = '/Tb_AbonosCuotas/Create/' + id + '';
+    }
+    function cuo(id) {
+        location.href = '/Tb_Cuotas/Index/' + id + '';
+    }
+
+    function detalle(elemento) {
+        var dato = {'elemento': elemento};
+        var tr = 0;
+        for(var i = 0; i < 2; i++){
+            var tab = document.getElementById(tr);
+            console.log(tab)
+            if(tab != null){
+                tab.remove();
+                tr++;
+                i--;
+            }else{
+                i = 2;
+            }
+        }
+        $.ajax({
+            'url': '/Tb_AbonosCuotas/Consultar',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(dato)
+        }).done(function (respuesta) {
+            var html = '';
+            var trs = 0;
+            for (var i = 0; i < respuesta.length; i++) {
+                html += '<tr id="' + trs + '">';
+                html += '<td  class="text-right" >';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Id + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td class="text-right">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].FechaAbono + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td class="text-right">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label">' + respuesta[i].ValorAbono + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td class="text-right">';
+                html += '<div class="col-md-4" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Recargo + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td class="text-right">';
+                html += '<div class="col-md-4" style="padding-left: 0px;">';
+                html += '<button id="abo" type="button" class="btn btn-danger" onclick="inabono(' + respuesta[i].Id + ', '+elemento+')">Eliminar</button>';
+                html += '</div>';
+                html += '</td>';
+                html += '</tr>';
+                trs++;
+            }
+            $('#Detalle').append(html);
+
+        })
+    }
+
+    function inabono(Id, finan) {
+        var date = { 'Id': Id };
+        $.ajax({
+            'url': '/Tb_AbonosCuotas/Delete',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(date)
+        }).done(function (Respuesta) {
+            console.log(Respuesta);
+            swal({ title: "¡Anulado!", text: "Abono anulado", type: "error", showConfirmButton: true }, function () {
+                detalle(finan);
+            });
+        })
+    }
+</script>

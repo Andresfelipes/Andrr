@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_AbonosCuotas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>ABONOS CUOTAS</h1>
+
+            </div>
+
+
+        </div>
+    </div>
+</header>
+<br />
+<div class="col-md-12 col-xs-12">
+     <div class="widget widget-default">
+          <header class="widget-header">
+          Consultar abono
+          </header>
+                  <div class="widget-body">
+                       <table class="table col-md-5 col-sm-7  display"  id="myTable" cellpadding="0" cellspacing="0" border="0" >
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FechaAbono)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.ValorAbono)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Recargo)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Tb_Cuotas.Codigo)
+                                    </th>
+                                    <th></th>
+                                </tr>
+
+                            @foreach (var item in Model) {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaAbono)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ValorAbono)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Recargo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tb_Cuotas.Codigo)
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            }
+
+                        </table>
+                    </div>
+               </div>
+    </div>

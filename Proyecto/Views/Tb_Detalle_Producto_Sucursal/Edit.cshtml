@@ -1,0 +1,150 @@
+﻿@model Proyecto.Models.Tb_Detalle_Producto_Sucursal
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>PRODUCTOS SUCURSAL</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script src="~/Scripts/Validation.js"></script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Modificar producto por sucursal</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="min">Stock Minímo *</label>
+                            @Html.EditorFor(model => model.Stock_Minimo, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Stock_Minimo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="max">Stock Máximo *</label>
+
+                            @Html.EditorFor(model => model.Stock_Maximo, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Stock_Maximo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="pVenta">Precio Venta *</label>
+
+                            @Html.EditorFor(model => model.Valor_Venta, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Valor_Venta, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="pMayor">Precio Por Mayor *</label>
+
+                            @Html.EditorFor(model => model.Valor_Mayor, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Valor_Mayor, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="pEspecial">Precio Especial</label>
+
+                            @Html.EditorFor(model => model.Valor_Especial, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Valor_Especial, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cant">Cantidad *</label>
+
+                            @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="prod">Producto *</label>
+                            @Html.DropDownList("Producto", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Producto, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="suc">Sucursal</label>
+                            @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Sucursal, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="form-inline">
+                            <div class="col-md-offset-5 form-group col-md-12">
+                                <input onclick="return valproduS1();" type="submit" value="Guardar " class="btn btn-primary" />
+                                <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script>
+
+
+ function valproduS1() {
+
+     valor = document.getElementById("Stock_Minimo").value;
+     //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+     nom1 = document.getElementById("Stock_Maximo").value;
+     ape1 = document.getElementById("Valor_Venta").value;
+     //ape2 = document.getElementById("Tipo_Producto").value;
+     tel = document.getElementById("Valor_Mayor").value;
+     cel = document.getElementById("Valor_Especial").value;
+     can = document.getElementById("Cantidad").value;
+     //pro = document.getElementById("Producto").selectedIndex;
+     //suc = document.getElementById("Sucursal").selectedIndex;
+
+
+
+     //sucur = document.getElementById("Sucursal").selectedIndex;
+
+
+
+     //rol = document.getElementById("Rol").selectedIndex;
+
+
+     if (valor == "" || nom1 == "" || ape1 == "" || email == "" || tel == "" || cel == "" || can == "") {
+
+         sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+         return false;
+     } else {
+
+
+         swal("BIEN HECHO!", "Producto registrado", "success");
+         //setTimeout(function () { location.href = '/Tb_Usuarios/Index' }, 5);
+         return true;
+
+     }
+
+ }
+</script>

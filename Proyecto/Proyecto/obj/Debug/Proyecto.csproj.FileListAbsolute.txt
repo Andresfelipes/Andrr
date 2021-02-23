@@ -1,0 +1,263 @@
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\Juan\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache

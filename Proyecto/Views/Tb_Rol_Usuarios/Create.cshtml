@@ -1,0 +1,101 @@
+﻿@model Proyecto.Models.Tb_Rol_Usuarios
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="page-header ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>Roles</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<link href="~/Alertify/css/alertify.min.css" rel="stylesheet" />
+<script src="~/Alertify/alertify.min.js"></script>
+<script>
+    var esta = "@ViewBag.esta";
+    if (esta == "Ya se encuentra Registrado") {
+
+        alertify.error("Este rol ya se encuentra registrado");
+        
+    }
+
+
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar usuario</div>
+                <div class="widget-body">
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.Codigo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            
+                                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+                          
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                            
+                                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input type="submit" onclick="return holawey();" value="Registrar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+   
+
+<script>
+
+    function holawey() {
+
+        var id = document.getElementById("Codigo").value;
+        var nombre = document.getElementById("Nombre").value;
+
+
+        if (id == "" || nombre == "") {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+        }
+
+
+    }
+
+</script>
+ViewBag.correcto = "SeRegistroCorrectamente";
+
+<script>
+
+    var correcto = "@ViewBag.correcto";
+    if (correcto == "SeRegistroCorrectamente")
+        swal({ title: "¡REGISTRO EXITOSO!", text: "Rol registrado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Rol_Usuarios/Index' });
+</script>
+
+

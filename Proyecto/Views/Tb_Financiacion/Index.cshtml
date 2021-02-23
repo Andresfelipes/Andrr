@@ -1,0 +1,156 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Financiacion>
+
+@{
+    ViewBag.Title = "Index";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>FINANCIACIÓN</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<br />
+<form id="form1">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-12 col-xs-12">
+                <div class="widget widget-default">
+                    <header class="widget-header">
+                        Consultar Financiación
+                    </header>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-primary" onclick="Finan(1)">
+                            <input type="radio" name="Vigente" id="Vigente"> Vigente
+                        </label>
+                        <label class="btn btn-primary" onclick="Finan(2)">
+                            <input type="radio" name="Pagado" id="Pagado" autocomplete="off"> Pagado
+                        </label>
+                        <label class="btn btn-primary" onclick="Finan(3)">
+                            <input type="radio" name="Anulado" id="Anulado" autocomplete="off"> Anulado
+                        </label>
+                        <label class="btn btn-primary" onclick="Finan(4)">
+                            <input type="radio" name="Enmora" id="Enmora" autocomplete="off"> En Mora
+                        </label>
+                    </div>
+                    <div class="widget-body">
+                        <table class="table col-md-5 col-sm-7  display" id="myTable" cellpadding="0" cellspacing="0" border="0">
+
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <label id="lblid" class="control-label">Código</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Fecha</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Tiempo De Pago</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Total</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Total Adeudado</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Venta</label>
+                                    </th>
+                                    <th>
+                                        <label id="lblid" class="control-label">Estado</label>
+                                    </th>
+
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.Dato)
+                                {
+                                    <tr>
+                                        <td>
+                                            @item.Codigo
+                                        </td>
+                                        <td>
+                                            @item.Fecha
+                                        </td>
+                                        <td>
+                                            @item.Tiempo
+                                        </td>
+                                        <td>
+                                            @item.Total
+                                        </td>
+                                        <td>
+                                            @item.Total_Adeudado
+                                        </td>
+                                        <td>
+                                            @item.Venta
+                                        </td>
+                                        <td>
+                                            @item.Estado
+                                        </td>
+
+                                        <td class="text-right ">
+                                        @if (ViewBag.Esta == "1")
+                                        {
+                                        <button id="inact" name="inac" Type="button" onclick="return validar('@item.Codigo', '@item.Estado')" class="btn btn-info" style="border-color:white; "><span class="fa fa-trash-o"></span> <span class="hidden-xs hidden-sm hidden-md"></span></button>
+                                        <button id="abo" type="button" class="btn btn-info" onclick="abono(@item.Codigo)">Abono</button>
+                                        }
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+<script type="text/javascript">
+    function abono(id) {
+        console.log(id);
+        location.href = '/Tb_AbonosCuotas/Create/' + id + '';
+    }
+    function Finan(id) {
+        location.href = '/Tb_Financiacion/Index/' + id + '';
+    }
+    function validar(Id) {
+        swal({
+            title: "¡Cambiar estado!",
+            text: "¿Esta seguro de anular la Financiación?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sí, estoy seguro",
+            closeOnConfirm: false
+        },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Financiacion/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                console.log(Respuesta);
+                if(Respuesta[0] == "1"){
+                    swal({ title: "¡Anulada!", text: "Financiación anulada", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                }else{
+                    swal({ title: "¡No se puede anular!", text: "La financiación ya cuenta con abonos", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                }
+            })
+        })
+    }
+</script>

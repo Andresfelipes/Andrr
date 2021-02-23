@@ -1,0 +1,66 @@
+﻿@model Proyecto.Models.Tb_Creditos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Creditos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero_Pagare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero_Pagare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cuota_inicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cuota_inicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total_Adeudado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total_Adeudado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Estados.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Estados.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_ventas.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_ventas.Codigo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

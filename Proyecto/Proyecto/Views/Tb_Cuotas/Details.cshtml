@@ -1,0 +1,66 @@
+﻿@model Proyecto.Models.Tb_Cuotas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_Cuotas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Limite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Limite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Financiacion.Tiempo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Financiacion.Tiempo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

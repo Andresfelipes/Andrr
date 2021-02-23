@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ADMISModelStoreContainer" CdmEntityContainer="ADMISEntities2">
+    <EntitySetMapping Name="Tb_Abonos">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Abonos">
+        <MappingFragment StoreEntitySet="Tb_Abonos">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Credito" ColumnName="Credito" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_AbonosCuotas">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_AbonosCuotas">
+        <MappingFragment StoreEntitySet="Tb_AbonosCuotas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cuotas" ColumnName="Cuotas" />
+          <ScalarProperty Name="FechaAbono" ColumnName="FechaAbono" />
+          <ScalarProperty Name="ValorAbono" ColumnName="ValorAbono" />
+          <ScalarProperty Name="Recargo" ColumnName="Recargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Clientes">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Clientes">
+        <MappingFragment StoreEntitySet="Tb_Clientes">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="Nombre2" ColumnName="Nombre2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoCliente" ColumnName="TipoCliente" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Cupo_activo" ColumnName="Cupo_activo" />
+          <ScalarProperty Name="Solicitud" ColumnName="Solicitud" />
+          <ScalarProperty Name="Tipo_Documento_Codigo" ColumnName="Tipo_Documento_Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Configuraciones">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Configuraciones">
+        <MappingFragment StoreEntitySet="Tb_Configuraciones">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="AumentoFinanciacion" ColumnName="AumentoFinanciacion" />
+          <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="Recargo" ColumnName="Recargo" />
+          <ScalarProperty Name="MontoMinorista" ColumnName="MontoMinorista" />
+          <ScalarProperty Name="MontoMayorista" ColumnName="MontoMayorista" />
+          <ScalarProperty Name="CupoCliente" ColumnName="CupoCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Creditos">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Creditos">
+        <MappingFragment StoreEntitySet="Tb_Creditos">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Numero_Pagare" ColumnName="Numero_Pagare" />
+          <ScalarProperty Name="Cuota_inicial" ColumnName="Cuota_inicial" />
+          <ScalarProperty Name="Total_Adeudado" ColumnName="Total_Adeudado" />
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Cuotas">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Cuotas">
+        <MappingFragment StoreEntitySet="Tb_Cuotas">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Financiacion" ColumnName="Financiacion" />
+          <ScalarProperty Name="NumeroCuotas" ColumnName="NumeroCuotas" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaLimite" ColumnName="FechaLimite" />
+          <ScalarProperty Name="ValorCuotas" ColumnName="ValorCuotas" />
+          <ScalarProperty Name="CuotasAPagar" ColumnName="CuotasAPagar" />
+          <ScalarProperty Name="FechaAPagar" ColumnName="FechaAPagar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Detalle_Entrada">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Detalle_Entrada">
+        <MappingFragment StoreEntitySet="Tb_Detalle_Entrada">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Entrada" ColumnName="Entrada" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+          <ScalarProperty Name="ProductoSucursal" ColumnName="ProductoSucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Detalle_Producto_Sucursal">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Detalle_Producto_Sucursal">
+        <MappingFragment StoreEntitySet="Tb_Detalle_Producto_Sucursal">
+          <ScalarProperty Name="codigo_detalle" ColumnName="codigo_detalle" />
+          <ScalarProperty Name="Stock_Minimo" ColumnName="Stock_Minimo" />
+          <ScalarProperty Name="Stock_Maximo" ColumnName="Stock_Maximo" />
+          <ScalarProperty Name="Valor_Venta" ColumnName="Valor_Venta" />
+          <ScalarProperty Name="Valor_Mayor" ColumnName="Valor_Mayor" />
+          <ScalarProperty Name="Valor_Especial" ColumnName="Valor_Especial" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_DetalleTranslados">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_DetalleTranslados">
+        <MappingFragment StoreEntitySet="Tb_DetalleTranslados">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Aumento" ColumnName="Aumento" />
+          <ScalarProperty Name="Sucursal_Origen" ColumnName="Sucursal_Origen" />
+          <ScalarProperty Name="ProductoSucursal" ColumnName="ProductoSucursal" />
+          <ScalarProperty Name="Sucursal_Destino" ColumnName="Sucursal_Destino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_DetalleVenta">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_DetalleVenta">
+        <MappingFragment StoreEntitySet="Tb_DetalleVenta">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Sub_total" ColumnName="Sub_total" />
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+          <ScalarProperty Name="ProductoSucursal" ColumnName="ProductoSucursal" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Dian">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Dian">
+        <MappingFragment StoreEntitySet="Tb_Dian">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Resolucion" ColumnName="Resolucion" />
+          <ScalarProperty Name="Fecha_inicio_vigencia" ColumnName="Fecha_inicio_vigencia" />
+          <ScalarProperty Name="Fecha_fin_vigencia" ColumnName="Fecha_fin_vigencia" />
+          <ScalarProperty Name="Num_inicio_rango" ColumnName="Num_inicio_rango" />
+          <ScalarProperty Name="Num_fin_rango" ColumnName="Num_fin_rango" />
+          <ScalarProperty Name="Num_actual" ColumnName="Num_actual" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Entradas">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Entradas">
+        <MappingFragment StoreEntitySet="Tb_Entradas">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+          <ScalarProperty Name="Proveedor" ColumnName="Proveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Estados">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Estados">
+        <MappingFragment StoreEntitySet="Tb_Estados">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Financiacion">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Financiacion">
+        <MappingFragment StoreEntitySet="Tb_Financiacion">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Numero_Pagare" ColumnName="Numero_Pagare" />
+          <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+          <ScalarProperty Name="Aumento" ColumnName="Aumento" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Cuota_Inicial" ColumnName="Cuota_Inicial" />
+          <ScalarProperty Name="Total_Adeudado" ColumnName="Total_Adeudado" />
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Permiso">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Permiso">
+        <MappingFragment StoreEntitySet="Tb_Permiso">
+          <ScalarProperty Name="Permiso_id" ColumnName="Permiso_id" />
+          <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Post">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Post">
+        <MappingFragment StoreEntitySet="Tb_Post">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Resolucion" ColumnName="Resolucion" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+          <ScalarProperty Name="Num_actual" ColumnName="Num_actual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Productos">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Productos">
+        <MappingFragment StoreEntitySet="Tb_Productos">
+          <ScalarProperty Name="Codigo_producto" ColumnName="Codigo_producto" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tipo_Producto" ColumnName="Tipo_Producto" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Proveedores">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Proveedores">
+        <MappingFragment StoreEntitySet="Tb_Proveedores">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Tipo_Documento" ColumnName="Tipo_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="Nombre2" ColumnName="Nombre2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Recuperar_contraseña">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Recuperar_contraseña">
+        <MappingFragment StoreEntitySet="Tb_Recuperar_contraseña">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Respuesta" ColumnName="Respuesta" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Rol_Usuarios">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Rol_Usuarios">
+        <MappingFragment StoreEntitySet="Tb_Rol_Usuarios">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Sucursales">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Sucursales">
+        <MappingFragment StoreEntitySet="Tb_Sucursales">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apodo" ColumnName="Apodo" />
+          <ScalarProperty Name="Prefijo" ColumnName="Prefijo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Tipo_Documento">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Tipo_Documento">
+        <MappingFragment StoreEntitySet="Tb_Tipo_Documento">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Tipo_Producto">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Tipo_Producto">
+        <MappingFragment StoreEntitySet="Tb_Tipo_Producto">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_Usuarios">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_Usuarios">
+        <MappingFragment StoreEntitySet="Tb_Usuarios">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Tipo_Documento" ColumnName="Tipo_Documento" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="Nombre2" ColumnName="Nombre2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Pregunta1" ColumnName="Pregunta1" />
+          <ScalarProperty Name="Pregunta2" ColumnName="Pregunta2" />
+          <ScalarProperty Name="Respuesta1" ColumnName="Respuesta1" />
+          <ScalarProperty Name="Respuesta2" ColumnName="Respuesta2" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tb_ventas">
+      <EntityTypeMapping TypeName="ADMISModel.Tb_ventas">
+        <MappingFragment StoreEntitySet="Tb_ventas">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="iva" ColumnName="iva" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Sucursal" ColumnName="Sucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Tb_Permiso_Denegado_Roles" TypeName="ADMISModel.Tb_Permiso_Denegado_Roles" StoreEntitySet="Tb_Permiso_Denegado_Roles">
+      <EndProperty Name="Tb_Permiso">
+        <ScalarProperty Name="Permiso_id" ColumnName="PermisoID" />
+      </EndProperty>
+      <EndProperty Name="Tb_Rol_Usuarios">
+        <ScalarProperty Name="Codigo" ColumnName="RolID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="Activos" FunctionName="ADMISModel.Store.Activos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.Activos_Result">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="Nombre2" ColumnName="Nombre2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoCliente" ColumnName="TipoCliente" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Cupo_activo" ColumnName="Cupo_activo" />
+          <ScalarProperty Name="Solicitud" ColumnName="Solicitud" />
+          <ScalarProperty Name="Tipo_Documento_Codigo" ColumnName="Tipo_Documento_Codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActProveedor" FunctionName="ADMISModel.Store.ActProveedor" />
+    <FunctionImportMapping FunctionImportName="ActSucursal" FunctionName="ADMISModel.Store.ActSucursal" />
+    <FunctionImportMapping FunctionImportName="ActualizarAbono" FunctionName="ADMISModel.Store.ActualizarAbono" />
+    <FunctionImportMapping FunctionImportName="ActualizarCliente" FunctionName="ADMISModel.Store.ActualizarCliente" />
+    <FunctionImportMapping FunctionImportName="ActualizarEstado" FunctionName="ADMISModel.Store.ActualizarEstado" />
+    <FunctionImportMapping FunctionImportName="ActualizarProducto" FunctionName="ADMISModel.Store.ActualizarProducto" />
+    <FunctionImportMapping FunctionImportName="ActualizarTipoProd" FunctionName="ADMISModel.Store.ActualizarTipoProd" />
+    <FunctionImportMapping FunctionImportName="Anular_Credito" FunctionName="ADMISModel.Store.Anular_Credito" />
+    <FunctionImportMapping FunctionImportName="cambiar_estado_cliente" FunctionName="ADMISModel.Store.cambiar_estado_cliente" />
+    <FunctionImportMapping FunctionImportName="Cargar_Dian" FunctionName="ADMISModel.Store.Cargar_Dian" />
+    <FunctionImportMapping FunctionImportName="Cargar_Iva" FunctionName="ADMISModel.Store.Cargar_Iva" />
+    <FunctionImportMapping FunctionImportName="Consultar_Credito" FunctionName="ADMISModel.Store.Consultar_Credito">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.Consultar_Credito_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Numero_Pagare" ColumnName="Numero_Pagare" />
+          <ScalarProperty Name="Cuota_inicial" ColumnName="Cuota_inicial" />
+          <ScalarProperty Name="Total_Adeudado" ColumnName="Total_Adeudado" />
+          <ScalarProperty Name="Venta" ColumnName="Venta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarClientes" FunctionName="ADMISModel.Store.ConsultarClientes">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.ConsultarClientes_Result">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="Nombre2" ColumnName="Nombre2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoCliente" ColumnName="TipoCliente" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+          <ScalarProperty Name="Cupo_activo" ColumnName="Cupo_activo" />
+          <ScalarProperty Name="Solicitud" ColumnName="Solicitud" />
+          <ScalarProperty Name="Tipo_Documento_Codigo" ColumnName="Tipo_Documento_Codigo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ConsultarProveedor" FunctionName="ADMISModel.Store.ConsultarProveedor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.ConsultarProveedor_Result">
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Tipo_Documento" ColumnName="Tipo_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Nombre1" ColumnName="Nombre1" />
+          <ScalarProperty Name="Nombre2" ColumnName="Nombre2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EliminarRol" FunctionName="ADMISModel.Store.EliminarRol" />
+    <FunctionImportMapping FunctionImportName="EliminarSucursal" FunctionName="ADMISModel.Store.EliminarSucursal" />
+    <FunctionImportMapping FunctionImportName="EliminarTipoDoc" FunctionName="ADMISModel.Store.EliminarTipoDoc" />
+    <FunctionImportMapping FunctionImportName="Estado" FunctionName="ADMISModel.Store.Estado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.Estado_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="InsertarClientes" FunctionName="ADMISModel.Store.InsertarClientes" />
+    <FunctionImportMapping FunctionImportName="Llamar_Sucursal" FunctionName="ADMISModel.Store.Llamar_Sucursal" />
+    <FunctionImportMapping FunctionImportName="llenarp" FunctionName="ADMISModel.Store.llenarp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.llenarp_Result">
+          <ScalarProperty Name="Codigo_producto" ColumnName="Codigo_producto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Precio" FunctionName="ADMISModel.Store.Precio" />
+    <FunctionImportMapping FunctionImportName="Reg_Credito" FunctionName="ADMISModel.Store.Reg_Credito" />
+    <FunctionImportMapping FunctionImportName="Reg_Financiacion" FunctionName="ADMISModel.Store.Reg_Financiacion" />
+    <FunctionImportMapping FunctionImportName="RegDetalleEntrada" FunctionName="ADMISModel.Store.RegDetalleEntrada" />
+    <FunctionImportMapping FunctionImportName="RegDetalleProdSucursal" FunctionName="ADMISModel.Store.RegDetalleProdSucursal" />
+    <FunctionImportMapping FunctionImportName="RegDetalleTraslado" FunctionName="ADMISModel.Store.RegDetalleTraslado" />
+    <FunctionImportMapping FunctionImportName="RegDetalleVenta" FunctionName="ADMISModel.Store.RegDetalleVenta" />
+    <FunctionImportMapping FunctionImportName="Registrar_detalle_producto_sucursal" FunctionName="ADMISModel.Store.Registrar_detalle_producto_sucursal" />
+    <FunctionImportMapping FunctionImportName="Registrar_producto" FunctionName="ADMISModel.Store.Registrar_producto" />
+    <FunctionImportMapping FunctionImportName="registrarAbono" FunctionName="ADMISModel.Store.registrarAbono" />
+    <FunctionImportMapping FunctionImportName="RegistrarDian" FunctionName="ADMISModel.Store.RegistrarDian" />
+    <FunctionImportMapping FunctionImportName="RegistrarEntrada" FunctionName="ADMISModel.Store.RegistrarEntrada" />
+    <FunctionImportMapping FunctionImportName="RegistrarEstado" FunctionName="ADMISModel.Store.RegistrarEstado" />
+    <FunctionImportMapping FunctionImportName="RegistrarPost" FunctionName="ADMISModel.Store.RegistrarPost" />
+    <FunctionImportMapping FunctionImportName="RegistrarRol" FunctionName="ADMISModel.Store.RegistrarRol" />
+    <FunctionImportMapping FunctionImportName="RegistrarTipoProd" FunctionName="ADMISModel.Store.RegistrarTipoProd" />
+    <FunctionImportMapping FunctionImportName="RegistrarUsuario" FunctionName="ADMISModel.Store.RegistrarUsuario" />
+    <FunctionImportMapping FunctionImportName="RegistrarVenta" FunctionName="ADMISModel.Store.RegistrarVenta" />
+    <FunctionImportMapping FunctionImportName="RegProveedor" FunctionName="ADMISModel.Store.RegProveedor" />
+    <FunctionImportMapping FunctionImportName="RegSucursal" FunctionName="ADMISModel.Store.RegSucursal" />
+    <FunctionImportMapping FunctionImportName="RegTipoDoc" FunctionName="ADMISModel.Store.RegTipoDoc" />
+    <FunctionImportMapping FunctionImportName="tipo_doc" FunctionName="ADMISModel.Store.tipo_doc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ADMISModel.tipo_doc_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

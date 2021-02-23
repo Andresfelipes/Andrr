@@ -1,0 +1,83 @@
+﻿@model Proyecto.Models.Tb_Dian
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_Dian</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Resolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_inicio_vigencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_inicio_vigencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_fin_vigencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_fin_vigencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_inicio_rango)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_inicio_rango)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_fin_rango)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_fin_rango)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Num_actual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Num_actual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Sucursales.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

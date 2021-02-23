@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADMISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tb_Abonos">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Credito" Type="Int32" Nullable="false" />
+    <Property Name="Valor" Type="Double" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Creditos" Relationship="Self.Fk_CreditoAbono" FromRole="Tb_Abonos" ToRole="Tb_Creditos" />
+  </EntityType>
+  <EntityType Name="Tb_AbonosCuotas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cuotas" Type="Int32" Nullable="false" />
+    <Property Name="FechaAbono" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ValorAbono" Type="Double" Nullable="false" />
+    <Property Name="Recargo" Type="Double" />
+    <NavigationProperty Name="Tb_Cuotas" Relationship="Self.FK__Tb_Abonos__Cuota__403A8C7D" FromRole="Tb_AbonosCuotas" ToRole="Tb_Cuotas" />
+  </EntityType>
+  <EntityType Name="Tb_Clientes">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="Int32" Nullable="false" />
+    <Property Name="Nombre1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoCliente" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ciudad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cupo_activo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Solicitud" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo_Documento_Codigo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_ventas" Relationship="Self.fk_Cli_v" FromRole="Tb_Clientes" ToRole="Tb_ventas" />
+    <NavigationProperty Name="Tb_Tipo_Documento" Relationship="Self.fk_doc" FromRole="Tb_Clientes" ToRole="Tb_Tipo_Documento" />
+  </EntityType>
+  <EntityType Name="Tb_Configuraciones">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="AumentoFinanciacion" Type="Double" />
+    <Property Name="Tiempo" Type="Int32" />
+    <Property Name="IVA" Type="Double" />
+    <Property Name="Recargo" Type="Double" />
+    <Property Name="MontoMinorista" Type="Double" Nullable="false" />
+    <Property Name="MontoMayorista" Type="Double" Nullable="false" />
+    <Property Name="CupoCliente" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tb_Creditos">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="Numero_Pagare" Type="Int32" Nullable="false" />
+    <Property Name="Cuota_inicial" Type="Double" />
+    <Property Name="Total_Adeudado" Type="Double" Nullable="false" />
+    <Property Name="Venta" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Abonos" Relationship="Self.Fk_CreditoAbono" FromRole="Tb_Creditos" ToRole="Tb_Abonos" />
+    <NavigationProperty Name="Tb_Estados" Relationship="Self.fk_Cre_e" FromRole="Tb_Creditos" ToRole="Tb_Estados" />
+    <NavigationProperty Name="Tb_ventas" Relationship="Self.fk_Cre_v" FromRole="Tb_Creditos" ToRole="Tb_ventas" />
+  </EntityType>
+  <EntityType Name="Tb_Cuotas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Financiacion" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCuotas" Type="Int32" Nullable="false" />
+    <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="FechaLimite" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ValorCuotas" Type="Double" Nullable="false" />
+    <Property Name="CuotasAPagar" Type="Int32" Nullable="false" />
+    <Property Name="FechaAPagar" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Tb_AbonosCuotas" Relationship="Self.FK__Tb_Abonos__Cuota__403A8C7D" FromRole="Tb_Cuotas" ToRole="Tb_AbonosCuotas" />
+    <NavigationProperty Name="Tb_Financiacion" Relationship="Self.FK__Tb_Cuotas__Finan__440B1D61" FromRole="Tb_Cuotas" ToRole="Tb_Financiacion" />
+    <NavigationProperty Name="Tb_Financiacion1" Relationship="Self.fk_Cuo_f" FromRole="Tb_Cuotas" ToRole="Tb_Financiacion" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Entrada">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Double" Nullable="false" />
+    <Property Name="Entrada" Type="Int32" Nullable="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductoSucursal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Entradas" Relationship="Self.Fk_D_entrada" FromRole="Tb_Detalle_Entrada" ToRole="Tb_Entradas" />
+    <NavigationProperty Name="Tb_Detalle_Producto_Sucursal" Relationship="Self.Fk_D_ProductoSucursal" FromRole="Tb_Detalle_Entrada" ToRole="Tb_Detalle_Producto_Sucursal" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.Fk_D_Sucursal" FromRole="Tb_Detalle_Entrada" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <EntityType Name="Tb_Detalle_Producto_Sucursal">
+    <Key>
+      <PropertyRef Name="codigo_detalle" />
+    </Key>
+    <Property Name="codigo_detalle" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stock_Minimo" Type="Int32" Nullable="false" />
+    <Property Name="Stock_Maximo" Type="Int32" Nullable="false" />
+    <Property Name="Valor_Venta" Type="Double" Nullable="false" />
+    <Property Name="Valor_Mayor" Type="Double" Nullable="false" />
+    <Property Name="Valor_Especial" Type="Double" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Producto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Detalle_Entrada" Relationship="Self.Fk_D_ProductoSucursal" FromRole="Tb_Detalle_Producto_Sucursal" ToRole="Tb_Detalle_Entrada" />
+    <NavigationProperty Name="Tb_Productos" Relationship="Self.Fk_producto_detalle" FromRole="Tb_Detalle_Producto_Sucursal" ToRole="Tb_Productos" />
+    <NavigationProperty Name="Tb_DetalleTranslados" Relationship="Self.Fk_ProductoTrasl" FromRole="Tb_Detalle_Producto_Sucursal" ToRole="Tb_DetalleTranslados" />
+    <NavigationProperty Name="Tb_DetalleVenta" Relationship="Self.Fk_ProductoVenta" FromRole="Tb_Detalle_Producto_Sucursal" ToRole="Tb_DetalleVenta" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.Fk_sucursal_detalle" FromRole="Tb_Detalle_Producto_Sucursal" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <EntityType Name="Tb_DetalleTranslados">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <Property Name="Fecha" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Aumento" Type="Double" Nullable="false" />
+    <Property Name="Sucursal_Origen" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductoSucursal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sucursal_Destino" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Detalle_Producto_Sucursal" Relationship="Self.Fk_ProductoTrasl" FromRole="Tb_DetalleTranslados" ToRole="Tb_Detalle_Producto_Sucursal" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.Fk_SucursalDestino" FromRole="Tb_DetalleTranslados" ToRole="Tb_Sucursales" />
+    <NavigationProperty Name="Tb_Sucursales1" Relationship="Self.Fk_SucursalOrigen" FromRole="Tb_DetalleTranslados" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <EntityType Name="Tb_DetalleVenta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Descuento" Type="Double" />
+    <Property Name="Sub_total" Type="Double" Nullable="false" />
+    <Property Name="Venta" Type="Int32" Nullable="false" />
+    <Property Name="ProductoSucursal" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Precio" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Tb_Detalle_Producto_Sucursal" Relationship="Self.Fk_ProductoVenta" FromRole="Tb_DetalleVenta" ToRole="Tb_Detalle_Producto_Sucursal" />
+    <NavigationProperty Name="Tb_ventas" Relationship="Self.fk_DetV_Ven" FromRole="Tb_DetalleVenta" ToRole="Tb_ventas" />
+  </EntityType>
+  <EntityType Name="Tb_Dian">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Resolucion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_inicio_vigencia" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Fecha_fin_vigencia" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Num_inicio_rango" Type="Int32" Nullable="false" />
+    <Property Name="Num_fin_rango" Type="Int32" Nullable="false" />
+    <Property Name="Num_actual" Type="Int32" Nullable="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.fk_Dian" FromRole="Tb_Dian" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <EntityType Name="Tb_Entradas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Proveedor" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Detalle_Entrada" Relationship="Self.Fk_D_entrada" FromRole="Tb_Entradas" ToRole="Tb_Detalle_Entrada" />
+    <NavigationProperty Name="Tb_Proveedores" Relationship="Self.fk_Pro_e" FromRole="Tb_Entradas" ToRole="Tb_Proveedores" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.fk_suc_e" FromRole="Tb_Entradas" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <EntityType Name="Tb_Estados">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Creditos" Relationship="Self.fk_Cre_e" FromRole="Tb_Estados" ToRole="Tb_Creditos" />
+    <NavigationProperty Name="Tb_Financiacion" Relationship="Self.fk_Fin_e" FromRole="Tb_Estados" ToRole="Tb_Financiacion" />
+  </EntityType>
+  <EntityType Name="Tb_Financiacion">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="Numero_Pagare" Type="Int32" Nullable="false" />
+    <Property Name="Tiempo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Aumento" Type="Double" Nullable="false" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <Property Name="Cuota_Inicial" Type="Int32" />
+    <Property Name="Total_Adeudado" Type="Double" Nullable="false" />
+    <Property Name="Venta" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Cuotas" Relationship="Self.FK__Tb_Cuotas__Finan__440B1D61" FromRole="Tb_Financiacion" ToRole="Tb_Cuotas" />
+    <NavigationProperty Name="Tb_Cuotas1" Relationship="Self.fk_Cuo_f" FromRole="Tb_Financiacion" ToRole="Tb_Cuotas" />
+    <NavigationProperty Name="Tb_Estados" Relationship="Self.fk_Fin_e" FromRole="Tb_Financiacion" ToRole="Tb_Estados" />
+    <NavigationProperty Name="Tb_ventas" Relationship="Self.fk_Fin_v" FromRole="Tb_Financiacion" ToRole="Tb_ventas" />
+  </EntityType>
+  <EntityType Name="Tb_Permiso">
+    <Key>
+      <PropertyRef Name="Permiso_id" />
+    </Key>
+    <Property Name="Permiso_id" Type="Int32" Nullable="false" />
+    <Property Name="Modulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Rol_Usuarios" Relationship="Self.Tb_Permiso_Denegado_Roles" FromRole="Tb_Permiso" ToRole="Tb_Rol_Usuarios" />
+  </EntityType>
+  <EntityType Name="Tb_Post">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Resolucion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Num_actual" Type="Int32" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.fk_Post" FromRole="Tb_Post" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <EntityType Name="Tb_Productos">
+    <Key>
+      <PropertyRef Name="Codigo_producto" />
+    </Key>
+    <Property Name="Codigo_producto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Referencia" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tipo_Producto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" />
+    <NavigationProperty Name="Tb_Detalle_Producto_Sucursal" Relationship="Self.Fk_producto_detalle" FromRole="Tb_Productos" ToRole="Tb_Detalle_Producto_Sucursal" />
+    <NavigationProperty Name="Tb_Tipo_Producto" Relationship="Self.fk_tipo_producto" FromRole="Tb_Productos" ToRole="Tb_Tipo_Producto" />
+  </EntityType>
+  <EntityType Name="Tb_Proveedores">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="Int32" Nullable="false" />
+    <Property Name="Celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tipo_Documento" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nit" Type="Int32" Nullable="false" />
+    <Property Name="Nombre1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Empresa" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Entradas" Relationship="Self.fk_Pro_e" FromRole="Tb_Proveedores" ToRole="Tb_Entradas" />
+    <NavigationProperty Name="Tb_Tipo_Documento" Relationship="Self.fk_doc_p" FromRole="Tb_Proveedores" ToRole="Tb_Tipo_Documento" />
+  </EntityType>
+  <EntityType Name="Tb_Recuperar_contraseña">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Respuesta" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Usuario" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Tb_Usuarios" Relationship="Self.fk_Rec" FromRole="Tb_Recuperar_contraseña" ToRole="Tb_Usuarios" />
+  </EntityType>
+  <EntityType Name="Tb_Rol_Usuarios">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Usuarios" Relationship="Self.fk_rol_u" FromRole="Tb_Rol_Usuarios" ToRole="Tb_Usuarios" />
+    <NavigationProperty Name="Tb_Permiso" Relationship="Self.Tb_Permiso_Denegado_Roles" FromRole="Tb_Rol_Usuarios" ToRole="Tb_Permiso" />
+  </EntityType>
+  <EntityType Name="Tb_Sucursales">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apodo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prefijo" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NIT" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Detalle_Entrada" Relationship="Self.Fk_D_Sucursal" FromRole="Tb_Sucursales" ToRole="Tb_Detalle_Entrada" />
+    <NavigationProperty Name="Tb_Detalle_Producto_Sucursal" Relationship="Self.Fk_sucursal_detalle" FromRole="Tb_Sucursales" ToRole="Tb_Detalle_Producto_Sucursal" />
+    <NavigationProperty Name="Tb_DetalleTranslados" Relationship="Self.Fk_SucursalDestino" FromRole="Tb_Sucursales" ToRole="Tb_DetalleTranslados" />
+    <NavigationProperty Name="Tb_DetalleTranslados1" Relationship="Self.Fk_SucursalOrigen" FromRole="Tb_Sucursales" ToRole="Tb_DetalleTranslados" />
+    <NavigationProperty Name="Tb_Dian" Relationship="Self.fk_Dian" FromRole="Tb_Sucursales" ToRole="Tb_Dian" />
+    <NavigationProperty Name="Tb_Entradas" Relationship="Self.fk_suc_e" FromRole="Tb_Sucursales" ToRole="Tb_Entradas" />
+    <NavigationProperty Name="Tb_Post" Relationship="Self.fk_Post" FromRole="Tb_Sucursales" ToRole="Tb_Post" />
+    <NavigationProperty Name="Tb_Usuarios" Relationship="Self.fk_suc_u" FromRole="Tb_Sucursales" ToRole="Tb_Usuarios" />
+    <NavigationProperty Name="Tb_ventas" Relationship="Self.fk_Suc_v" FromRole="Tb_Sucursales" ToRole="Tb_ventas" />
+  </EntityType>
+  <EntityType Name="Tb_Tipo_Documento">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Clientes" Relationship="Self.fk_doc" FromRole="Tb_Tipo_Documento" ToRole="Tb_Clientes" />
+    <NavigationProperty Name="Tb_Proveedores" Relationship="Self.fk_doc_p" FromRole="Tb_Tipo_Documento" ToRole="Tb_Proveedores" />
+    <NavigationProperty Name="Tb_Usuarios" Relationship="Self.fk_doc_u" FromRole="Tb_Tipo_Documento" ToRole="Tb_Usuarios" />
+  </EntityType>
+  <EntityType Name="Tb_Tipo_Producto">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Tb_Productos" Relationship="Self.fk_tipo_producto" FromRole="Tb_Tipo_Producto" ToRole="Tb_Productos" />
+  </EntityType>
+  <EntityType Name="Tb_Usuarios">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="Int64" Nullable="false" />
+    <Property Name="Tipo_Documento" Type="Int32" Nullable="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Contraseña" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Pregunta1" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pregunta2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Respuesta1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Respuesta2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Rol" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Tb_Recuperar_contraseña" Relationship="Self.fk_Rec" FromRole="Tb_Usuarios" ToRole="Tb_Recuperar_contraseña" />
+    <NavigationProperty Name="Tb_Rol_Usuarios" Relationship="Self.fk_rol_u" FromRole="Tb_Usuarios" ToRole="Tb_Rol_Usuarios" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.fk_suc_u" FromRole="Tb_Usuarios" ToRole="Tb_Sucursales" />
+    <NavigationProperty Name="Tb_Tipo_Documento" Relationship="Self.fk_doc_u" FromRole="Tb_Usuarios" ToRole="Tb_Tipo_Documento" />
+  </EntityType>
+  <EntityType Name="Tb_ventas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <Property Name="iva" Type="Double" Nullable="false" />
+    <Property Name="Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Sucursal" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tb_Clientes" Relationship="Self.fk_Cli_v" FromRole="Tb_ventas" ToRole="Tb_Clientes" />
+    <NavigationProperty Name="Tb_Creditos" Relationship="Self.fk_Cre_v" FromRole="Tb_ventas" ToRole="Tb_Creditos" />
+    <NavigationProperty Name="Tb_DetalleVenta" Relationship="Self.fk_DetV_Ven" FromRole="Tb_ventas" ToRole="Tb_DetalleVenta" />
+    <NavigationProperty Name="Tb_Financiacion" Relationship="Self.fk_Fin_v" FromRole="Tb_ventas" ToRole="Tb_Financiacion" />
+    <NavigationProperty Name="Tb_Sucursales" Relationship="Self.fk_Suc_v" FromRole="Tb_ventas" ToRole="Tb_Sucursales" />
+  </EntityType>
+  <Association Name="Fk_CreditoAbono">
+    <End Role="Tb_Creditos" Type="Self.Tb_Creditos" Multiplicity="1" />
+    <End Role="Tb_Abonos" Type="Self.Tb_Abonos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Creditos">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Abonos">
+        <PropertyRef Name="Credito" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Abonos__Cuota__403A8C7D">
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="1" />
+    <End Role="Tb_AbonosCuotas" Type="Self.Tb_AbonosCuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Cuotas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_AbonosCuotas">
+        <PropertyRef Name="Cuotas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cli_v">
+    <End Role="Tb_Clientes" Type="Self.Tb_Clientes" Multiplicity="1" />
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Clientes">
+        <PropertyRef Name="Identificacion" />
+      </Principal>
+      <Dependent Role="Tb_ventas">
+        <PropertyRef Name="Cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_doc">
+    <End Role="Tb_Tipo_Documento" Type="Self.Tb_Tipo_Documento" Multiplicity="1" />
+    <End Role="Tb_Clientes" Type="Self.Tb_Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Documento">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Clientes">
+        <PropertyRef Name="Tipo_Documento_Codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cre_e">
+    <End Role="Tb_Estados" Type="Self.Tb_Estados" Multiplicity="1" />
+    <End Role="Tb_Creditos" Type="Self.Tb_Creditos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Estados">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Creditos">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cre_v">
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="1" />
+    <End Role="Tb_Creditos" Type="Self.Tb_Creditos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ventas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Creditos">
+        <PropertyRef Name="Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tb_Cuotas__Finan__440B1D61">
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="1" />
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Financiacion">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Cuotas">
+        <PropertyRef Name="Financiacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Cuo_f">
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="1" />
+    <End Role="Tb_Cuotas" Type="Self.Tb_Cuotas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Financiacion">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Cuotas">
+        <PropertyRef Name="Financiacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_D_entrada">
+    <End Role="Tb_Entradas" Type="Self.Tb_Entradas" Multiplicity="1" />
+    <End Role="Tb_Detalle_Entrada" Type="Self.Tb_Detalle_Entrada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Entradas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Entrada">
+        <PropertyRef Name="Entrada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_D_ProductoSucursal">
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="1" />
+    <End Role="Tb_Detalle_Entrada" Type="Self.Tb_Detalle_Entrada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="codigo_detalle" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Entrada">
+        <PropertyRef Name="ProductoSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_D_Sucursal">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Detalle_Entrada" Type="Self.Tb_Detalle_Entrada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Entrada">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_producto_detalle">
+    <End Role="Tb_Productos" Type="Self.Tb_Productos" Multiplicity="0..1" />
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Productos">
+        <PropertyRef Name="Codigo_producto" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_ProductoTrasl">
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="1" />
+    <End Role="Tb_DetalleTranslados" Type="Self.Tb_DetalleTranslados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="codigo_detalle" />
+      </Principal>
+      <Dependent Role="Tb_DetalleTranslados">
+        <PropertyRef Name="ProductoSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_ProductoVenta">
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="1" />
+    <End Role="Tb_DetalleVenta" Type="Self.Tb_DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="codigo_detalle" />
+      </Principal>
+      <Dependent Role="Tb_DetalleVenta">
+        <PropertyRef Name="ProductoSucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_sucursal_detalle">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Detalle_Producto_Sucursal" Type="Self.Tb_Detalle_Producto_Sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Detalle_Producto_Sucursal">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_SucursalDestino">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_DetalleTranslados" Type="Self.Tb_DetalleTranslados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_DetalleTranslados">
+        <PropertyRef Name="Sucursal_Destino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Fk_SucursalOrigen">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_DetalleTranslados" Type="Self.Tb_DetalleTranslados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_DetalleTranslados">
+        <PropertyRef Name="Sucursal_Origen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DetV_Ven">
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="1" />
+    <End Role="Tb_DetalleVenta" Type="Self.Tb_DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ventas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_DetalleVenta">
+        <PropertyRef Name="Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Dian">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Dian" Type="Self.Tb_Dian" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Dian">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Pro_e">
+    <End Role="Tb_Proveedores" Type="Self.Tb_Proveedores" Multiplicity="1" />
+    <End Role="Tb_Entradas" Type="Self.Tb_Entradas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Proveedores">
+        <PropertyRef Name="Identificacion" />
+      </Principal>
+      <Dependent Role="Tb_Entradas">
+        <PropertyRef Name="Proveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_suc_e">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Entradas" Type="Self.Tb_Entradas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Entradas">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Fin_e">
+    <End Role="Tb_Estados" Type="Self.Tb_Estados" Multiplicity="1" />
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Estados">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tb_Financiacion">
+        <PropertyRef Name="Estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Fin_v">
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="1" />
+    <End Role="Tb_Financiacion" Type="Self.Tb_Financiacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_ventas">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Financiacion">
+        <PropertyRef Name="Venta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Post">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="1" />
+    <End Role="Tb_Post" Type="Self.Tb_Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Post">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tipo_producto">
+    <End Role="Tb_Tipo_Producto" Type="Self.Tb_Tipo_Producto" Multiplicity="1" />
+    <End Role="Tb_Productos" Type="Self.Tb_Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Producto">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Productos">
+        <PropertyRef Name="Tipo_Producto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_doc_p">
+    <End Role="Tb_Tipo_Documento" Type="Self.Tb_Tipo_Documento" Multiplicity="1" />
+    <End Role="Tb_Proveedores" Type="Self.Tb_Proveedores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Documento">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Proveedores">
+        <PropertyRef Name="Tipo_Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Rec">
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="1" />
+    <End Role="Tb_Recuperar_contraseña" Type="Self.Tb_Recuperar_contraseña" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Usuarios">
+        <PropertyRef Name="Identificacion" />
+      </Principal>
+      <Dependent Role="Tb_Recuperar_contraseña">
+        <PropertyRef Name="Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rol_u">
+    <End Role="Tb_Rol_Usuarios" Type="Self.Tb_Rol_Usuarios" Multiplicity="1" />
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Rol_Usuarios">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Usuarios">
+        <PropertyRef Name="Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_suc_u">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="0..1" />
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Usuarios">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Suc_v">
+    <End Role="Tb_Sucursales" Type="Self.Tb_Sucursales" Multiplicity="0..1" />
+    <End Role="Tb_ventas" Type="Self.Tb_ventas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Sucursales">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_ventas">
+        <PropertyRef Name="Sucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_doc_u">
+    <End Role="Tb_Tipo_Documento" Type="Self.Tb_Tipo_Documento" Multiplicity="1" />
+    <End Role="Tb_Usuarios" Type="Self.Tb_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tb_Tipo_Documento">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Tb_Usuarios">
+        <PropertyRef Name="Tipo_Documento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tb_Permiso_Denegado_Roles">
+    <End Role="Tb_Permiso" Type="Self.Tb_Permiso" Multiplicity="*" />
+    <End Role="Tb_Rol_Usuarios" Type="Self.Tb_Rol_Usuarios" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ADMISEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tb_Abonos" EntityType="Self.Tb_Abonos" />
+    <EntitySet Name="Tb_AbonosCuotas" EntityType="Self.Tb_AbonosCuotas" />
+    <EntitySet Name="Tb_Clientes" EntityType="Self.Tb_Clientes" />
+    <EntitySet Name="Tb_Configuraciones" EntityType="Self.Tb_Configuraciones" />
+    <EntitySet Name="Tb_Creditos" EntityType="Self.Tb_Creditos" />
+    <EntitySet Name="Tb_Cuotas" EntityType="Self.Tb_Cuotas" />
+    <EntitySet Name="Tb_Detalle_Entrada" EntityType="Self.Tb_Detalle_Entrada" />
+    <EntitySet Name="Tb_Detalle_Producto_Sucursal" EntityType="Self.Tb_Detalle_Producto_Sucursal" />
+    <EntitySet Name="Tb_DetalleTranslados" EntityType="Self.Tb_DetalleTranslados" />
+    <EntitySet Name="Tb_DetalleVenta" EntityType="Self.Tb_DetalleVenta" />
+    <EntitySet Name="Tb_Dian" EntityType="Self.Tb_Dian" />
+    <EntitySet Name="Tb_Entradas" EntityType="Self.Tb_Entradas" />
+    <EntitySet Name="Tb_Estados" EntityType="Self.Tb_Estados" />
+    <EntitySet Name="Tb_Financiacion" EntityType="Self.Tb_Financiacion" />
+    <EntitySet Name="Tb_Permiso" EntityType="Self.Tb_Permiso" />
+    <EntitySet Name="Tb_Post" EntityType="Self.Tb_Post" />
+    <EntitySet Name="Tb_Productos" EntityType="Self.Tb_Productos" />
+    <EntitySet Name="Tb_Proveedores" EntityType="Self.Tb_Proveedores" />
+    <EntitySet Name="Tb_Recuperar_contraseña" EntityType="Self.Tb_Recuperar_contraseña" />
+    <EntitySet Name="Tb_Rol_Usuarios" EntityType="Self.Tb_Rol_Usuarios" />
+    <EntitySet Name="Tb_Sucursales" EntityType="Self.Tb_Sucursales" />
+    <EntitySet Name="Tb_Tipo_Documento" EntityType="Self.Tb_Tipo_Documento" />
+    <EntitySet Name="Tb_Tipo_Producto" EntityType="Self.Tb_Tipo_Producto" />
+    <EntitySet Name="Tb_Usuarios" EntityType="Self.Tb_Usuarios" />
+    <EntitySet Name="Tb_ventas" EntityType="Self.Tb_ventas" />
+    <AssociationSet Name="Fk_CreditoAbono" Association="Self.Fk_CreditoAbono">
+      <End Role="Tb_Creditos" EntitySet="Tb_Creditos" />
+      <End Role="Tb_Abonos" EntitySet="Tb_Abonos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Abonos__Cuota__403A8C7D" Association="Self.FK__Tb_Abonos__Cuota__403A8C7D">
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+      <End Role="Tb_AbonosCuotas" EntitySet="Tb_AbonosCuotas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cli_v" Association="Self.fk_Cli_v">
+      <End Role="Tb_Clientes" EntitySet="Tb_Clientes" />
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_doc" Association="Self.fk_doc">
+      <End Role="Tb_Tipo_Documento" EntitySet="Tb_Tipo_Documento" />
+      <End Role="Tb_Clientes" EntitySet="Tb_Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cre_e" Association="Self.fk_Cre_e">
+      <End Role="Tb_Estados" EntitySet="Tb_Estados" />
+      <End Role="Tb_Creditos" EntitySet="Tb_Creditos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cre_v" Association="Self.fk_Cre_v">
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+      <End Role="Tb_Creditos" EntitySet="Tb_Creditos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tb_Cuotas__Finan__440B1D61" Association="Self.FK__Tb_Cuotas__Finan__440B1D61">
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Cuo_f" Association="Self.fk_Cuo_f">
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+      <End Role="Tb_Cuotas" EntitySet="Tb_Cuotas" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_D_entrada" Association="Self.Fk_D_entrada">
+      <End Role="Tb_Entradas" EntitySet="Tb_Entradas" />
+      <End Role="Tb_Detalle_Entrada" EntitySet="Tb_Detalle_Entrada" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_D_ProductoSucursal" Association="Self.Fk_D_ProductoSucursal">
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+      <End Role="Tb_Detalle_Entrada" EntitySet="Tb_Detalle_Entrada" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_D_Sucursal" Association="Self.Fk_D_Sucursal">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Detalle_Entrada" EntitySet="Tb_Detalle_Entrada" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_producto_detalle" Association="Self.Fk_producto_detalle">
+      <End Role="Tb_Productos" EntitySet="Tb_Productos" />
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_ProductoTrasl" Association="Self.Fk_ProductoTrasl">
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+      <End Role="Tb_DetalleTranslados" EntitySet="Tb_DetalleTranslados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_ProductoVenta" Association="Self.Fk_ProductoVenta">
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+      <End Role="Tb_DetalleVenta" EntitySet="Tb_DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_sucursal_detalle" Association="Self.Fk_sucursal_detalle">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Detalle_Producto_Sucursal" EntitySet="Tb_Detalle_Producto_Sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_SucursalDestino" Association="Self.Fk_SucursalDestino">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_DetalleTranslados" EntitySet="Tb_DetalleTranslados" />
+    </AssociationSet>
+    <AssociationSet Name="Fk_SucursalOrigen" Association="Self.Fk_SucursalOrigen">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_DetalleTranslados" EntitySet="Tb_DetalleTranslados" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DetV_Ven" Association="Self.fk_DetV_Ven">
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+      <End Role="Tb_DetalleVenta" EntitySet="Tb_DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Dian" Association="Self.fk_Dian">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Dian" EntitySet="Tb_Dian" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Pro_e" Association="Self.fk_Pro_e">
+      <End Role="Tb_Proveedores" EntitySet="Tb_Proveedores" />
+      <End Role="Tb_Entradas" EntitySet="Tb_Entradas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_suc_e" Association="Self.fk_suc_e">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Entradas" EntitySet="Tb_Entradas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Fin_e" Association="Self.fk_Fin_e">
+      <End Role="Tb_Estados" EntitySet="Tb_Estados" />
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Fin_v" Association="Self.fk_Fin_v">
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+      <End Role="Tb_Financiacion" EntitySet="Tb_Financiacion" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Post" Association="Self.fk_Post">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Post" EntitySet="Tb_Post" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tipo_producto" Association="Self.fk_tipo_producto">
+      <End Role="Tb_Tipo_Producto" EntitySet="Tb_Tipo_Producto" />
+      <End Role="Tb_Productos" EntitySet="Tb_Productos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_doc_p" Association="Self.fk_doc_p">
+      <End Role="Tb_Tipo_Documento" EntitySet="Tb_Tipo_Documento" />
+      <End Role="Tb_Proveedores" EntitySet="Tb_Proveedores" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Rec" Association="Self.fk_Rec">
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+      <End Role="Tb_Recuperar_contraseña" EntitySet="Tb_Recuperar_contraseña" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rol_u" Association="Self.fk_rol_u">
+      <End Role="Tb_Rol_Usuarios" EntitySet="Tb_Rol_Usuarios" />
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_suc_u" Association="Self.fk_suc_u">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Suc_v" Association="Self.fk_Suc_v">
+      <End Role="Tb_Sucursales" EntitySet="Tb_Sucursales" />
+      <End Role="Tb_ventas" EntitySet="Tb_ventas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_doc_u" Association="Self.fk_doc_u">
+      <End Role="Tb_Tipo_Documento" EntitySet="Tb_Tipo_Documento" />
+      <End Role="Tb_Usuarios" EntitySet="Tb_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="Tb_Permiso_Denegado_Roles" Association="Self.Tb_Permiso_Denegado_Roles">
+      <End Role="Tb_Permiso" EntitySet="Tb_Permiso" />
+      <End Role="Tb_Rol_Usuarios" EntitySet="Tb_Rol_Usuarios" />
+    </AssociationSet>
+    <FunctionImport Name="Activos" ReturnType="Collection(ADMISModel.Activos_Result)" />
+    <FunctionImport Name="ActProveedor">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="Cel" Mode="In" Type="String" />
+      <Parameter Name="Tel" Mode="In" Type="String" />
+      <Parameter Name="TipoDoc" Mode="In" Type="Int32" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Nit" Mode="In" Type="Int32" />
+      <Parameter Name="Nom1" Mode="In" Type="String" />
+      <Parameter Name="Nom2" Mode="In" Type="String" />
+      <Parameter Name="Apell1" Mode="In" Type="String" />
+      <Parameter Name="Apell2" Mode="In" Type="String" />
+      <Parameter Name="Empresa" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActSucursal">
+      <Parameter Name="Codigo" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apodo" Mode="In" Type="String" />
+      <Parameter Name="Prefijo" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="NIT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarAbono">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarCliente">
+      <Parameter Name="Identificacion" Mode="In" Type="Int64" />
+      <Parameter Name="Nombre1" Mode="In" Type="String" />
+      <Parameter Name="Nombre2" Mode="In" Type="String" />
+      <Parameter Name="Apellido1" Mode="In" Type="String" />
+      <Parameter Name="Apellido2" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="Celular" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Tipo" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Ciudad" Mode="In" Type="String" />
+      <Parameter Name="Cupo_activo" Mode="In" Type="String" />
+      <Parameter Name="Solicitud" Mode="In" Type="String" />
+      <Parameter Name="Tipo_Documento_Codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarEstado">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarProducto">
+      <Parameter Name="CodigoProducto" Mode="In" Type="String" />
+      <Parameter Name="Ref" Mode="In" Type="String" />
+      <Parameter Name="Desc" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="TipoProd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizarTipoProd">
+      <Parameter Name="cod" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Anular_Credito">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="cambiar_estado_cliente">
+      <Parameter Name="id" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="Cargar_Dian" ReturnType="Collection(Int32)">
+      <Parameter Name="Sucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cargar_Iva" ReturnType="Collection(Double)" />
+    <FunctionImport Name="Consultar_Credito" ReturnType="Collection(ADMISModel.Consultar_Credito_Result)">
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarClientes" ReturnType="Collection(ADMISModel.ConsultarClientes_Result)">
+      <Parameter Name="Identificacion" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre1" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ConsultarProveedor" ReturnType="Collection(ADMISModel.ConsultarProveedor_Result)">
+      <Parameter Name="ident" Mode="In" Type="Int32" />
+      <Parameter Name="nom1" Mode="In" Type="String" />
+      <Parameter Name="empresa" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarRol">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarSucursal">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="EliminarTipoDoc">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Estado" ReturnType="Collection(ADMISModel.Estado_Result)">
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertarClientes">
+      <Parameter Name="Identificacion" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre1" Mode="In" Type="String" />
+      <Parameter Name="nombre2" Mode="In" Type="String" />
+      <Parameter Name="Apellido1" Mode="In" Type="String" />
+      <Parameter Name="Apellido2" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="Celular" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Tipo" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Ciudad" Mode="In" Type="String" />
+      <Parameter Name="Cupo_activo" Mode="In" Type="String" />
+      <Parameter Name="Solicitud" Mode="In" Type="String" />
+      <Parameter Name="Tipo_Documento_Codigo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Llamar_Sucursal">
+      <Parameter Name="user" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="llenarp" ReturnType="Collection(ADMISModel.llenarp_Result)">
+      <Parameter Name="user" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Precio" ReturnType="Collection(Double)">
+      <Parameter Name="producto" Mode="In" Type="String" />
+      <Parameter Name="Sucursal" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Reg_Credito">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+      <Parameter Name="num_pagare" Mode="In" Type="Int32" />
+      <Parameter Name="cuota_inicial" Mode="In" Type="Int32" />
+      <Parameter Name="total_adeudado" Mode="In" Type="Double" />
+      <Parameter Name="venta" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Reg_Financiacion">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="estado" Mode="In" Type="Int32" />
+      <Parameter Name="num_pagare" Mode="In" Type="Int32" />
+      <Parameter Name="tiempo" Mode="In" Type="String" />
+      <Parameter Name="aumento" Mode="In" Type="Double" />
+      <Parameter Name="total" Mode="In" Type="Double" />
+      <Parameter Name="Cuota_inicial" Mode="In" Type="Double" />
+      <Parameter Name="Total_Adeudado" Mode="In" Type="Double" />
+      <Parameter Name="venta" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RegDetalleEntrada">
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="Precio" Mode="In" Type="Double" />
+      <Parameter Name="Entrada" Mode="In" Type="Int32" />
+      <Parameter Name="Sucursal" Mode="In" Type="String" />
+      <Parameter Name="Producto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegDetalleProdSucursal">
+      <Parameter Name="codigo_detalle" Mode="In" Type="String" />
+      <Parameter Name="StockMin" Mode="In" Type="Int32" />
+      <Parameter Name="StockMax" Mode="In" Type="Int32" />
+      <Parameter Name="ValorVenta" Mode="In" Type="Double" />
+      <Parameter Name="ValorMayor" Mode="In" Type="Double" />
+      <Parameter Name="ValorEspecial" Mode="In" Type="Double" />
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="Producto" Mode="In" Type="String" />
+      <Parameter Name="Sucursal" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegDetalleTraslado">
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="Total" Mode="In" Type="Double" />
+      <Parameter Name="Fecha" Mode="In" Type="String" />
+      <Parameter Name="Aumento" Mode="In" Type="Double" />
+      <Parameter Name="SucursalOrigen" Mode="In" Type="String" />
+      <Parameter Name="Producto" Mode="In" Type="String" />
+      <Parameter Name="SucursalDestino" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegDetalleVenta">
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="Descuento" Mode="In" Type="Double" />
+      <Parameter Name="SubTotal" Mode="In" Type="Double" />
+      <Parameter Name="Venta" Mode="In" Type="Int32" />
+      <Parameter Name="precio" Mode="In" Type="Double" />
+      <Parameter Name="Producto" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Registrar_detalle_producto_sucursal">
+      <Parameter Name="stock_min" Mode="In" Type="Int32" />
+      <Parameter Name="stock_max" Mode="In" Type="Int32" />
+      <Parameter Name="valor_venta" Mode="In" Type="Double" />
+      <Parameter Name="valor_mayor" Mode="In" Type="Double" />
+      <Parameter Name="valor_especial" Mode="In" Type="Double" />
+      <Parameter Name="cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="producto" Mode="In" Type="String" />
+      <Parameter Name="sucursal" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Registrar_producto">
+      <Parameter Name="Referencia" Mode="In" Type="String" />
+      <Parameter Name="descripcion" Mode="In" Type="String" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+      <Parameter Name="Tipo_producto" Mode="In" Type="String" />
+      <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="registrarAbono">
+      <Parameter Name="cod" Mode="In" Type="Int32" />
+      <Parameter Name="fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="credito" Mode="In" Type="Int32" />
+      <Parameter Name="valor" Mode="In" Type="Double" />
+      <Parameter Name="estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarDian">
+      <Parameter Name="Codigo" Mode="In" Type="Int32" />
+      <Parameter Name="Resolucion" Mode="In" Type="String" />
+      <Parameter Name="FechaInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="FechaFin" Mode="In" Type="DateTime" />
+      <Parameter Name="NumInicio" Mode="In" Type="Int32" />
+      <Parameter Name="NumFin" Mode="In" Type="Int32" />
+      <Parameter Name="Sucursal" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarEntrada">
+      <Parameter Name="Codigo" Mode="In" Type="Int32" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="Total" Mode="In" Type="Double" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Sucursal" Mode="In" Type="String" />
+      <Parameter Name="Proveedor" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarEstado">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarPost">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="NumActual" Mode="In" Type="Int32" />
+      <Parameter Name="Resolucion" Mode="In" Type="String" />
+      <Parameter Name="Sucursal" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarRol">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarTipoProd">
+      <Parameter Name="cod" Mode="In" Type="Int32" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarUsuario">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="TipoDoc" Mode="In" Type="Int32" />
+      <Parameter Name="Sucursal" Mode="In" Type="Int32" />
+      <Parameter Name="Nom1" Mode="In" Type="String" />
+      <Parameter Name="Nom2" Mode="In" Type="String" />
+      <Parameter Name="Apell1" Mode="In" Type="String" />
+      <Parameter Name="Apell2" Mode="In" Type="String" />
+      <Parameter Name="Contr" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Preg1" Mode="In" Type="String" />
+      <Parameter Name="Preg2" Mode="In" Type="String" />
+      <Parameter Name="Resp1" Mode="In" Type="String" />
+      <Parameter Name="Resp2" Mode="In" Type="String" />
+      <Parameter Name="Rol" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RegistrarVenta">
+      <Parameter Name="Codigo" Mode="In" Type="Int32" />
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="Total" Mode="In" Type="Double" />
+      <Parameter Name="iva" Mode="In" Type="Double" />
+      <Parameter Name="Cliente" Mode="In" Type="Int32" />
+      <Parameter Name="Sucursal" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegProveedor">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="Cel" Mode="In" Type="String" />
+      <Parameter Name="Tel" Mode="In" Type="String" />
+      <Parameter Name="TipoDoc" Mode="In" Type="Int32" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="Nit" Mode="In" Type="Int32" />
+      <Parameter Name="Nom1" Mode="In" Type="String" />
+      <Parameter Name="Nom2" Mode="In" Type="String" />
+      <Parameter Name="Apell1" Mode="In" Type="String" />
+      <Parameter Name="Apell2" Mode="In" Type="String" />
+      <Parameter Name="Empresa" Mode="In" Type="String" />
+      <Parameter Name="Estado" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegSucursal">
+      <Parameter Name="Codigo" Mode="In" Type="String" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Apodo" Mode="In" Type="String" />
+      <Parameter Name="Prefijo" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="Direccion" Mode="In" Type="String" />
+      <Parameter Name="NIT" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RegTipoDoc">
+      <Parameter Name="codigo" Mode="In" Type="Int32" />
+      <Parameter Name="nombre" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="tipo_doc" ReturnType="Collection(ADMISModel.tipo_doc_Result)" />
+  </EntityContainer>
+  <ComplexType Name="Activos_Result">
+    <Property Type="Int32" Name="Identificacion" Nullable="false" />
+    <Property Type="String" Name="Nombre1" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Nombre2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Celular" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="TipoCliente" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="45" />
+    <Property Type="String" Name="Ciudad" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Cupo_activo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Solicitud" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Tipo_Documento_Codigo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Consultar_Credito_Result">
+    <Property Type="Int32" Name="Codigo" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Int32" Name="Numero_Pagare" Nullable="false" />
+    <Property Type="Double" Name="Cuota_inicial" Nullable="true" />
+    <Property Type="Double" Name="Total_Adeudado" Nullable="false" />
+    <Property Type="Int32" Name="Venta" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ConsultarClientes_Result">
+    <Property Type="Int32" Name="Identificacion" Nullable="false" />
+    <Property Type="String" Name="Nombre1" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Nombre2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Celular" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="TipoCliente" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="45" />
+    <Property Type="String" Name="Ciudad" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Cupo_activo" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Solicitud" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="Tipo_Documento_Codigo" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ConsultarProveedor_Result">
+    <Property Type="Int32" Name="Identificacion" Nullable="false" />
+    <Property Type="String" Name="Celular" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Telefono" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="Tipo_Documento" Nullable="false" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="45" />
+    <Property Type="Int32" Name="Nit" Nullable="false" />
+    <Property Type="String" Name="Nombre1" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="Nombre2" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Apellido1" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Apellido2" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Empresa" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="45" />
+  </ComplexType>
+  <ComplexType Name="Estado_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Estado" Nullable="false" MaxLength="45" />
+  </ComplexType>
+  <ComplexType Name="llenarp_Result">
+    <Property Type="String" Name="Codigo_producto" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Descripcion" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="tipo_doc_Result">
+    <Property Type="Int32" Name="Codigo" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="20" />
+  </ComplexType>
+</Schema>

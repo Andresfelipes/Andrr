@@ -1,0 +1,119 @@
+﻿@model Proyecto.Models.Tb_Estados
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>ESTADOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<script>
+
+    var esta = "@ViewBag.esta";
+
+    if (esta == "esta") {
+
+        alertify.error("Este estado ya se encuentra registrado");
+    }
+
+</script>
+
+
+<script>
+
+    var correcto = "@ViewBag.correcto";
+    if (correcto == "correcto") {
+
+
+        swal({ title: "¡REGISTRO EXITOSO!", text: "Estado registrado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Estados/Index' });
+
+    }
+
+</script>
+
+
+<script src="~/Scripts/Validation.js"></script>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <div class="widget widget-default">
+                    <div class="widget-header">Registrar estado</div>
+                    <div class="widget-body">
+
+                        <div class="form">
+                            <hr />
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group col-md-6">
+                                <label id="lblid" class="control-label labels" Text="id">Código *</label>
+                                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                               
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label id="lblid" class="control-label labels" Text="Nombre">Estado *</label>
+                                
+                                    @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                                    @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                              
+                            </div>
+                                                       
+                            <div class="form-inline col-md-offset-5">
+                                <div class="col-md-offset-10 form-group col-md-12">
+                                    <input onclick="return valesta();" type="submit" value="Registrar" class="btn btn-primary" />
+                                    <input type="reset" value="Limpiar" class="btn btn-default" />
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+                        }
+
+                        
+<script>
+ function valesta() {
+
+        valor = document.getElementById("Id").value;
+        //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+        nom1 = document.getElementById("Estado").value;
+
+
+
+
+        //sucur = document.getElementById("Sucursal").selectedIndex;
+
+
+
+        //rol = document.getElementById("Rol").selectedIndex;
+
+
+        if (valor== "" ||   nom1== "" ) {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+        } 
+
+    }
+</script>

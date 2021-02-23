@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Tipo_Producto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>TIPO PRODUCTO </h1>
+
+            </div>
+
+
+        </div>
+    </div>
+</header>
+
+<br />
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar tipo de producto
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label" >Código</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Tipo</label>
+                                </th>
+
+                                <th class="text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Codigo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nombre)
+                                    </td>
+
+                                    <td class="text-right "><button class="btn btn-primary" style="border-color:white;"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink(" Editar", "Edit", new { id = item.Codigo })</button></td>
+                                </tr>
+
+                            }
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

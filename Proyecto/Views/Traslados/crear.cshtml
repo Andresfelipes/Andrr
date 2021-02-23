@@ -1,0 +1,385 @@
+﻿@model Proyecto.Models.viewModelTraslados
+
+@{
+    ViewBag.Title = "crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>TRASLADOS</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar traslado</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cod">Código *</label>
+                            @Html.EditorFor(model => model.tb_traslados.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.tb_traslados.Codigo, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="fech">Fecha *</label>
+
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field Fecha must be a date." data-val-required="El campo Fecha es obligatorio." id="Fecha" name="Fecha" type="date" value="">
+                            <span class="field-validation-valid text-danger" data-valmsg-for="Fecha" data-valmsg-replace="true"></span>
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="sucO">Sucursal Origen *</label>
+                            @Html.DropDownList("Sucursal_origen", null, htmlAttributes: new { @class = "selectpicker form-control selectcliente" })
+                            @Html.ValidationMessageFor(model => model.tb_traslados.Sucursal_origen, "", new { @class = "text-danger" })
+
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="suc">Sucursal Destino *</label>
+                            <select class="selectpicker form-control selectcliente" id="Sucursal" name="Sucursal" tabindex="-98">
+                                <option value="0">Seleccione un Sucursal...</option>
+                                @foreach (var item in ViewBag.Sucu)
+                                {
+                                    <option value="@item.Codigo">@item.Apodo</option>
+                                }
+                            </select>
+
+                            @Html.ValidationMessageFor(model => model.tb_traslados.Sucursal_Destino, "", new { @class = "text-danger" })
+
+                        </div>
+                        
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="tot">Total *</label>                           
+                            @Html.EditorFor(model => model.tb_traslados.Total, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.tb_traslados.Total, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="widget-body" style="width: 962px; padding-left: 3px; margin-right: 900px;">
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+
+                                        <th>Producto Sucursal</th>
+                                        <th style="width: 250px; padding-left: 15px;">Cantidad</th>
+                                        <th>Aumento</th>
+                                        <th class="text-right">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+
+                                                    <select class="selectpicker form-control selectcliente" data-live-search="true" id="Producto" name="Producto" tabindex="-98">
+                                                        <option value="0">Seleccione un Producto...</option>
+                                                        @foreach (var item in ViewBag.dato)
+                                                        {
+                                                            <option value="@item.Codigo_producto" data-subtext="@item.Codigo_producto">@item.Descripcion</option>
+                                                        }
+                                                    </select>
+                                                    @Html.ValidationMessageFor(model => model.tb_traslados_detalle.ProductoSucursal, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 250px;">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.tb_traslados_detalle.Cantidad, new { htmlAttributes = new { @class = "form-control validate-character", @onblur = "cantidad() " } })
+                                                    @Html.ValidationMessageFor(model => model.tb_traslados_detalle.Cantidad, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td style="width: 250px;">
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.tb_traslados_detalle.Aumento, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                                                @Html.ValidationMessageFor(model => model.tb_traslados_detalle.Aumento, "", new { @class = "text-danger" })
+                                            </div>
+                                        </td>
+
+
+                                        <td class="text-right"><input onclick="pasarDetalle()" value="Agregar" type="button" class="btn btn-primary" style="background-color:limegreen; color:white; border-color:limegreen;"></td>
+                                    </tr>
+                                </tbody>
+                                <tbody id="Detalle"></tbody>
+                            </table>
+                        </div>
+
+                        <div id="Hola">
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-offset-5 col-md-6 col-lg-6">
+                                <input onclick="registrar_Detalle_Entrada()" type="button" value="REGISTRAR" class="btn btn-primary" />
+                                <input onclick="calcularTotalDetalle()" type="button" value="Validar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+
+
+<script type="text/javascript">
+
+    var array = { detalle: [], fecha:'',sucursal_origen : '', sucursal_destino : '', total : ''  };
+    function pasarDetalle() {
+        if ($('#Producto').val() != 0) {
+            if ($('#tb_traslados_detalle_Cantidad').val() != "") {
+                if ($('#tb_traslados_detalle_Cantidad').val() >= 1) {
+                    if ($('#tb_traslados_detalle_Aumento').val() != "") {
+                        var actu = 0;
+                        var producto_cod = $('#Producto').val();
+                        for (var i = 0; i < array.detalle.length; i++) {
+                            if (array.detalle[i].ProductoSucursal == producto_cod) {
+                                actu = 1;
+                            }
+                        }
+                        if (actu == 0) {
+                            var produ = $('#Producto').val();
+                            var canti = $('#tb_traslados_detalle_Cantidad').val();
+                            var pre = $('#tb_traslados_detalle_Aumento').val();
+                            var html = '';
+                            html += '<tr id="Hola">';
+                            html += '<td style="width: 250px;padding-left: 22px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + produ + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + canti + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label id="Precio">' + pre + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;>';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '</tr>';
+                            array.detalle.push({ 'ProductoSucursal': produ, 'Cantidad': canti, 'Precio': pre });
+                            console.log(produ, canti, pre);
+                            $('#Detalle').append(html);
+                            $('#Producto').val(0);
+                            $('#tb_traslados_detalle_Cantidad').val('');
+                            $('#tb_traslados_detalle_Aumento').val('');
+                            calcular();
+                        } else {
+                            actualizar();
+                        }
+                    } else {
+                        alertify.error("Debe ingresar un precio");
+                        $('#tb_traslados_detalle_Aumento').focus();
+                    }
+                } else {
+                    alertify.error("Cantidad debe ser mayor a 0");
+                    $('#tb_traslados_detalle_Cantidad').focus();
+                }
+            } else {
+                alertify.error("Debe ingresar la cantidad");
+                $('#tb_traslados_detalle_Cantidad').focus();
+            }
+        } else {
+            alertify.error("Debe seleccionar un producto");
+            $('#Producto').focus();
+        }
+        }
+
+
+    function quitarElemento(elemento) {
+        var e = $(elemento).parent().parent();
+        $(e).remove();
+        var valores = "";
+        $(elemento).parents("tr").find("td").each(function () {
+            valores += $(this).html() + "\n";
+            return false;
+        });
+        $("#Producto").val(valores);
+        valor = $("#Producto").val();
+        $("#Producto").val('');
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].ProductoSucursal == valor) {
+                var arrays = { detalle: [], venta: '', sub_total: '', fecha: '', sucursal: '', cliente: '', iva: '', total: '' };
+                arrays.detalle = array.detalle;
+                array = { detalle: [], venta: '', sub_total: '', fecha: '', sucursal: '', cliente: '', iva: '', total: '' };
+                for (var i = 0; i < arrays.detalle.length; i++) {
+                    if (arrays.detalle[i].ProductoSucursal != valor) {
+                        array.detalle[i] = arrays.detalle[i];
+                    }
+                }
+            }
+        }
+        calcular();
+
+    }
+
+    function cantidad() {
+        var cant = parseFloat($("#tb_traslados_detalle_Cantidad").val());
+        if (cant >= 1) {
+            var id = $('#Producto').val();
+            var suc = $('#Sucursal_origen').val();
+            var lo = cant;
+            for (var i = 0; i < array.detalle.length; i++) {
+                if (array.detalle[i].ProductoSucursal == id) {
+                    lo = parseFloat(parseFloat(lo) + parseFloat(array.detalle[i].Cantidad));
+                }
+            }
+            var datos = { 'id': id, 'suc': suc, 'cantidad': lo };
+            $.ajax({
+                'url': '/Traslados/Cantidad',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(datos)
+            }).done(function (respuesta) {
+                var can = parseFloat(respuesta[0]);
+                if (can < 0) {
+                    alertify.error('Cantidad insuficiente');
+                    setTimeout(function () { $("#tb_traslados_detalle_Cantidad").focus(); }, 1);
+                }
+            })
+        } else {
+            alertify.error('Cantidad debe ser mayor a 0');
+            setTimeout(function () { $("#tb_traslados_detalle_Cantidad").focus(); }, 1);
+        }
+
+    }
+
+    function actualizar() {
+        var producto_cod = $('#Producto').val();
+        var cantidad = $('#tb_traslados_detalle_Cantidad').val();
+        var precio = $('#tb_traslados_detalle_Aumento').val();
+        var posi = 0;
+        $("#Hola").remove();
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].ProductoSucursal == producto_cod) {
+                posi = i;
+            }
+        }
+        array.detalle[posi].Cantidad = (parseFloat(array.detalle[posi].Cantidad) + parseFloat(cantidad));
+        array.detalle[posi].Precio = ((parseFloat(array.detalle[posi].Precio) + parseFloat(precio))/2);
+        for (var i = 0; i < array.detalle.length; i++) {
+            var html = '';
+            html += '<tr id="Hola">';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += array.detalle[i].ProductoSucursal;
+            html += '</td>';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<label>' + array.detalle[i].Cantidad + '</label>';
+            html += '</div>';
+            html += '</td>';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<label id="Pre">' + array.detalle[i].Precio + '</label>';
+            html += '</div>';
+            html += '</td>';
+            html += '<td style="width: 250px;>';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+            html += '</div>';
+            html += '</td>';
+            html += '</tr>';
+            $('#Detalle').append(html);
+            calcular();
+        }
+        $('#Producto').val(0);
+        $('#tb_traslados_detalle_Cantidad').val('');
+        $('#tb_traslados_detalle_Aumento').val('');
+    }
+
+    function registrar_Detalle_Entrada() {
+        console.log($("#Fecha").val());
+        if ((($("#tb_traslados_Codigo").val() != "") || ($("#Sucursal").val() != 0)) || (($("#Fecha").val() != "") || (array.detalle.length != 0))) {
+            if ($("#tb_traslados_Codigo").val() != "") {
+                if ($("#Fecha").val() != "") {
+                    if ($("#Sucursal").val() != 0) {
+                        if (array.detalle.length != 0) {
+                            array.traslado = $("#tb_traslados_Codigo").val();
+                            array.fecha = $("#Fecha").val();
+                            if ($("#tb_traslados_detalle_Aumento").val() != "") {
+                                array.aumento = $("#tb_traslados_detalle_Aumento").val();
+                            } else {
+                                array.aumento = 0;
+                            }
+                            array.sucursal_origen = $("#Sucursal_origen").val();
+                            array.sucursal_destino = $("#Sucursal").val();
+                            array.total = $("#tb_traslados_Total").val();
+
+                            console.log(array);
+                            $.ajax({
+                                'url': '/Traslados/Create',
+                                'dataType': 'json',
+                                'type': 'post',
+                                'contentType': "application/json; charset=utf-8",
+                                'data': JSON.stringify(array)
+                            }).done(function (respuesta) {
+                                location.href = '/Translados/Index';
+                            })
+                        } else {
+                            alertify.error("Debe agregar minimo un detalle");
+                        }
+                    } else {
+                        alertify.error("Debe seleccinar una sucursal de destino");
+                    }
+                } else {
+                    alertify.error("Debe ingresar la fecha");
+                }
+            } else {
+                alertify.error("Debe ingresar el codigo de translado");
+            }
+        } else {
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+        }
+        }
+
+        function calcular() {
+            var aumento;
+            if ($('#tb_traslados_detalle_Aumento').val() == "") {
+                aumento = 0;
+            } else {
+                aumento = $('#tb_traslados_detalle_Aumento').val();
+            }
+            var Total = 0;
+            for (var i = 0; i < array.detalle.length; i++) {
+                Total += parseFloat(parseFloat(array.detalle[i].Cantidad) * parseFloat(array.detalle[i].Precio));
+            }
+            var tot = parseFloat(parseFloat(Total) + parseFloat(aumento));
+            $('#tb_traslados_Total').val(parseFloat(tot));
+        }
+
+
+
+</script>

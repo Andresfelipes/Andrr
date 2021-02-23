@@ -1,0 +1,138 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Creditos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CRÉDITOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar crédito
+                </header>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary" onclick="cred(1)">
+                        <input type="radio" name="Vigente" id="Vigente"> Vigente
+                    </label>
+                    <label class="btn btn-primary" onclick="cred(2)">
+                        <input type="radio" name="Pagado" id="Pagado" autocomplete="off"> Pagado
+                    </label>
+                    <label class="btn btn-primary" onclick="cred(3)">
+                        <input type="radio" name="Anulado" id="Anulado" autocomplete="off"> Anulado
+                    </label>
+                </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Código</label>
+                                </th>
+
+                                <th>
+                                    <label id="lblid" class="control-label">Fecha</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Venta</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Total Adeudado</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Estado</label>
+                                </th>
+                                
+
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.dato)
+                        {
+                            <tr>
+                                <td>
+                                    @item.Codigo
+                                </td>
+                                <td>
+                                    @item.Fecha
+                                </td>
+                                <td>
+                                    @item.Venta
+                                </td>
+                                <td>
+                                    @item.Total_Adeudado
+                                </td>
+                                <td>
+                                    @item.Estado
+                                </td>
+                                
+
+                                <td class="text-right ">
+                                    <button Type="button" onclick="return validar(@item.Codigo)" class="btn btn-info" style="border-color:white; "><span class="fa fa-trash-o"></span> <span class="hidden-xs hidden-sm hidden-md"></span></button>
+                                    <button type="button" class="btn btn-info" onclick="abono(@item.Codigo)">Abono</button>
+                                </td>
+                                </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function abono(id) {
+        console.log(id);
+        location.href = '/Tb_Abonos/Create/' + id + '';
+    }
+
+    function cred(id) {
+        location.href = '/Tb_Creditos/Index/' + id + '';
+    }
+    function validar(Id) {
+        swal({
+            title: "¡Anular Crédito!",
+            text: "¿Esta seguro de anular el Crédito?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sí, estoy seguro",
+            closeOnConfirm: false
+        },
+        function () {
+            var date = { 'Id': Id };
+            $.ajax({
+                'url': '/Tb_Creditos/Delete',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(date)
+            }).done(function (Respuesta) {
+                console.log(Respuesta);
+                if (Respuesta == "1") {
+                    swal({ title: "¡Anulad0!", text: "Crédito anulado", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                } else {
+                    swal({ title: "¡No se puede anular!", text: "El crédito ya cuenta con abonos", type: "error", showConfirmButton: false }, setTimeout("location.reload()", 1000));
+                }
+            })
+        })
+    }
+</script>

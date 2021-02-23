@@ -1,0 +1,199 @@
+﻿@model Proyecto.Models.Tb_Detalle_Producto_Sucursal
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>PRODUCTOS SUCURSAL</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script src="~/Scripts/Validation.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar producto por sucursal</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="prod">Producto *</label>
+                            @Html.DropDownList("Producto", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Producto, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="suc">Sucursal</label>
+                            @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Sucursal, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="min">Stock Minímo *</label>
+                            @Html.EditorFor(model => model.Stock_Minimo, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Stock_Minimo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="max">Stock Máximo *</label>
+
+                            @Html.EditorFor(model => model.Stock_Maximo, new { htmlAttributes = new { @class = "form-control validate-character", @onblur = "stock()" } })
+                            @Html.ValidationMessageFor(model => model.Stock_Maximo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="pVenta">Precio Venta *</label>
+
+                            @Html.EditorFor(model => model.Valor_Venta, new { htmlAttributes = new { @class = "form-control validate-character", @onblur = "ven(1)" } })
+                            @Html.ValidationMessageFor(model => model.Valor_Venta, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="pMayor">Precio Por Mayor *</label>
+
+                            @Html.EditorFor(model => model.Valor_Mayor, new { htmlAttributes = new { @class = "form-control validate-character", @onblur = "ven(2)" } })
+                            @Html.ValidationMessageFor(model => model.Valor_Mayor, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="pEspecial">Precio Especial</label>
+
+                            @Html.EditorFor(model => model.Valor_Especial, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Valor_Especial, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cant">Cantidad *</label>
+
+                            @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-inline">
+                            <div class="col-md-offset-5 form-group col-md-12">
+                                <input onclick="return valproduS();" type="submit" value="Registrar" class="btn btn-primary" />
+                                <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                    }
+
+                   
+<script>
+    function stock() {
+        var min = $('#Stock_Minimo').val();
+        min = parseFloat(min);
+        var max = $('#Stock_Maximo').val();
+        max = parseFloat(max);
+        if (min < max) {
+        } else {
+            alertify.error("El stock minimo no puede ser mayor al stock maximo");
+            $('#Stock_Minimo').focus();
+        }
+    }
+
+    function valproduS() {
+        var cant = $('#Producto').val();
+        var array = { 'id': cant };
+        $.ajax({
+            'url': '/Tb_Detalle_Producto_Sucursal/Cantidad',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(array)
+        }).done(function (respuesta) {
+            var res = parseFloat(respuesta);
+            var can = $('#Cantidad').val();
+            can = parseFloat(can);
+            console.log(can)
+            if ((res >= can) || (can > 0)) {
+                min = document.getElementById("Stock_Minimo").value;
+                max = document.getElementById("Stock_Maximo").value;
+                val = document.getElementById("Valor_Venta").value;
+                may = document.getElementById("Valor_Mayor").value;
+                es = document.getElementById("Valor_Especial").value;
+                can = document.getElementById("Cantidad").value;
+                pro = document.getElementById("Producto").value;
+                suc = document.getElementById("Sucursal").value;
+
+                if (min == "" || max == "" || val == "" || may == "" || es == "" || can == "" || pro == 0 || suc == 0) {
+                    sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+                    return false;
+                } else {
+                        swal("BIEN HECHO!", "Producto registrado", "success");
+                        return true;
+                }
+            } else {
+                alertify.error("Cantidad insuficiente del producto");
+            }
+        });
+    }
+
+ function ven(id) {
+     var pro = $('#Producto').val();
+     var array = { 'Id': pro };
+     $.ajax({
+         'url': '/Tb_Detalle_Producto_Sucursal/Consul',
+         'dataType': 'json',
+         'type': 'post',
+         'contentType': "application/json; charset=utf-8",
+         'data': JSON.stringify(array)
+     }).done(function (respuesta) {
+         var ven = parseFloat(respuesta);
+         if (id == "1") {
+             var val = parseFloat($('#Valor_Venta').val().toString().replace(".", ""));
+             if (val < ven) {
+                 alertify.error("El precio de venta es inferior al de entrada");
+                 $('#Valor_Venta').focus();
+             } else {
+                 if (val < 0) {
+                     alertify.error("El precio de venta es inferior a 0");
+                     $('#Valor_Venta').focus();
+                 }
+             }
+         } else {
+             var may = parseFloat($('#Valor_Mayor').val().toString().replace(".", ""));
+             if (may < ven) {
+                 alertify.error("El precio al por mayor es inferior al de entrada");
+                 $('#Valor_Mayor').focus();
+             } else {
+                 if (may < 0) {
+                     alertify.error("El precio al por mayor es inferior a 0");
+                     $('#Valor_Mayor').focus();
+                 }
+             }
+         }
+     })
+ }
+
+</script>

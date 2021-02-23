@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Abonos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>ABONOS CRÉDITO</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<br />
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar abono
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Código</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Crédito</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Fecha</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Valor</label>
+                                </th>
+                                <th class="text-center">
+                                    <label id="lblid" class="control-label">Acciones</label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Codigo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Credito)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Fecha)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Valor)
+                                    </td>
+                                    <td class="text-center">
+                                        <button id="inact" name="inac" Type="button" onclick="return validar('@item.Codigo', '@item.Estado')" class="btn btn-info" style="border-color:white; "><span class="fa fa-trash-o"></span> <span class="hidden-xs hidden-sm hidden-md"></span></button>
+                                        <button id="abo" type="button" class="btn btn-info" onclick="abono(@item.Codigo)">Abono</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                   
+
+                </div>
+            </div>
+        </div>
+    </div>

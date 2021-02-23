@@ -1,0 +1,102 @@
+﻿@model Proyecto.Models.Tb_Tipo_Producto
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>TIPO PRODUCTO</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script src="~/Scripts/Validation.js"></script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Modificar tipo producto</div>
+                <div class="widget-body">
+
+
+
+
+                    <div class="form">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cod">Código *</label>
+                            @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control validate-character", disabled="disabled" } })
+                            @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="nom">Nombre</label>
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input onclick="return valtipod1();" type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Regresar al inicio", "Index")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+
+<script>
+ function valtipod1() {
+
+        valor = document.getElementById("Codigo").value;
+        //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+        nom1 = document.getElementById("Nombre").value;
+
+
+
+
+        //sucur = document.getElementById("Sucursal").selectedIndex;
+
+
+
+        //rol = document.getElementById("Rol").selectedIndex;
+
+
+        if (valor== "" ||   nom1== "" ) {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+        } else {
+
+
+                swal("BIEN HECHO!", "Tipo de Producto registrado", "success");
+                //setTimeout(function () { location.href = '/Tb_Usuarios/Index' }, 5);
+                return true;
+
+        }
+
+    }
+</script>

@@ -1,0 +1,1086 @@
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Documents\Visual Studio 2015\Projects\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Juan\Desktop\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\Juan\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\Juan\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Desktop\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\sebastian\Desktop\Consolidado\DANIEL\ADMISexp - copia\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Sebastian\Desktop\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\3ertyui\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\ai\wertghjk\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\Aprendiz\Desktop\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\proyecti_AI\Proyecto_Integrado2\Proyecto_Integrado\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\ACER\Desktop\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\Completo\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\Sebastian\Desktop\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+L:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+D:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+F:\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Owin.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Owin.dll
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Owin.xml
+C:\Users\pc\Desktop\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\ApplicationInsights.config
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll.config
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Proyecto.pdb
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Shared.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.Web.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.pdfa.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xtra.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Owin.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Owin.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\SimpleCrypto.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\WebGrease.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\stdole.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\EntityFramework.SqlServer.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\itextsharp.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.Web.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Microsoft.Owin.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Helpers.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Mvc.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Optimization.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.Razor.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\bin\Antlr3.Runtime.pdb
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.dll
+C:\Users\Ariadllo3\Desktop\ADMIS\ADMIS-PROY\Proyecto_Builes (2)\Proyecto_Builes\Proyecto\Proyecto\obj\Debug\Proyecto.pdb

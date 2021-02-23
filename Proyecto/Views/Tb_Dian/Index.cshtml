@@ -1,0 +1,120 @@
+﻿@model Proyecto.Models.Tb_Dian
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>DIAN</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar DIAN
+                </header>
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active" onclick="dian(1)">
+                        <input type="radio" name="Aburra" id="Aburra"> Aburra
+                    </label>
+                    <label class="btn btn-primary" onclick="dian(2)">
+                        <input type="radio" name="Jasan" id="Jasan" autocomplete="off"> Jasan
+                    </label>
+                    <label class="btn btn-primary" onclick="dian(3)">
+                        <input type="radio" name="Guayaquil" id="Guayaquil" autocomplete="off"> Guayaquil
+                    </label>
+                    <label class="btn btn-primary" onclick="dian(4)">
+                        <input type="radio" name="Pichincha" id="Pichincha" autocomplete="off"> Pichincha
+                    </label>
+                </div>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Código</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Resolución</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Fecha Fin</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Número Actual</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Número Fin</label>
+                                </th>
+                                
+                                <th>
+                                    <label id="lblid" class="control-label">Sucursal</label>
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Estado</label>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Codigo
+                                    </td>
+                                    <td>
+                                        @item.Resolucion
+                                    </td>
+                                    
+                                    <td>
+                                        @item.Fecha_fin_vigencia
+                                    </td>
+
+                                    <td>
+                                        @item.Num_actual
+                                    </td> 
+                                    <td>
+                                        @item.Num_fin_rango
+                                    </td>                                   
+                                    <td>
+                                        @item.Apodo
+                                    </td>
+                                    <td>
+                                        @item.Estado
+                                    </td>
+
+                                    <td class="text-right ">
+                                    <button Type="button" onclick="return validar()" class="btn btn-info" style="border-color:white; "><span class="fa fa-trash-o"></span> <span class="hidden-xs hidden-sm hidden-md"></span></button></td>
+                                    
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function dian(id) {
+        location.href = '/Tb_Dian/Index/' + id + '';
+    }
+</script>

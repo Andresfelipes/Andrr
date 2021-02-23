@@ -1,0 +1,140 @@
+﻿@model Proyecto.Models.viewModelEntradas
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>ENTRADAS</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar entrada
+                </header>
+                <div class="widget-body">
+                    <table class="table" id="myTable">
+                        <thead>
+                            <tr>
+                        <th>
+                            <label>Codigo</label>
+                        </th>
+                        <th>
+                            <label>Fecha</label>
+                        </th>
+                        <th>
+                            <label>Total</label>
+                        </th>
+                        <th>
+                            <label>Estado</label>
+                        </th>
+                        <th>
+                            <label>Sucursal</label>
+                        </th>
+                        <th>
+                            <label>Proveedor</label>
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.dato)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Codigo
+                                    </td>
+                                    <td>
+                                        @item.Fecha
+                                    </td>
+                                    <td>
+                                        @item.Total
+                                    </td>
+                                    <td>
+                                        @item.Estado
+                                    </td>
+                                    <td>
+                                        @item.Sucursal
+                                    </td>
+                                    <td>
+                                        @item.Proveedor
+                                    </td>
+                                    <td>
+                                        <button type="button" onclick="detalle(@item.Codigo)" class="btn btn-primary">Detalles</button>
+                                        <button Type="button" class="btn btn-info"><span class="fa fa-trash-o"></span><span class="hidden-xs hidden-sm hidden-md"></span></button>
+                                    </td>
+
+                                </tr>
+                            }
+
+
+                    </table>
+
+                    <br />
+                    <table class="table-ventas">
+                        <thead>
+                        <th>
+                            <label>Cantidad</label>
+                        </th>
+                        <th>
+                            <label>Producto</label>
+                        </th>
+                        <th>
+                            <label>Precio</label>
+                        </th>
+                        </tr>
+                        </thead>
+                        <tbody id="Detalle"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<script type="text/javascript">
+    function detalle(elemento) {
+        var dato = {'elemento': elemento};
+        $("#Hola").remove();
+        $.ajax({
+            'url': '/Entradas/Consultar',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(dato)
+        }).done(function (respuesta) {
+            console.log(respuesta.length);
+            var html = '';
+            for(var i = 0; i < respuesta.length; i++){
+                html += '<tr id="Hola">';
+                html += '<td style="width: 250px;padding-left: 20px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Cantidad + '</label>';
+                html += '</div>';
+                html += '<td style="width: 250px;padding-left: 0px;">';
+                html += '<div class="col-md-10" style="padding-left: 0px;">';
+                html += '<label">' + respuesta[i].ProductoSucursal + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '<td style="width: 250px;padding-left: 0px;">';
+                html += '<div class="col-md-4" style="padding-left: 0px;">';
+                html += '<label>' + respuesta[i].Precio + '</label>';
+                html += '</div>';
+                html += '</td>';
+                html += '</tr>';
+            }
+            $('#Detalle').append(html);
+
+        })
+    }
+</script>

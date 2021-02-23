@@ -1,0 +1,129 @@
+﻿@model Proyecto.Models.Tb_Usuarios
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Desea Eliinar Este Usuarios?</h3>
+<div>
+    <h4>Usuarios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contraseña)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contraseña)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pregunta1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pregunta1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pregunta2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pregunta2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Respuesta1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Respuesta1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Respuesta2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Respuesta2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Rol_Usuarios.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Rol_Usuarios.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Sucursales.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Tipo_Documento.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Tipo_Documento.Nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

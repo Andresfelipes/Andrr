@@ -1,0 +1,149 @@
+﻿@model Proyecto.Models.Tb_Dian
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>DIAN <small>EDITAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script src="~/Scripts/Validation.js"></script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid ">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+
+                <div class="widget-header">Registrar</div>
+                <div class="widget-body">
+                    <div class="form">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.Codigo)
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="COD">Código *</label>
+
+                            @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="resol">Resolución *</label>
+                            @Html.EditorFor(model => model.Resolucion, new { htmlAttributes = new { @class = "form-control " } })
+                            @Html.ValidationMessageFor(model => model.Resolucion, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="fInicio">Fecha Inicio *</label>
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field Fecha_inicio_vigencia must be a date." data-val-required="El campo Fecha_inicio_vigencia es obligatorio." id="Fecha_inicio_vigencia" name="Fecha_inicio_vigencia" type="date" value="">
+                            @Html.ValidationMessageFor(model => model.Fecha_inicio_vigencia, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="fFIN">Fecha Fin *</label>
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field Fecha_fin_vigencia must be a date." data-val-required="El campo Fecha_fin_vigencia es obligatorio." id="Fecha_fin_vigencia" name="Fecha_fin_vigencia" type="date" value="">
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numInicio">Número De Inicio *</label>
+                            @Html.EditorFor(model => model.Num_inicio_rango, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Num_inicio_rango, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numFin">Número Finalización *</label>
+                            @Html.EditorFor(model => model.Num_fin_rango, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Num_fin_rango, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="numAct">Número Actual *</label>
+                            @Html.EditorFor(model => model.Num_actual, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Num_actual, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="sucur">Sucursal</label>
+                            @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Sucursal, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="est">Estado *</label>
+                            @Html.EditorFor(model => model.Estado, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input onclick="return valdian1();" type="submit" value="GUARDAR" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script>
+ function valdian1() {
+
+        valor = document.getElementById("Codigo").value;
+        //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+        nom1 = document.getElementById("Resolucion").value;
+        ape1 = document.getElementById("Fecha_inicio_vigencia").value;
+        ape2 = document.getElementById("Fecha_fin_vigencia").value;
+        tel = document.getElementById("Num_inicio_rango").value;
+        cel = document.getElementById("Num_fin_rango").value;
+        email = document.getElementById("Num_actual").value;
+        estado = document.getElementById("Sucursal").value;
+        nit = document.getElementById("Estado").value;
+
+
+        //sucur = document.getElementById("Sucursal").selectedIndex;
+
+
+
+        //rol = document.getElementById("Rol").selectedIndex;
+
+
+        if (valor== "" ||   nom1== "" || ape1== "" ||ape2=="" || email== ""||tel=="" || cel=="" || email == "" || estado == ""  || nit =="" || empresa =="" || dire=="" ) {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+        } else {
+
+
+                swal("BIEN HECHO!", "Dian registrado", "success");
+                //setTimeout(function () { location.href = '/Tb_Usuarios/Index' }, 5);
+                return true;
+
+        }
+
+    }
+</script>
+

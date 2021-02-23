@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="25b933739c4b4d7f86558d93f2c35012" Name="Diagram1">
+        <EntityTypeShape EntityType="ADMISModel.Tb_Abonos" Width="1.5" PointX="10.5" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_AbonosCuotas" Width="1.5" PointX="15.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Clientes" Width="1.5" PointX="3.75" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Configuraciones" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Creditos" Width="1.5" PointX="8.25" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Cuotas" Width="1.5" PointX="13.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Detalle_Entrada" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Detalle_Producto_Sucursal" Width="1.5" PointX="6" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_DetalleTranslados" Width="1.5" PointX="8.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_DetalleVenta" Width="1.5" PointX="8.25" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Dian" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Entradas" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Estados" Width="1.5" PointX="9" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Financiacion" Width="1.5" PointX="11.25" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Permiso" Width="1.5" PointX="1.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Post" Width="1.5" PointX="3" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Productos" Width="1.5" PointX="3.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Proveedores" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Recuperar_contraseña" Width="1.5" PointX="8.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Rol_Usuarios" Width="1.5" PointX="3.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Sucursales" Width="1.5" PointX="0.75" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Tipo_Documento" Width="1.5" PointX="3.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Tipo_Producto" Width="1.5" PointX="1.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_Usuarios" Width="1.5" PointX="6" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADMISModel.Tb_ventas" Width="1.5" PointX="6" PointY="22.625" IsExpanded="true" />
+        <AssociationConnector Association="ADMISModel.Fk_CreditoAbono" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.FK__Tb_Abonos__Cuota__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Cli_v" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_doc" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Cre_e" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Cre_v" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.FK__Tb_Cuotas__Finan__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Cuo_f" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_D_entrada" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_D_ProductoSucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_D_Sucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_producto_detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_ProductoTrasl" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_ProductoVenta" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_sucursal_detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_SucursalDestino" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Fk_SucursalOrigen" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_DetV_Ven" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Dian" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Pro_e" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_suc_e" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Fin_e" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Fin_v" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_tipo_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_doc_p" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Rec" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_rol_u" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_suc_u" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_Suc_v" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.fk_doc_u" ManuallyRouted="false" />
+        <AssociationConnector Association="ADMISModel.Tb_Permiso_Denegado_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,149 @@
+﻿@model Proyecto.Models.Tb_Clientes
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //(Html.BeginForm("Delete", "Tb_ClientesController", FormMethod.Post))
+}
+
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CLIENTES</h1>
+               
+            </div>
+
+            @*<div  id="bus" class="col-md-4 col-lg-4">
+                <input type="text" id="txt_bus" name="txt_bus" class="form-control col-md-4 col-lg-4" /> 
+                <br />
+                 <input  type="submit" id="btn_bus" name="btn_bus" class="btn-primary" />
+            </div>*@
+               
+        </div>
+    </div>
+</header>
+
+<br />
+
+                    <form method="post" action="Tb_Clientes/Delete">
+                        @Html.AntiForgeryToken()
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="widget widget-default">
+                                        <header class="widget-header">
+                                            CONSULTAR CLIENTES
+                                        </header>
+                                        <div class="widget-body">
+                                            <table class="table" id="myTable">
+                                                <thead>
+                                                    <tr>
+                                                        <th><label id="lblid" class="control-label">Identificación</label></th>
+                                                        
+                                                        <th> <label id="lblid" class="control-label">Nombres </label></th>
+                                                  
+                                                        <th><label id="lblid" class="control-label">Apellidos</label></th>
+                                                                                                                                                                     
+                                                        <th>
+                                                            <label id="lblid" class="control-label ">Tipo Cliente</label>
+                                                        </th>
+
+                                                        <th>
+                                                            <label id="lblid" class="control-label ">Estado</label>
+                                                        </th>
+
+                                                        <th>
+                                                            <label id="lblid" class="control-label">Cupo Activo</label>
+                                                        </th>
+                                                                                                                
+                                                        <th class="text-right">Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var item in ViewBag.dato)
+                                                    {
+                                                        <tr>
+                                                            <td>
+                                                                @item.Identificacion
+                                                            </td>
+                                                            <td>
+                                                                @item.Nombre1  @item.Nombre2
+                                                               
+                                                            </td>
+
+                                                            <td>
+                                                                @item.Apellido1 @item.Apellido2
+                                                            </td>
+                                                                                                                                                          
+                                                            <td>
+                                                                @item.TipoCliente
+                                                            </td>
+                                                            <td>
+                                                                @item.Estado
+                                                            </td>
+
+                                                            <td>
+                                                                @item.Cupo_activo
+                                                            </td>
+                                                                                                                       
+                                                            <td class="text-right "><button  class="btn btn-primary"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Editar", "Edit", new { id = item.Identificacion })</button><button Type="button" onclick="return validar()" class="btn btn-info" style="border-color:red; "><span class="fa fa-trash-o"></span> <span class="hidden-xs hidden-sm hidden-md"></span></button></td>
+                                                        </tr>
+
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+
+                                    
+                                </div>
+                    </form>
+<script>
+    function validar(Id) {
+        var ok
+        console.log(Id);
+        swal({
+            title: "INACTIVAR CLIENTE?",
+            text: "ESTA SEGURO DE INACTIVAR ESTE CLIENTE",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "SI,ESTOY SEGURO",
+            cancelButtonText: "NO,CANCELAR!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+  function (isConfirm) {
+      var ok = true;
+      var dato = { 'Id': Id }
+      if (isConfirm) {
+          $.ajax({
+              'url': 'Tb_Clientes/Delete',
+              'dataType': 'json',
+              'type': 'post',
+              'contentType': "application/json; charset=utf-8",
+              'data': JSON.stringify(dato)               
+          }).done(function (Respuesta) {
+              if (Respuesta) {
+                  swal("INACTIVAR!", "AH INACTIVA EL CLIENTE", "success");
+                  ok = true;
+              }
+          })
+          ok = true;
+      } else {
+          swal("CANCELDOSS", " :)", "error");
+          ok = false;
+      }
+     
+  });
+        return ok;
+    }
+   
+    
+</script>

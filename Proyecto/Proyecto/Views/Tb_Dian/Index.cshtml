@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Dian>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>DIANZ<small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    DIAN
+                </header>
+                <div class="widget-body">
+                    <table class="table">
+                        <thead>
+
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Resolucion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Fecha_inicio_vigencia)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Fecha_fin_vigencia)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Num_inicio_rango)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Num_fin_rango)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Num_actual)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Estado)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Resolucion)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Fecha_inicio_vigencia)
+                                    </td>
+                                    
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Fecha_fin_vigencia)
+                                    </td>
+                                    
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Num_inicio_rango)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Num_fin_rango)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Num_actual)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Estado)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tb_Sucursales.Nombre)
+                                    </td>
+                                    
+
+                                    <td class="text-right"><button class="btn btn-transparent btn-xs"><span class="fa fa-pencil"></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink("Edit", "Edit", new { id = item.Codigo }) </button> <div class="btn btn-transparent btn-transparent-danger btn-xs"><span class="fa fa-trash-o"></span>@Html.ActionLink("Delete", "Delete", new { id = item.Codigo })  <span class="hidden-xs hidden-sm hidden-md"></span></div></td>
+                                    
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

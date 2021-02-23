@@ -1,0 +1,262 @@
+﻿@model Proyecto.Models.viewModelVenta
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>VENTAS<small>REGISTRAR</small></h1>
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group col-md-6">
+                            @Html.LabelFor(model => model.Tb_ventas.Codigo, htmlAttributes: new { @class = "control-label col-md-2" })
+
+
+                            @Html.EditorFor(model => model.Tb_ventas.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Tb_ventas.Codigo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Tb_ventas.Fecha, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.Tb_ventas.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Fecha, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Tb_ventas.Sucursal, "Sucursal", htmlAttributes: new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control", @onchange = "Cargar_Dian(); Cargar_Productos()" })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Sucursal, "", new { @class = "text-danger" })
+                    </div>
+
+
+
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Tb_ventas.Cliente, "Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownList("Cliente", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Cliente, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Tb_ventas.iva, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.Tb_ventas.iva, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.iva, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        @Html.LabelFor(model => model.Tb_ventas.Total, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                        @Html.EditorFor(model => model.Tb_ventas.Total, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Tb_ventas.Total, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="widget-body" style="width: 962px; padding-left: 3px; margin-right: 900px;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 250px; padding-left: 15px;">Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Descuento</th>
+                                    <th>Precio</th>
+                                    <th class="text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                @Html.DropDownList("Producto", null, htmlAttributes: new { @class = "form-control", @onchange = "cambiar_producto()" })
+                                                @Html.ValidationMessageFor(model => model.Tb_Detalle.ProductoSucursal, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="width: 250px;">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                @Html.EditorFor(model => model.Tb_Detalle.Cantidad, new { htmlAttributes = new { @class = "form-control" } })
+                                                @Html.ValidationMessageFor(model => model.Tb_Detalle.Cantidad, "", new { @class = "text-danger" })
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td style="width: 250px;">
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Tb_Detalle.Descuento, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Tb_Detalle.Descuento, "", new { @class = "text-danger" })
+                                        </div>
+                                    </td>
+                                    <td style="width: 250px;">
+                                        <div class="col-md-10">
+                                            <input class="form-control text-box single-line" data-val="true" data-val-number="The field iva must be a number." data-val-required="El campo iva es obligatorio." id="Precio" name="Precio" type="number" value="">
+                                        </div>
+                                    </td>
+
+                                    <td class="text-right"><input onclick="pasarDetalle()" value="Agregar" type="button" class="btn btn-primary" style="background-color:limegreen; color:white; border-color:limegreen;"></td>
+                                </tr>
+                            </tbody>
+                            <tbody id="Detalle"></tbody>
+                        </table>
+                    </div>
+
+                    <div id="Hola">
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-md-offset-5 col-md-6 col-lg-6">
+                            <input onclick="Registrar_Detalle()" type="button" value="REGISTRAR" class="btn btn-primary" />
+                            <input onclick="calcularTotalDetalle()" type="button" value="Validar" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+<script type="text/javascript">
+    function cambiar_producto() {
+        var id = $('#Producto').val();
+        var suc = $('#Sucursal').val();
+        var datos = { 'id': id, 'suc': suc };
+        $.ajax({
+            'url': '/Ventas/Precio',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(datos)
+        }).done(function (respuesta) {
+            $('#Precio').val(respuesta[0]);
+        })
+    }
+
+    function Cargar_Dian() {
+        var id = $('#Sucursal').val();
+        var datos = { 'id': id };
+        $.ajax({
+            'url': '/Ventas/Dian',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(datos)
+        }).done(function (respuesta) {
+            $('#Tb_ventas_Codigo').val(respuesta[0]);
+        })
+    }
+    function Cargar_Productos() {
+        $.ajax({
+            'url': '/Ventas/Productos',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify()
+        }).done(function (respuesta) {
+
+        })
+    }
+
+    var array = { detalle: [], fecha : '', sucursal : '', cliente : '', iva : '', total : '' };
+    function pasarDetalle() {
+        var Total = 0;
+        var vali = $('#Tb_ventas_Total').val();
+        if ( vali == "") {
+            Total = 0;
+        } else {
+            Total = $('#Tb_ventas_Total').val();
+        }
+        var producto = $('#Producto option:selected').text();
+        var producto_cod = $('#Producto option:selected').val();
+        var cantidad = $('#Tb_Detalle_Cantidad').val();
+        var Descuento = $('#Tb_Detalle_Descuento').val();
+        var precio = $('#Precio').val();
+        var html = '';
+        html += '<tr>';
+        html += '<td style="width: 250px;padding-left: 22px;">';
+        html += '<div class="col-md-10" style="padding-left: 0px;">';
+        html += '<label>' + producto + '</label>';
+        html += '</div>';
+        html += '</td>';
+        html += '<td style="width: 250px;padding-left: 20px;">';
+        html += '<div class="col-md-10" style="padding-left: 0px;">';
+        html += '<label>' + cantidad + '</label>';
+        html += '</div>';
+        html += '</td>';
+        html += '<td style="width: 250px;padding-left: 20px;">';
+        html += '<div class="col-md-10" style="padding-left: 0px;">';
+        html += '<label>' + Descuento + '</label>';
+        html += '</div>';
+        html += '</td>';
+        html += '<td style="width: 250px;padding-left: 20px;">';
+        html += '<div class="col-md-10" style="padding-left: 0px;">';
+        html += '<label id="Precio">' + precio + '</label>';
+        html += '</div>';
+        html += '</td>';
+        html += '<td style="width: 250px;>';
+        html += '<div class="col-md-10" style="padding-left: 0px;">';
+        html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+        html += '</div>';
+        html += '</td>';
+        html += '</tr>';
+        array.detalle.push({'Producto':producto_cod, 'Cantidad':cantidad, 'Sub_total':precio});
+        $('#Detalle').append(html);
+        Total = parseFloat(parseFloat(Total) + (parseFloat(precio) * parseFloat(cantidad)));
+        $('#Tb_ventas_Total').val(parseFloat(Total));
+    }
+   
+    function quitarElemento(elemento) {
+        var e = $(elemento).parent().parent();
+        $(e).remove();
+    }
+    function Registrar_Detalle() {
+        array.fecha = $("#Tb_ventas_Fecha").val();
+        array.cliente = $("#Cliente").val();
+        array.sucursal = $("#Sucursal").val();
+        array.iva = $("#Tb_ventas_iva").val();
+        array.total = $("#Tb_ventas_Total").val();
+        $.ajax({
+            'url': '/Ventas/Create',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(array)
+        }).done(function (respuesta) {
+
+        })
+    }
+
+
+
+</script>

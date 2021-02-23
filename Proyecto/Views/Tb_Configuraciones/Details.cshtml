@@ -1,0 +1,83 @@
+﻿@model Proyecto.Models.Tb_Configuraciones
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_Configuraciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AumentoFinanciacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AumentoFinanciacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tiempo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tiempo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IVA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IVA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Recargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Recargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoMinorista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoMinorista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoMayorista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoMayorista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CupoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CupoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sucursal_pricipal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sucursal_pricipal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Codigo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

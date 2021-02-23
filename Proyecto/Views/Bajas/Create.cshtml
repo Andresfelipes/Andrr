@@ -1,0 +1,360 @@
+﻿@model Proyecto.Models.viewModelBajas
+@{
+    ViewBag.Title = "crear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>Registrar Bajas</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar Baja</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="codigo">Código *</label>
+
+                            @Html.EditorFor(model => model.bajas.Codigo_baja, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.bajas.Codigo_baja, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="codigo">Fecha *</label>
+
+                            <input class="form-control text-box single-line" data-val="true" data-val-date="The field fecha must be a date." 
+                                   data-val-required="El campo fecha es obligatorio." id="bajas_fecha" name="bajas.fecha" type="date" value="">
+                            @Html.ValidationMessageFor(model => model.bajas.fecha, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="sucur">Sucursal *</label>
+                            @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control", disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.bajas.Sucursal_baja, "", new { @class = "text-danger" })
+
+                        </div>
+
+                       
+                        <div class="widget-body" style="width: 900px; padding-left: 3px; margin-right: 900px;">
+                            <table class="table " >
+                                <thead>
+                                    <tr>
+
+                                        <th>Producto Sucursal</th>
+                                        <th >Cantidad</th>
+                                        <th>Motivo</th>
+                                        
+                                        <th class="text-right">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="col-md-6 " style="width: 220px">
+
+                                                    <select class="selectpicker form-control selectcliente" data-live-search="true" id="Producto" name="Producto" tabindex="-98">
+                                                        <option value="0">Seleccione un Producto...</option>
+                                                        @foreach (var item in ViewBag.dato)
+                                                        {
+                                                            <option value="@item.Codigo_producto" data-subtext="@item.Codigo_producto">@item.Descripcion</option>
+                                                        }
+                                                    </select>
+                                                    @Html.ValidationMessageFor(model => model.detalle.Producto, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 250px;">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.detalle.Cantidad, new { htmlAttributes = new { @class = "form-control validate-character", @onblur = "cantidad() " } })
+                                                    @Html.ValidationMessageFor(model => model.detalle.Cantidad, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td style="width: 250px;">
+                                            <div class="form-group">
+                                                <div class="col-md-10">
+                                                    @Html.EditorFor(model => model.detalle.Motivo, new { htmlAttributes = new { @class = "form-control " } })
+                                                    @Html.ValidationMessageFor(model => model.detalle.Motivo, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </td>
+
+
+                                        <td class="text-right"><input onclick="pasarDetalle()" value="Agregar" type="button" class="btn btn-primary" style="background-color:limegreen; color:white; border-color:limegreen;"></td>
+                                    </tr>
+                                </tbody>
+                                <tbody id="Detalle"></tbody>
+                            </table>
+                        </div>
+
+                        <div id="Hola">
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-offset-5 col-md-6 col-lg-6">
+                                <input onclick="registrar_Detalle_Entrada()" type="button" value="Registrar" class="btn btn-primary" />
+                                @*<input onclick="calcularTotalDetalle()" type="button" value="Validar" class="btn btn-primary" />*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+
+
+<script type="text/javascript">
+
+    var array = { detalle: [],baja:'', fecha:'',sucursal: '', motivo : '',produ:'',canti:''  };
+    function pasarDetalle() {
+        if ($('#Producto').val() != 0) {
+            if ($('#detalle_Cantidad').val() != "") {
+                if ($('#detalle_Cantidad').val() >= 1) {
+                    if ($('#detalle_Cantidad').val() != "") {
+                        var actu = 0;
+                        var producto_cod = $('#Producto').val();
+                        for (var i = 0; i < array.detalle.length; i++) {
+                            if (array.detalle[i].ProductoSucursal == producto_cod) {
+                                actu = 1;
+                            }
+                        }
+                        if (actu == 0) {
+                            var produ = $('#Producto').val();
+                            var canti = $('#detalle_Cantidad').val();
+                            var pre = $('#detalle_Cantidad').val();
+                            var moti = $('#detalle_Motivo').val();
+                            var html = '';
+                            html += '<tr id="Hola">';
+                            html += '<td style="width: 250px;padding-left: 22px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + produ + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + canti + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + moti + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                         
+                            html += '<td style="width: 250px;>';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '</tr>';
+                            array.detalle.push({ 'Motivo': moti, 'Producto': produ, 'Cantidad': canti });
+                            console.log(array.detalle);
+                            console.log(produ, canti);
+                            $('#Detalle').append(html);
+                            $('#Producto').val('');
+                            $('#detalle_Cantidad').val('');
+                           
+                            ;
+                        } 
+                    } 
+                } else {
+                    alertify.error("Cantidad debe ser mayor a 0");
+                    $('#detalle_Cantidad').focus();
+                }
+            } else {
+                alertify.error("Debe ingresar la cantidad");
+                $('#detalle_cantidad').focus();
+            }
+        } else {
+            alertify.error("Debe seleccionar un producto");
+            $('#Producto').focus();
+        }
+        }
+
+
+    function quitarElemento(elemento) {
+        var e = $(elemento).parent().parent();
+        $(e).remove();
+        var valores = "";
+        $(elemento).parents("tr").find("td").each(function () {
+            valores += $(this).html() + "\n";
+            return false;
+        });
+        $("#Producto").val(valores);
+        valor = $("#Producto").val();
+        $("#Producto").val('');
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].ProductoSucursal == valor) {
+                var arrays = { detalle: [], fecha: '', sucursal: '', motivo: '' };
+                arrays.detalle = array.detalle;
+                array = { detalle: [], fecha: '', sucursal: '', motivo: '' };
+                for (var i = 0; i < arrays.detalle.length; i++) {
+                    if (arrays.detalle[i].producto_sucur != valor) {
+                        array.detalle[i] = arrays.detalle[i];
+                    }
+                }
+            }
+        }
+      
+
+    }
+
+   
+
+    function actualizar() {
+        var producto_cod = $('#Producto').val();
+        var cantidad = $('#detalle_Cantidad').val();
+       
+        var posi = 0;
+        $("#Hola").remove();
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].producto_sucur == producto_cod) {
+                posi = i;
+            }
+        }
+        array.detalle[posi].cantidad = (parseFloat(array.detalle[posi].cantidad) + parseFloat(cantidad));
+      
+        for (var i = 0; i < array.detalle.length; i++) {
+            var html = '';
+            html += '<tr id="Hola">';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += array.detalle[i].producto_sucur;
+            html += '</td>';
+            html += '<td style="width: 250px;padding-left: 20px;">';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<label>' + array.detalle[i].Cantidad + '</label>';
+            html += '</div>';
+            html += '</td>';
+           
+            html += '<td style="width: 250px;>';
+            html += '<div class="col-md-10" style="padding-left: 0px;">';
+            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+            html += '</div>';
+            html += '</td>';
+            html += '</tr>';
+            $('#Detalle').append(html);
+            
+        }
+        $('#Producto').val(0);
+        $('#detalle_cantidad').val('');
+       
+    }
+
+    function registrar_Detalle_Entrada() {
+        console.log(array);
+        console.log($("#bajas_fecha").val());
+        if ((($("#bajas_Codigo_baja").val() != "") || ($("#Sucursal").val() != 0)) || (($("#bajas_fecha").val() != "") || (array.detalle.length != 0))) {
+            if ($("#bajas_Codigo_baja").val() != "") {
+                if ($("#bajas_fecha").val() != "") {
+                    if ($("#Sucursal").val() != 0) {
+                        
+                            if (array.detalle.length != 0) {
+                                array.baja = $("#bajas_Codigo_baja").val();
+                                array.fecha = $("#bajas_fecha").val();
+                                array.sucursal = $("#Sucursal").val();
+                             
+
+                                console.log(array);
+                                $.ajax({
+                                    'url': '/Bajas/Create',
+                                    'dataType': 'json',
+                                    'type': 'post',
+                                    'contentType': "application/json; charset=utf-8",
+                                    'data': JSON.stringify(array)
+                                }).done(function (respuesta) {
+                                    if (respuesta == "1") {
+                                        location.href = '/Traslados/Index';
+                                    } else {
+
+                                        alertify.error("Ya existe una baja con este codigo");
+                                    }
+                                })
+                            } else {
+                                alertify.error("Debe agregar minimo un detalle");
+                            }
+
+                        
+
+                    } else {
+                        alertify.error("Debe seleccinar una Sucursal");
+                    }
+                } else {
+                    alertify.error("Debe ingresar Una Fecha");
+                }
+            } else {
+                alertify.error("Debe ingresar el codigo de la baja");
+            }
+        } else {
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+        }
+        }
+
+      
+    function cantidad() {
+        var cant = parseFloat($("#detalle_Cantidad").val());
+        if (cant >= 1) {
+            var id = $('#Producto').val();
+            var suc = $('#Sucursal').val();
+            var lo = cant;
+            for (var i = 0; i < array.detalle.length; i++) {
+                if (array.detalle[i].ProductoSucursal == id) {
+                    lo = parseFloat(parseFloat(lo) + parseFloat(array.detalle[i].Cantidad));
+                }
+            }
+            var datos = { 'id': id, 'suc': suc, 'cantidad': lo };
+            $.ajax({
+                'url': '/Bajas/Cantidad',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(datos)
+            }).done(function (respuesta) {
+                console.log(respuesta[0]);
+               
+                if (respuesta < 0) {
+                    alertify.error('Cantidad insuficiente');
+                    setTimeout(function () { $("#detalle_Cantidad").focus(); }, 1);
+                }
+            })
+        } else {
+            alertify.error('Cantidad debe ser mayor a 0');
+            setTimeout(function () { $("#detalle_Cantidad").focus(); }, 1);
+        }
+
+    }
+
+
+</script>
+
+

@@ -1,0 +1,84 @@
+﻿@model Proyecto.Models.Tb_Abonos
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>ABONOS CRÉDITO</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">REGISTRAR ABONO</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels">ID *</label>
+                            
+                                @Html.EditorFor(model => model.Codigo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Codigo, "", new { @class = "text-danger" })
+                           
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels">Fecha *</label>
+                           
+                                @Html.EditorFor(model => model.Fecha, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Fecha, "", new { @class = "text-danger" })
+                           
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels">Código Crédito *</label>
+                            
+                                @Html.DropDownList("Credito", null, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Credito, "", new { @class = "text-danger" })
+                           
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels">Valor *</label>
+                         
+                                @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+                            
+                        </div>
+
+                        <div class="form-group  col-md-12">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input type="submit" value="Registrar" class="btn btn-primary" />
+                                <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                    }
+
+                 
+

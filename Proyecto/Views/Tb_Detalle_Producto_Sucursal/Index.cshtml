@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_Detalle_Producto_Sucursal>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>PRODUCTOS SUCURSAL</h1>
+
+            </div>
+
+
+        </div>
+    </div>
+</header>
+
+<br />
+
+@Html.AntiForgeryToken()
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Consultar producto sucursal
+                </header>
+                <div class="widget-body">
+                    <table class="table col-md-5 col-sm-7  display" id="myTable" cellpadding="0" cellspacing="0" border="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <label id="lblid" class="control-label">Código</label>
+                                </th>
+
+                                <th>
+                                    <label id="lblid" class="control-label">Producto</label>
+
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Stock mínimo</label>
+
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Stock máximo</label>
+
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Precio venta</label>
+
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Precio por mayor</label>
+
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Cantidad</label>
+
+                                </th>
+                                <th>
+                                    <label id="lblid" class="control-label">Sucursal</label>
+
+                                </th>
+                                <th class="text-right">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.codigo_detalle)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tb_Productos.Descripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Stock_Minimo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Stock_Maximo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Valor_Venta)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Valor_Mayor)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Cantidad)
+                                    </td>
+                                    <td>
+                                       @Html.DisplayFor(modelItem => item.Tb_Sucursales.Apodo)
+                                    </td>
+                                    
+
+
+                                    <td class="text-right "><button class="btn btn-primary" style="border-color:white;"><span></span><span class="hidden-xs hidden-sm hidden-md"></span>@Html.ActionLink(" Editar", "Edit", new { id = item.codigo_detalle })</button></td>
+
+                                    
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

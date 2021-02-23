@@ -1,0 +1,288 @@
+﻿
+
+
+@model  Proyecto.Models.ViewModelsPermisos
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>DENEGAR PERMISOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+@*<script>
+
+    var mesaje = "@ViewBag.repetido";
+
+    if (mesaje = ) {
+        
+
+
+    }
+</script>*@
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">DENEGAR PERMISOS</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="codigo">Código *</label>
+
+                            @Html.EditorFor(model => model.denegar.id, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.denegar.id, "", new { @class = "text-danger" })
+
+                        </div>
+                      
+
+
+                        <div class="widget-body" style="width: 900px; padding-left: 3px; margin-right: 900px;">
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+
+                                        <th>Rol</th>
+                                        <th>Modulo</th>
+                                        <th>Accion</th>
+                                      
+
+                                        <th class="text-right">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="col-md-6 " style="width: 220px">
+
+                                                    <select class="selectpicker form-control selectcliente" data-live-search="true" id="Rol" name="Rol" tabindex="-98">
+                                                        <option value="0">Seleccione un Rol</option>
+                                                        @foreach (var item in ViewBag.dato)
+                                                        {
+                                                            <option value="@item.Codigo" data-subtext="@item.Codigo">@item.Nombre</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="col-md-6 " style="width: 220px">
+
+                                                    <select class="selectpicker form-control selectcliente" data-live-search="true" id="Modulo" name="Modulo" tabindex="-98">
+                                                        <option value="0">Seleccione un Modulo...</option>
+                                                        @foreach (var item in ViewBag.dato1)
+                                                   {
+                                                            <option value="@item.id" data-subtext="@item.id">@item.Modulo</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="col-md-6 " style="width: 220px">
+
+                                                    <select class="selectpicker form-control selectcliente" data-live-search="true" id="Accion" name="Accion" tabindex="-98">
+                                                        <option value="0">Seleccione una Accion </option>
+                                                        @foreach (var item in ViewBag.dato2)
+                                                        {
+                                                            <option value="@item.id" data-subtext="@item.id">@item.Accion</option>
+                                                        }
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        
+
+
+                                        <td class="text-right"><input onclick="pasarDetalle()" value="Denegar" type="button" class="btn btn-primary" style="background-color:limegreen; color:white; border-color:limegreen;"></td>
+                                    </tr>
+                                </tbody>
+                                <tbody id="Detalle"></tbody>
+                            </table>
+                        </div>
+
+                        <div id="Hola">
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-md-offset-5 col-md-6 col-lg-6">
+                                <input onclick="registrar_Detalle_Entrada()" type="button" value="REGISTRAR" class="btn btn-primary" />
+                                <input onclick="calcularTotalDetalle()" type="button" value="Validar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+
+
+<script type="text/javascript">
+
+    var array = { detalle: [],id:'' };
+    function pasarDetalle() {
+        if ($('#Rol').val() != 0) {
+            if ($('#Modulo').val() != "") {
+             
+                  
+                        
+                            var Rol = $('#Rol').val();
+                            var mod = $('#Modulo').val();
+                            var ac = $('#Accion').val();
+                            
+                            var html = '';
+                            html += '<tr id="Hola">';
+                            html += '<td style="width: 250px;padding-left: 22px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + Rol + '</label>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + mod + '</label>';
+                            html += '</div>';
+                            html += '<td style="width: 250px;padding-left: 20px;">';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<label>' + ac + '</label>';
+                            html += '</div>';
+                         
+
+                            html += '<td style="width: 250px;>';
+                            html += '<div class="col-md-10" style="padding-left: 0px;">';
+                            html += '<a onclick="quitarElemento(this)" class="btn btn-danger pull-right"><i class="fa fa-times"></i></a>';
+                            html += '</div>';
+                            html += '</td>';
+                            html += '</tr>';
+                            array.detalle.push({  'Modulo': mod, 'Rol': Rol,'Accion':ac });
+                            console.log(array.detalle);
+                            console.log(mod, Rol);
+                            $('#Detalle').append(html);
+                          
+
+                            ;
+                        
+                    
+                 
+            } else {
+                alertify.error("Debe Seleccionar un Modulo");
+                $('#Modulo').focus();
+            }
+        } else {
+            alertify.error("Debe seleccionar un Rol");
+            $('#Rol').focus();
+        }
+        }
+
+
+    function quitarElemento(elemento) {
+        var e = $(elemento).parent().parent();
+        $(e).remove();
+        var valores = "";
+        $(elemento).parents("tr").find("td").each(function () {
+            valores += $(this).html() + "\n";
+            return false;
+        });
+        $("#Rol").val(valores);
+        valor = $("#Rol").val();
+        $("#Rol").val('');
+        for (var i = 0; i < array.detalle.length; i++) {
+            if (array.detalle[i].ProductoSucursal == valor) {
+                var arrays = { detalle: [], fecha: '', sucursal: '', motivo: '' };
+                arrays.detalle = array.detalle;
+                array = { detalle: [], fecha: '', sucursal: '', motivo: '' };
+                for (var i = 0; i < arrays.detalle.length; i++) {
+                    if (arrays.detalle[i].producto_sucur != valor) {
+                        array.detalle[i] = arrays.detalle[i];
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+
+    
+
+    function registrar_Detalle_Entrada() {
+        console.log(array);
+        console.log($("#denegar_id").val());
+        if ((($("#denegar_id").val() != "")  || (array.detalle.length != 0))) {
+            if ($("#denegar_id").val() != "") {
+                
+
+                            if (array.detalle.length != 0) {
+                                array.id = $("#denegar_id").val();
+                               
+
+
+                                console.log(array);
+                                $.ajax({
+                                    'url': '/Permisos/Create',
+                                    'dataType': 'json',
+                                    'type': 'post',
+                                    'contentType': "application/json; charset=utf-8",
+                                    'data': JSON.stringify(array)
+                                }).done(function (respuesta) {
+                                    if (respuesta[0] == "1") {
+
+                                        var correcto = "@ViewBag.correcto";
+                                        if (correcto = "Se registro correctamente")
+                                            swal({ title: "¡REGISTRO EXITOSO!", text: "Permiso Denegado registrado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Permisos/Index' });
+
+                                    } else {
+                                        if (respuesta[0] == "2") {
+                                            alertify.error(respuesta[1]);
+                                        } else {
+                                            alertify.error("Ya existe un Permiso Denegado con este codigo");
+                                        }
+                                    }
+                                })
+                            } else {
+                                alertify.error("Debe agregar minimo un detalle");
+                            }
+ 
+            } else {
+                alertify.error("Debe ingresar el codigo del Permiso");
+            }
+        } else {
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+        }
+        }
+
+
+  
+
+
+</script>
+

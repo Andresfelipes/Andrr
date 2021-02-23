@@ -1,0 +1,82 @@
+﻿@model Proyecto.Models.Tb_Detalle_Producto_Sucursal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tb_Detalle_Producto_Sucursal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_Minimo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_Minimo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_Maximo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_Maximo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_Venta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor_Venta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_Mayor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor_Mayor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_Especial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor_Especial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Productos.Referencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Productos.Referencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tb_Sucursales.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigo_detalle }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿
+@model Proyecto.Models.Tb_Usuarios
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<div class="notifications top-right"></div>
+<div class="wrapper">
+    <div class="page-wrapper">
+        <div id="login-hidden" style="display: none;">
+            <div class="log-in-wrapper">
+                <h1 class="log-in-title">Iniciar sesión <strong class="text-primary">ADMIS</strong><br><small>Ingrese sus datos</small></h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger", @style = "margin-left: -50px" })
+                    </div>
+                </div>
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Email, new {@class= "form-control input-lg", @placeholder = "Ingrese su correo" })
+                        
+                    </div>
+                    <div class="form-group">
+                        @Html.PasswordFor(model => model.Contraseña, new { @class = "form-control input-lg", @placeholder = "Ingrese su contraseña" })
+                    </div>
+                    <div class="form-group">
+                        @Html.CheckBoxFor(model => model.Recordarme, new { @checked="true"})
+                       
+                        <label for="remember_me" class="icheck-label">
+                           @Html.DisplayNameFor(model => model.Recordarme)
+                        </label>
+                    </div>
+                    
+                    <button class="btn btn-transparent btn-lg btn-transparent-primary btn-block" type="submit">Iniciar</button>
+                    
+                    <ul class="login-bottom-links">
+                        <li><a href="forgot-password.html">¿Olvidó su contraseña?</a></li>
+                    </ul>
+
+                }
+                
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

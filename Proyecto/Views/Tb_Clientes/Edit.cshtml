@@ -1,0 +1,205 @@
+﻿@model Proyecto.Models.Tb_Clientes
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CLIENTES</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script type="text/javascript">
+
+    var alerta = "@ViewBag.Registro";
+
+    if (alerta == "Correcto") {
+        swal({ title: "¡ACTUALIZACIÓN EXITOSA!", text: "Cliente actualizado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Clientes/Index' });
+    }
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Modificar cliente</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.Identificacion)
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="identificacion">Identificación *</label>
+                            @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control  validate-character", disabled="disabled" } })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="tipodoc">Tipo De Documento *</label>
+                            @Html.DropDownList("Tipo_Documento_Codigo", null, htmlAttributes: new { @class = "form-control", disabled = "disabled" })
+                            @Html.ValidationMessageFor(model => model.Tipo_Documento_Codigo, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="nom1">Primer Nombre *</label>
+                            @Html.EditorFor(model => model.Nombre1, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Nombre1, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="nom2">Segundo Nombre</label>
+                            @Html.EditorFor(model => model.Nombre2, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Nombre2, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="apell1">Primer Apellido *</label>
+                            @Html.EditorFor(model => model.Apellido1, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Apellido1, "", new { @class = "text-danger" })
+                        </div>
+
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="apell2">Segundo Apellido</label>
+                            @Html.EditorFor(model => model.Apellido2, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Apellido2, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="tel">Teléfono *</label>
+                            @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="cel">Celular *</label>
+                            @Html.EditorFor(model => model.Celular, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Celular, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="correo">Correo Electrónico *</label>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control  " } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="estado">Estado *</label>
+                            <select class="form-control" id="Estado" name="Estado">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger validate-character" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="tipocliente">Tipo Cliente *</label>
+                            <select class="form-control" id="TipoCliente" name="tipocliente">
+                                <option value="0">{Selecccione Tipo Cliente...}</option>
+                                <option value="Mayorista">Mayorista</option>
+                                <option value="Minorista">Minorista</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.TipoCliente, "", new { @class = "text-danger validate-number" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="direc">Dirección *</label>
+                            @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control " } })
+                            @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="ciudad">Ciudad *</label>
+                            @Html.EditorFor(model => model.Ciudad, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Ciudad, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label" Text="cupo">Cupo Activo *</label>
+                        @Html.EditorFor(model => model.Cupo_activo, new { htmlAttributes = new { @class = "form-control validate-character", disabled="disabled" } })
+                        @Html.ValidationMessageFor(model => model.Cupo_activo, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label id="lblid" class="control-label" Text="solicitud">Número Solicitud</label>
+                        @Html.EditorFor(model => model.Solicitud, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                        @Html.ValidationMessageFor(model => model.Solicitud, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-inline">
+                        <div class="col-md-offset-5 form-group col-md-12">
+                            <input onclick="return hola1();" type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+                    </div>
+                                        
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var id = document.getElementById("Identificacion").value;
+            $('#Cupo_activo').attr("disabled", "disabled");
+            var ids = { 'id': id };
+            $.ajax({
+                'url': '/Tb_Clientes/Campos',
+                'dataType': 'json',
+                'type': 'post',
+                'contentType': "application/json; charset=utf-8",
+                'data': JSON.stringify(ids)
+            }).done(function (respuesta) {
+                $('#TipoCliente').val(respuesta[0].TipoCliente);
+                $('#Estado').val(respuesta[0].Estado);
+            })
+        }
+    function hola1() {
+        var id = document.getElementById("Identificacion").value;
+        var doc = document.getElementById("Tipo_Documento_Codigo").value;
+        var nom1 = document.getElementById("Nombre1").value;
+        var ape1 = document.getElementById("Apellido1").value;
+        var cel = document.getElementById("Celular").value;
+        var estado = document.getElementById("Estado").value;
+        var tipo = document.getElementById("TipoCliente").value;
+        var direccion = document.getElementById("Direccion").value;
+        var ciudad = document.getElementById("Ciudad").value;
+        var financiacion = document.getElementById("Cupo_activo").value;
+
+        if (id == "" || doc == 0 || nom1 == "" || ape1 == ""  ||cel == "" || estado == ""
+            || tipo == 0 || direccion == "" || ciudad == "" || financiacion == "") {
+            
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+        } else {
+            $('#Tipo_Documento_Codigo').removeAttr("disabled");
+            $('#Cupo_activo').removeAttr("disabled");
+        }
+
+
+
+    }
+    </script>
+
+
+
+}
+
+
+

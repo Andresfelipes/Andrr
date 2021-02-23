@@ -1,0 +1,134 @@
+﻿@model Proyecto.Models.Tb_Usuarios
+@{
+    ViewBag.Title = "cambiarContrasenia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>CAMBIAR CONTRASEÑA</h1>
+
+
+
+            </div>
+        </div>
+    </div>
+</header>
+<link href="~/Alertify/css/themes/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Alertify/alertify.min.js"></script>
+<link href="~/assent/dist/sweetalert.css" rel="stylesheet" />
+<script src="~/assent/dist/sweetalert.min.js"></script>
+<br />
+<script type="text/javascript">
+
+    var mensaje = "@ViewBag.contramala";
+    var contraigual = "@ViewBag.igual"
+    var contranocoincide = "@ViewBag.nocoinciden";
+    var correcto = "@ViewBag.correcto";
+
+    if (mensaje != "") {
+        alertify.error(mensaje);
+    
+
+    }
+    if (contraigual != "") {
+        alertify.error(contraigual);
+
+    }
+    if (contranocoincide != "") {
+
+        alertify.error(contranocoincide);
+
+    }
+
+    if (correcto != "") {
+        alertify.success(correcto);
+        setTimeout(function () { location.href = '/Tb_Usuarios/Index' }, 5);
+        
+
+        
+    }
+
+
+
+</script>
+
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Cambiar Contraseña</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        @Html.HiddenFor(model => model.Email)
+
+                        <div class="form-group col-md-6" style="margin-top:30pxc">
+                            <label id="lblid" class="control-label" Text="nom1">Contraseña Actual</label>
+                                <input class="form-control  text-box single-line" id="Contrase_a" name="Contraseña" type="password" value="">                           
+                             @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="nom1">Nueva Contraseña</label>
+                            <input class="form-control text-box single-line" id="nuevacontrasenia" name="nuevacontrasenia" type="password" value="">     
+                            @Html.ValidationMessageFor(model => model.nuevacontrasenia, "", new { @class = "text-danger" })
+                        </div>
+
+                   
+                        <div class="col-md-6">
+
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="nom1">Confirmar Contraseña</label>
+                            <input class="form-control  text-box single-line" id="confirmarcontrasenia" name="confirmarcontrasenia" type="password" value="">
+                            @Html.ValidationMessageFor(model => model.confirmarcontrasenia, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input onclick="return valconn();" type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+
+
+ function valconn() {
+
+     valor = document.getElementById("Contrase_a").value;
+        //doc = document.getElementById("Tipo_Documento").selectedIndex;
+
+     nom1 = document.getElementById("nuevacontrasenia").value;
+     ape1 = document.getElementById("confirmarcontrasenia").value;
+        
+
+
+     if (valor== "" ||   nom1== "" || ape1== ""  ) {
+
+            sweetAlert("¡ERROR!", "Todos los campos obligatorios!", "error");
+
+            return false;
+        } 
+
+    }
+</script>
+

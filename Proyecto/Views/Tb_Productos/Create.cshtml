@@ -1,0 +1,139 @@
+﻿@model Proyecto.Models.Tb_Productos
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>PRODUCTOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script src="~/Scripts/Validation.js"></script>
+<script>
+    var res = "@ViewBag.res";
+
+    if (res == "Correcto") {
+        swal({ title: "¡REGISTRO EXITOSO!", text: "Producto registrado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Productos/Index' });
+    }
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Registrar productos</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                        
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cod">Referencia *</label>
+                            @Html.EditorFor(model => model.Referencia, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Referencia, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="desc">Descripción *</label>
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="estado">Estado *</label>
+                            <select class="form-control" id="Estado" name="Estado">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.Estado, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="Tipo">Tipo Producto *</label>
+                            @Html.DropDownList("Tipo_Producto", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Tipo_Producto, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="cant">Cantidad *</label>
+                            @Html.EditorFor(model => model.cantidad, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.cantidad, "", new { @class = "text-danger" })
+
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="prec">Precio *</label>
+                            @Html.EditorFor(model => model.Precio, new { htmlAttributes = new { @class = "form-control validate-character", @onkeyup = "valor()" } })
+
+                        </div>
+                        <div class="form-inline">
+                            <div class="col-md-offset-5 form-group col-md-12">
+                                <input onclick="return valprodu();" type="submit" value="Registrar" class="btn btn-primary" />
+                                 <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+}
+       
+    <script>   
+
+ function valprodu() {
+
+     ref = document.getElementById("Referencia").value;
+     des = document.getElementById("Descripcion").value;
+     est = document.getElementById("Estado").value;
+     pro = document.getElementById("Tipo_Producto").value;
+     can = document.getElementById("cantidad").value;
+     pre = document.getElementById("Precio").value;
+
+
+     if (ref == "" || des == "" || est == 0 || pro == 0 || can == "" || pre == "" ) {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+     } else {
+         var num1 = $('#Precio').val().replace(".", "");
+         $('#Precio').val(num1);
+                return true;
+
+        }
+
+ }
+
+ function valor() {
+     var num1 = $('#Precio').val().replace(".", "");
+     console.log(num1)
+     num1 = num1.toString().split('').reverse().join('').replace(/(?=\d*\.?)(\d{3})/g, '$1.');
+     num1 = num1.split('').reverse().join('').replace(/^[\.]/, '');
+     $('#Precio').val(num1);
+ }
+
+</script>
+

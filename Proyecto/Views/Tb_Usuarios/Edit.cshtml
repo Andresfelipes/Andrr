@@ -1,0 +1,167 @@
+﻿@model Proyecto.Models.Tb_Usuarios
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header ">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>USUARIOS</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+<script>
+    var alerta = "@ViewBag.Registro";
+
+    if (alerta == "Correcto") {
+        swal({ title: "¡ACTUALIZACIÓN EXITOSA!", text: "Usuario actualizado correctamente", type: "success", showConfirmButton: true }, function () { location.href = '/Tb_Usuarios/Index' });
+    }
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.Identificacion)
+
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Modificar usuario</div>
+                <div class="widget-body">
+
+                    <div class="form">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="ident">Identificación *</label>
+                            @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control validate-character" } })
+                            @Html.ValidationMessageFor(model => model.Identificacion, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels " Text="tipoDoc">Tipo Documento *</label>
+                            @Html.DropDownList("Tipo_Documento", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Tipo_Documento, "", new { @class = "text-danger" })
+                        </div>
+
+
+                        <div class="form-group col-md-6">
+
+                            <label id="lblid" class="control-label labels" Text="nom1">Primer Nombre *</label>
+                            @Html.EditorFor(model => model.Nombre1, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Nombre1, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+
+                            <label id="lblid" class="control-label labels" Text="nom2">Segundo Nombre</label>
+                            @Html.EditorFor(model => model.Nombre2, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Nombre2, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="apell1">Primer Apellido *</label>
+                            @Html.EditorFor(model => model.Apellido1, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Apellido1, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="apell2">Segundo Apellido</label>
+                            @Html.EditorFor(model => model.Apellido2, new { htmlAttributes = new { @class = "form-control validate-number" } })
+                            @Html.ValidationMessageFor(model => model.Apellido2, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="sucu">Sucursal *</label>
+                            @Html.DropDownList("Sucursal", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Sucursal, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="correo">Correo Electrónico *</label>
+
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label" Text="estado">Estado *</label>
+                            <select class="form-control" id="Estado" name="Estado">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                        </div>
+
+                       <div class="form-group col-md-6">
+                            <label id="lblid" class="control-label labels" Text="rol">Rol *</label>
+
+                            @Html.DropDownList("Rol", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Rol, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-5 col-md-10">
+                                <input onclick="return hola();" type="submit" value="Guardar" class="btn btn-primary" />
+                                <input type="reset" value="Limpiar" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<script type="text/javascript">
+    window.onload = function Recar() {
+        var id = document.getElementById("Identificacion").value;
+        var ids = { 'id': id };
+        $.ajax({
+            'url': '/Tb_Usuarios/Users',
+            'dataType': 'json',
+            'type': 'post',
+            'contentType': "application/json; charset=utf-8",
+            'data': JSON.stringify(ids)
+        }).done(function (respuesta) {
+            $('#Sucursal').val(respuesta[0].Sucursal);
+            $('#Tipo_Documento').val(respuesta[0].Tipo_Documento);
+            $('#Rol').val(respuesta[0].rol);
+            $('#Estado').val(respuesta[0].estado);
+        })
+    }
+
+    function hola() {
+        var id = document.getElementById("Identificacion").value;
+        var doc = document.getElementById("Tipo_Documento").value;
+        var nom1 = document.getElementById("Nombre1").value;
+        var ape1 = document.getElementById("Apellido1").value;
+        var ape2 = document.getElementById("Apellido2").value;
+        var suc = document.getElementById("Sucursal").value;
+        var rol = document.getElementById("Rol").value;
+        var email = document.getElementById("Email").value;
+        var estadp = document.getElementById("Estado").value;
+
+        if (id == "" || doc == 0 || nom1 == "" || ape2 == ""|| ape1 == ""  ||suc == 0 || rol == 0
+            || email == "" || estadp == 0 ) {
+
+            sweetAlert("¡ERROR!", "Debe diligenciar los campos obligatorios!", "error");
+
+            return false;
+        } else {
+            return true;
+        }
+
+
+
+    }
+</script>

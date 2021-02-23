@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Proyecto.Models.Tb_ventas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>VENTASZ<small>CONSULTAR</small></h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-12 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    CLIENTES
+                </header>
+                <div class="widget-body">
+                    <table class="table">
+                        <thead>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fecha)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Total)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.iva)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tb_Clientes.Nombre1)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tb_Sucursales.Nombre)
+                        </th>
+                        <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Fecha)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Total)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.iva)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tb_Clientes.Nombre1)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tb_Sucursales.Nombre)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.Codigo }) |
+                                        @Html.ActionLink("Details", "Details", new { id = item.Codigo }) |
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.Codigo })
+                                    </td>
+                                </tr>
+                            }
+
+</table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

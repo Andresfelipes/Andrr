@@ -1,0 +1,71 @@
+﻿@model Proyecto.Models.Tb_Productos
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span>Eliminar</h1>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+<div class="form-horizontal">
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="widget widget-default">
+                <div class="widget-header">Eliminar Estado</div>
+                <div class="widget-body">
+
+                    <div class="form col-md-offset-3 col-md-10">
+                        <hr />
+                        <h3>Desea eliminar este registro?</h3>
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Referencia)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Referencia)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Referencia)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Referencia)
+                            </dd>
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Referencia)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Referencia)
+                            </dd>
+
+                        </dl>
+
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="col-md-offset-2">
+                                <input type="submit" value="Eliminar" class="btn btn-primary" /> |
+                                @Html.ActionLink("Regresar al inicio", "Index")
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
